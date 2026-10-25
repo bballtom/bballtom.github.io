@@ -55,7 +55,8 @@ function fixtureDetail(fixture) {
 
 function teamCard(team, checkedAt) {
   const fixture = nextFixture(team)
-  return `<li><a class="team-card${fixture.bye ? ' bye' : ''}" href="#/${team.id}">
+  const removed = fixture.status === 'removed' ? ' removed' : ''
+  return `<li><a class="team-card${fixture.bye ? ' bye' : ''}${removed}" href="#/${team.id}">
     <div class="squad"><h3>${squadName(team.name)}</h3>${pill(fixture)}</div>
     <p class="when">${whenText(fixture, checkedAt)}</p>
     ${fixtureDetail(fixture)}
@@ -98,7 +99,7 @@ function renderTeam(data, team) {
     </section>
     <ul class="fixture-list">
       ${team.fixtures.map((fixture) => {
-        const note = changeSummary(fixture)
+        const note = fixture.status === 'removed' ? 'CANCELLED' : changeSummary(fixture)
         const classes = ['fixture-card', fixture.status === 'removed' ? 'removed' : '', fixture.bye ? 'bye' : ''].filter(Boolean).join(' ')
         const extra = fixture.bye
           ? ''
@@ -158,14 +159,14 @@ function show() {
   const id = location.hash.replace(/^#\/?/, '')
   if (!id) {
     renderHome(window.__fixtures)
-    return
+  } else {
+    const team = window.__fixtures.teams.find((item) => item.id === id)
+    if (!team) renderHome(window.__fixtures)
+    else renderTeam(window.__fixtures, team)
   }
-  const team = window.__fixtures.teams.find((item) => item.id === id)
-  if (!team) {
-    renderHome(window.__fixtures)
-    return
-  }
-  renderTeam(window.__fixtures, team)
+  const goTop = () => window.scrollTo(0, 0)
+  goTop()
+  requestAnimationFrame(goTop)
 }
 
 const response = await fetch('./fixtures.json', { cache: 'no-store' })
@@ -176,6 +177,7 @@ if (!response.ok) {
   window.__fixtures = await response.json()
   const when = stampLabel(window.__fixtures.changedAt || window.__fixtures.checkedAt)
   checked.textContent = when ? `Last change ${when}` : 'Fixtures loaded'
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual'
   show()
   window.addEventListener('hashchange', show)
 }

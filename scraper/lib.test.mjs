@@ -220,6 +220,21 @@ test('WhatsApp text uses icons, a short hall, and leaves out new badges', () => 
     '📅 Sat 14 Nov',
     '❌ Bye',
   ].join('\n'))
+  assert.equal(formatWhatsApp('', [{
+    date: '2026-10-31',
+    time: '14:20',
+    opponent: 'Southside',
+    hall: 'Reddish Vale High School',
+    court: '3',
+    status: 'removed',
+    change: { type: 'removed', previous: null },
+  }], '2026-10-25T08:00'), [
+    'CANCELLED',
+    '~📅 Sat 31 Oct~',
+    '~⏰ 2:20pm~',
+    '~📍 Reddish, Court 3~',
+    '~🆚 Southside~',
+  ].join('\n'))
   assert.equal(formatPlace('Reddish Vale High School', '3'), 'Reddish Vale High School, Court 3')
   assert.equal(formatPlace('Hollinwood', ''), 'Hollinwood')
   assert.equal(formatPlace('Oldham', '2'), 'Oldham, Court 2')

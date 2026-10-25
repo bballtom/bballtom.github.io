@@ -88,16 +88,17 @@ function copyHall(hall) {
 export function formatWhatsApp(_teamName, fixtures, nowStamp = '') {
   return fixtures.map((fixture) => {
     const lines = []
-    const note = changeSummary(fixture)
+    const note = fixture.status === 'removed' ? 'CANCELLED' : changeSummary(fixture)
     if (note && note !== 'NEW') lines.push(note)
-    lines.push(`📅 ${dateLabel(fixture.date, nowStamp)}`)
-    if (fixture.bye) {
-      lines.push('❌ Bye')
-      return lines.join('\n')
+    const body = [`📅 ${dateLabel(fixture.date, nowStamp)}`]
+    if (fixture.bye) body.push('❌ Bye')
+    else {
+      body.push(`⏰ ${formatClock(fixture.time)}`)
+      body.push(`📍 ${formatPlace(copyHall(fixture.hall), fixture.court)}`)
+      body.push(`🆚 ${fixture.opponent}`)
     }
-    lines.push(`⏰ ${formatClock(fixture.time)}`)
-    lines.push(`📍 ${formatPlace(copyHall(fixture.hall), fixture.court)}`)
-    lines.push(`🆚 ${fixture.opponent}`)
+    const struck = fixture.status === 'removed'
+    lines.push(...body.map((line) => (struck ? `~${line}~` : line)))
     return lines.join('\n')
   }).join('\n\n')
 }

@@ -204,7 +204,17 @@ main {
 
 .fixture-card { padding: 14px 16px; border-left: 6px solid var(--green); }
 .fixture-card.removed { background: var(--cancel-bg); border-left-color: var(--cancel); }
-.fixture-card.removed .when { text-decoration: line-through; }
+.team-card.removed .when,
+.team-card.removed .opponent,
+.team-card.removed .place,
+.team-card.removed .bye-mark,
+.fixture-card.removed .when,
+.fixture-card.removed .opponent,
+.fixture-card.removed .place,
+.fixture-card.removed .league,
+.fixture-card.removed .bye-mark {
+  text-decoration: line-through;
+}
 
 .note { margin: 0 0 8px; font-size: 0.92rem; font-weight: 800; }
 .note.new { color: var(--new); }
