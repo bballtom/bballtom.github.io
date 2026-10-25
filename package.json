@@ -1,0 +1,13 @@
+{
+  "name": "vikings-fixtures",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scrape": "node scraper/scrape.mjs",
+    "start": "node scraper/serve.mjs",
+    "test": "node --test scraper/lib.test.mjs"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.2"
+  }
+}

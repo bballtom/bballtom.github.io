@@ -1,0 +1,29 @@
+name: Check fixtures
+
+on:
+  schedule:
+    - cron: "0 */2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run scrape
+      - name: Save fixture changes
+        run: |
+          git diff --quiet -- fixtures.json && exit 0
+          git config user.name "fixtures-bot"
+          git config user.email "fixtures-bot@users.noreply.github.com"
+          git add fixtures.json
+          git commit -m "Update fixtures"
+          git push

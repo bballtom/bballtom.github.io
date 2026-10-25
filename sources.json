@@ -1,0 +1,14 @@
+{
+  "teamPattern": "tameside\\s*vikings",
+  "defaultHall": "Reddish Vale High School",
+  "sources": [
+    {
+      "name": "Stockport winter",
+      "url": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/"
+    },
+    {
+      "name": "Stockport summer",
+      "url": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures-summer/"
+    }
+  ]
+}
