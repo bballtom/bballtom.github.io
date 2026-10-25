@@ -17,7 +17,7 @@ function pill(fixture) {
 }
 
 function nextFixture(team) {
-  return team.fixtures.find((fixture) => fixture.status !== 'removed') ?? team.fixtures[0]
+  return team.fixtures[0]
 }
 
 function groupsFor(teams) {
