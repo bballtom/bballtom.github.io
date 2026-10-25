@@ -42,26 +42,38 @@ function groupsFor(teams) {
     }))
 }
 
+function whenText(fixture, checkedAt) {
+  const day = dateLabel(fixture.date, checkedAt)
+  return fixture.bye || !fixture.time ? day : `${day}, ${fixture.time}`
+}
+
+function fixtureDetail(fixture) {
+  if (fixture.bye) return '<p class="bye-mark">❌ Bye</p>'
+  return `<p class="opponent">vs ${escapeHtml(fixture.opponent)}</p>
+    <p class="place">${escapeHtml(formatPlace(fixture.hall, fixture.court))}</p>`
+}
+
 function teamCard(team, checkedAt) {
   const fixture = nextFixture(team)
-  return `<li><a class="team-card" href="#/${team.id}">
+  return `<li><a class="team-card${fixture.bye ? ' bye' : ''}" href="#/${team.id}">
     <div class="squad"><h3>${squadName(team.name)}</h3>${pill(fixture)}</div>
-    <p class="when">${dateLabel(fixture.date, checkedAt)}, ${fixture.time}</p>
-    <p class="opponent">vs ${escapeHtml(fixture.opponent)}</p>
-    <p class="place">${escapeHtml(formatPlace(fixture.hall, fixture.court))}</p>
+    <p class="when">${whenText(fixture, checkedAt)}</p>
+    ${fixtureDetail(fixture)}
   </a></li>`
 }
 
 function renderHome(data) {
   const teams = data.teams ?? []
-  const games = teams.reduce((sum, team) => sum + team.fixtures.filter((fixture) => fixture.status !== 'removed').length, 0)
+  const upcoming = teams.flatMap((team) => team.fixtures.filter((fixture) => fixture.status !== 'removed'))
+  const byes = upcoming.filter((fixture) => fixture.bye).length
+  const games = upcoming.length - byes
   if (teams.length === 0) {
     app.innerHTML = `<section class="empty"><h2>No fixtures posted yet</h2><p>Nothing for Tameside Vikings is on the league page right now.</p></section>`
     return
   }
   const groups = groupsFor(teams)
   app.innerHTML = `
-    <p class="summary">${teams.length} teams, ${games} upcoming games</p>
+    <p class="summary">${teams.length} teams, ${games} upcoming games${byes ? `, ${byes} ${byes === 1 ? 'bye' : 'byes'}` : ''}</p>
     ${groups.map((group) => `
       <section class="age-group">
         <h2>${escapeHtml(group.label)}</h2>
@@ -87,12 +99,15 @@ function renderTeam(data, team) {
     <ul class="fixture-list">
       ${team.fixtures.map((fixture) => {
         const note = changeSummary(fixture)
-        return `<li class="fixture-card ${fixture.status === 'removed' ? 'removed' : ''}">
+        const classes = ['fixture-card', fixture.status === 'removed' ? 'removed' : '', fixture.bye ? 'bye' : ''].filter(Boolean).join(' ')
+        const extra = fixture.bye
+          ? ''
+          : `<p class="league">${escapeHtml(fixture.division)}${fixture.division ? ' · ' : ''}${escapeHtml(fixture.league)}</p>`
+        return `<li class="${classes}">
           ${note ? `<p class="note ${fixture.change?.type ?? 'removed'}">${escapeHtml(note)}</p>` : ''}
-          <p class="when">${dateLabel(fixture.date, data.checkedAt)}, ${fixture.time}</p>
-          <p class="opponent">vs ${escapeHtml(fixture.opponent)}</p>
-          <p class="place">${escapeHtml(formatPlace(fixture.hall, fixture.court))}</p>
-          <p class="league">${escapeHtml(fixture.division)}${fixture.division ? ' · ' : ''}${escapeHtml(fixture.league)}</p>
+          <p class="when">${whenText(fixture, data.checkedAt)}</p>
+          ${fixtureDetail(fixture)}
+          ${extra}
           <p class="meta"><a href="${escapeHtml(fixture.sourceUrl)}">League page</a></p>
         </li>`
       }).join('')}

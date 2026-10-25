@@ -60,7 +60,8 @@ export function changeSummary(fixture) {
   if (change.type === 'removed') return 'CANCELLED'
   if (change.type === 'moved') {
     const when = dateLabel(change.previous.date, fixture.date)
-    return `MOVED: was ${when}, ${change.previous.time}`
+    const clock = change.previous.time ? `, ${change.previous.time}` : ''
+    return `MOVED: was ${when}${clock}`
   }
   const previous = change.previous ?? {}
   const bits = []
@@ -90,6 +91,10 @@ export function formatWhatsApp(_teamName, fixtures, nowStamp = '') {
     const note = changeSummary(fixture)
     if (note && note !== 'NEW') lines.push(note)
     lines.push(`📅 ${dateLabel(fixture.date, nowStamp)}`)
+    if (fixture.bye) {
+      lines.push('❌ Bye')
+      return lines.join('\n')
+    }
     lines.push(`⏰ ${formatClock(fixture.time)}`)
     lines.push(`📍 ${formatPlace(copyHall(fixture.hall), fixture.court)}`)
     lines.push(`🆚 ${fixture.opponent}`)

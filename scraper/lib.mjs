@@ -97,15 +97,20 @@ export function londonStamp(date = new Date()) {
 }
 
 export function isPast(date, time, nowStamp) {
+  if (!time) return date < nowStamp.slice(0, 10)
   return `${date}T${time}` < nowStamp
 }
 
+function identity(fixture) {
+  return fixture.bye ? 'bye' : norm(fixture.opponent)
+}
+
 export function fullKey(fixture) {
-  return [fixture.season, String(fixture.leagueId), norm(fixture.team), norm(fixture.opponent), fixture.date].join('|')
+  return [fixture.season, String(fixture.leagueId), norm(fixture.team), identity(fixture), fixture.date].join('|')
 }
 
 function pairKey(fixture) {
-  return [fixture.season, String(fixture.leagueId), norm(fixture.team), norm(fixture.opponent)].join('|')
+  return [fixture.season, String(fixture.leagueId), norm(fixture.team), identity(fixture)].join('|')
 }
 
 function opponentKey(fixture) {
@@ -133,9 +138,10 @@ export function readFixtures(html, { leagueId, leagueLabel, sourceUrl, defaultHa
     const headers = $(element).find('th').map((__, th) => clean($(th).text())).get()
     return headers.includes('Time') && headers.includes('Teams')
   }).first()
-  if (!table.length || !season.label) return []
+  if (!season.label) return []
 
   const fixtures = []
+  if (!table.length) return readByes($, { season, league, leagueId, sourceUrl, teamRe })
   const seen = new Set()
   let currentDateText = ''
 
@@ -184,6 +190,51 @@ export function readFixtures(html, { leagueId, leagueLabel, sourceUrl, defaultHa
     }
   })
 
+  return fixtures.concat(readByes($, { season, league, leagueId, sourceUrl, teamRe }))
+}
+
+function readByes($, { season, league, leagueId, sourceUrl, teamRe }) {
+  const fixtures = []
+  const seen = new Set()
+
+  $('table').each((_, table) => {
+    if (!$(table).find('td.first-col-bye').length) return
+    let currentDateText = ''
+    $(table).find('tr').each((__, row) => {
+      const dateCell = $(row).find('td.first-col-bye')
+      if (dateCell.length) {
+        currentDateText = clean(dateCell.text())
+        return
+      }
+      const name = clean($(row).find('td').first().text())
+      if (!name || !currentDateText || !teamRe.test(name)) return
+      const date = inferIsoDate(currentDateText, season)
+      if (!date) return
+      const team = displayTeam(name)
+      const fixture = {
+        season: season.label,
+        leagueId: String(leagueId),
+        league,
+        sourceUrl,
+        date,
+        time: '',
+        team,
+        teamId: teamSlug(team),
+        opponent: '',
+        hall: '',
+        court: '',
+        division: '',
+        bye: true,
+        status: 'bye',
+        change: null,
+      }
+      const key = fullKey(fixture)
+      if (seen.has(key)) return
+      seen.add(key)
+      fixtures.push(fixture)
+    })
+  })
+
   return fixtures
 }
 
@@ -211,7 +262,7 @@ function samePrevious(left = {}, right = {}) {
 }
 
 function scheduledFrom(fresh, change) {
-  return { ...fresh, status: 'scheduled', change }
+  return { ...fresh, status: fresh.bye ? 'bye' : 'scheduled', change }
 }
 
 function applyMatched(old, fresh, nowStamp) {
@@ -269,9 +320,11 @@ export function diffFixtures(previous, scraped, nowStamp) {
       const [oldKey, old] = olds[0]
       const [newKey, fresh] = news[0]
       if (old.status === 'removed') continue
+      const built = build(old, fresh)
+      if (!built) continue
       consumedPrev.add(oldKey)
       consumedNext.add(newKey)
-      output.push(build(old, fresh))
+      output.push(built)
     }
   }
 
@@ -287,6 +340,7 @@ export function diffFixtures(previous, scraped, nowStamp) {
   }))
 
   linkSingles(opponentKey, (old, fresh) => {
+    if (old.bye || fresh.bye) return null
     const previous = previousValues(baseline(old), fresh)
     previous.opponent = old.opponent
     return scheduledFrom(fresh, { type: 'updated', detectedAt: nowStamp, previous })

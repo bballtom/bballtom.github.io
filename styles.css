@@ -176,6 +176,10 @@ main {
 
 .opponent, .place, .league, .meta { color: var(--muted); }
 
+.bye-mark { margin: 4px 0 0; color: var(--cancel); font-weight: 800; }
+
+.team-card.bye, .fixture-card.bye { border-left-color: var(--cancel); }
+
 .pill {
   display: inline-block;
   border-radius: 999px;

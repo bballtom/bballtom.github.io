@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-25T07:52",
-  "changedAt": "2026-10-25T07:52",
+  "checkedAt": "2026-10-25T09:27",
+  "changedAt": "2026-10-25T09:27",
   "timezone": "Europe/London",
   "defaultHall": "Reddish Vale High School",
   "teams": [
@@ -145,6 +145,25 @@
           "division": "Premier Division",
           "status": "scheduled",
           "change": null
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "54",
+          "league": "Thursday & Friday school years 9&10 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
+          "date": "2026-11-06",
+          "time": "",
+          "opponent": "",
+          "hall": "",
+          "court": "",
+          "division": "",
+          "bye": true,
+          "status": "bye",
+          "change": {
+            "type": "new",
+            "detectedAt": "2026-10-25T09:27",
+            "previous": null
+          }
         },
         {
           "season": "Winter Season 26",
@@ -655,6 +674,25 @@
           "division": "Premier Division",
           "status": "scheduled",
           "change": null
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "58",
+          "league": "Saturday school years 5&6 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=58",
+          "date": "2026-11-21",
+          "time": "",
+          "opponent": "",
+          "hall": "",
+          "court": "",
+          "division": "",
+          "bye": true,
+          "status": "bye",
+          "change": {
+            "type": "new",
+            "detectedAt": "2026-10-25T09:27",
+            "previous": null
+          }
         }
       ]
     },
@@ -675,6 +713,25 @@
           "division": "Division 3",
           "status": "scheduled",
           "change": null
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "58",
+          "league": "Saturday school years 5&6 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=58",
+          "date": "2026-11-07",
+          "time": "",
+          "opponent": "",
+          "hall": "",
+          "court": "",
+          "division": "",
+          "bye": true,
+          "status": "bye",
+          "change": {
+            "type": "new",
+            "detectedAt": "2026-10-25T09:27",
+            "previous": null
+          }
         },
         {
           "season": "Winter Season 26",
@@ -737,6 +794,25 @@
           "division": "Division 1",
           "status": "scheduled",
           "change": null
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "57",
+          "league": "Saturday school years 3&4 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=57",
+          "date": "2026-11-14",
+          "time": "",
+          "opponent": "",
+          "hall": "",
+          "court": "",
+          "division": "",
+          "bye": true,
+          "status": "bye",
+          "change": {
+            "type": "new",
+            "detectedAt": "2026-10-25T09:27",
+            "previous": null
+          }
         },
         {
           "season": "Winter Season 26",
@@ -923,6 +999,25 @@
           "division": "Division 2",
           "status": "scheduled",
           "change": null
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "59",
+          "league": "Saturday school years 7&8 basketball (boys)",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
+          "date": "2026-11-21",
+          "time": "",
+          "opponent": "",
+          "hall": "",
+          "court": "",
+          "division": "",
+          "bye": true,
+          "status": "bye",
+          "change": {
+            "type": "new",
+            "detectedAt": "2026-10-25T09:27",
+            "previous": null
+          }
         }
       ]
     },
@@ -957,6 +1052,25 @@
           "division": "Division 2",
           "status": "scheduled",
           "change": null
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "59",
+          "league": "Saturday school years 7&8 basketball (boys)",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
+          "date": "2026-11-14",
+          "time": "",
+          "opponent": "",
+          "hall": "",
+          "court": "",
+          "division": "",
+          "bye": true,
+          "status": "bye",
+          "change": {
+            "type": "new",
+            "detectedAt": "2026-10-25T09:27",
+            "previous": null
+          }
         },
         {
           "season": "Winter Season 26",

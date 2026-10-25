@@ -5,6 +5,7 @@ import {
   diffFixtures,
   displayTeam,
   inferIsoDate,
+  isPast,
   parseCourt,
   parseSeason,
   readFixtures,
@@ -76,6 +77,41 @@ function slayers(html = sampleHtml, court = null) {
   })
   return court ? rows : rows
 }
+
+test('a bye week is kept for Vikings and ignored for other clubs', () => {
+  const html = `${sampleHtml}
+    <table>
+      <tr><td class="sticky-col-date first-col-bye"><strong>Saturday 14th Nov</strong></td></tr>
+      <tr><td><strong>Tameside Vikings Slayers</strong></td></tr>
+      <tr><td><strong>Thunder Strikers</strong></td></tr>
+      <tr><td class="sticky-col-date first-col-bye"><strong>Saturday 21st Nov</strong></td></tr>
+      <tr><td><strong>Tameside Vikings Storm Maidens</strong></td></tr>
+    </table>`
+  const rows = readFixtures(html, {
+    leagueId: '57',
+    leagueLabel: 'Saturday school years 3&4 basketball - Winter Season 26',
+    sourceUrl: 'https://example.test/?id=57',
+    defaultHall: 'Reddish Vale High School',
+    teamPattern: 'tameside\\s*vikings',
+  })
+  const byes = rows.filter((row) => row.bye)
+  assert.equal(rows.length, 3)
+  assert.deepEqual(byes.map((row) => [row.team, row.date, row.status, row.time, row.opponent]), [
+    ['Tameside Vikings Slayers', '2026-11-14', 'bye', '', ''],
+    ['Tameside Vikings Storm Maidens', '2026-11-21', 'bye', '', ''],
+  ])
+  assert.equal(isPast('2026-11-14', '', '2026-11-14T18:00'), false)
+  assert.equal(isPast('2026-11-14', '', '2026-11-15T00:01'), true)
+
+  const game = rows.find((row) => !row.bye)
+  const added = diffFixtures([game], rows, '2026-10-19T20:00')
+  assert.equal(added.find((row) => !row.bye).change, null)
+  assert.equal(added.find((row) => row.teamId === 'slayers' && row.bye).change.type, 'new')
+
+  const slayersBye = byes[0]
+  assert.equal(diffFixtures([slayersBye], [slayersBye], '2026-11-14T18:00').length, 1)
+  assert.equal(diffFixtures([slayersBye], [slayersBye], '2026-11-15T09:00').length, 0)
+})
 
 test('the table keeps Vikings games and names the usual hall', () => {
   const rows = slayers()
@@ -173,6 +209,16 @@ test('WhatsApp text uses icons, a short hall, and leaves out new badges', () => 
     '⏰ 2:20pm',
     '📍 Hollinwood',
     '🆚 Lion Mountain',
+  ].join('\n'))
+  assert.equal(formatWhatsApp('', [{
+    date: '2026-11-14',
+    time: '',
+    bye: true,
+    status: 'bye',
+    change: { type: 'new', previous: null },
+  }], '2026-10-25T08:00'), [
+    '📅 Sat 14 Nov',
+    '❌ Bye',
   ].join('\n'))
   assert.equal(formatPlace('Reddish Vale High School', '3'), 'Reddish Vale High School, Court 3')
   assert.equal(formatPlace('Hollinwood', ''), 'Hollinwood')
