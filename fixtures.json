@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-25T14:24",
-  "changedAt": "2026-10-25T14:24",
+  "checkedAt": "2026-10-26T20:30",
+  "changedAt": "2026-10-26T20:30",
   "timezone": "Europe/London",
   "defaultHall": "Reddish Vale High School",
   "teams": [
@@ -888,13 +888,19 @@
           "league": "Saturday school years 7&8 basketball (boys)",
           "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
           "date": "2026-11-21",
-          "time": "10:10",
+          "time": "11:00",
           "opponent": "MBC SWARM",
           "hall": "Hollinwood",
           "court": "",
           "division": "Premier Division",
           "status": "scheduled",
-          "change": null
+          "change": {
+            "type": "updated",
+            "detectedAt": "2026-10-26T20:30",
+            "previous": {
+              "time": "10:10"
+            }
+          }
         }
       ]
     },
@@ -1084,13 +1090,19 @@
           "league": "Saturday school years 7&8 basketball (boys)",
           "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
           "date": "2026-11-21",
-          "time": "11:00",
+          "time": "11:50",
           "opponent": "Stockport Storm",
           "hall": "Hollinwood",
           "court": "",
           "division": "Division 2",
           "status": "scheduled",
-          "change": null
+          "change": {
+            "type": "updated",
+            "detectedAt": "2026-10-26T20:30",
+            "previous": {
+              "time": "11:00"
+            }
+          }
         }
       ]
     }
