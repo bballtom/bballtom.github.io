@@ -1,4 +1,4 @@
-import { ageGroup, changeSummary, dateLabel, formatPlace, formatWhatsApp } from './format.mjs'
+import { ageGroup, changeSummary, dateLabel, formatPlace, formatTableWhatsApp, formatWhatsApp } from './format.mjs'
 
 const app = document.querySelector('#app')
 const checked = document.querySelector('#checked')
@@ -86,10 +86,54 @@ function renderHome(data) {
     <p class="source">Games that have already started are left off. <a href="https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/">League source</a></p>`
 }
 
+function sameName(left, right) {
+  const norm = (value) => String(value ?? '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
+  return norm(left) === norm(right)
+}
+
+function shortTeam(name) {
+  return String(name ?? '').replace(/^Tameside Vikings\s+/i, '')
+}
+
+function standingsFor(team) {
+  const tables = window.__tables?.tables ?? []
+  return tables.find((table) => table.rows.some((row) => sameName(row.team, team.name)))
+}
+
+function standingsHtml(team) {
+  const table = standingsFor(team)
+  if (!table) return ''
+  const when = stampLabel(window.__tables?.checkedAt)
+  return `<section class="standings">
+    <h2>${escapeHtml(table.division || 'League table')}</h2>
+    <p class="league">${escapeHtml(table.league)}</p>
+    <div class="standings-wrap">
+      <table>
+        <thead>
+          <tr><th>Pos</th><th>Team</th><th>P</th><th>W</th><th>L</th><th>Pts</th></tr>
+        </thead>
+        <tbody>
+          ${table.rows.map((row) => `<tr class="${sameName(row.team, team.name) ? 'us' : ''}">
+            <td>${row.position}</td>
+            <td>${escapeHtml(shortTeam(row.team))}</td>
+            <td>${row.played}</td>
+            <td>${row.won}</td>
+            <td>${row.lost}</td>
+            <td>${row.points}</td>
+          </tr>`).join('')}
+        </tbody>
+      </table>
+    </div>
+    <p class="source">Table checked ${escapeHtml(when)}. <a href="${escapeHtml(table.sourceUrl)}">League table</a></p>
+  </section>`
+}
+
 function renderTeam(data, team) {
   const allText = formatWhatsApp(team.name, team.fixtures, data.checkedAt)
   const next = nextFixture(team)
   const nextText = formatWhatsApp(team.name, next ? [next] : [], data.checkedAt)
+  const table = standingsFor(team)
+  const tableText = formatTableWhatsApp(team.name, table)
   const groups = [...new Set(team.fixtures.map((fixture) => ageGroup(fixture.league).label))]
   app.innerHTML = `
     <a class="back" href="#/">All teams</a>
@@ -113,14 +157,17 @@ function renderTeam(data, team) {
         </li>`
       }).join('')}
     </ul>
+    ${standingsHtml(team)}
     <div class="copy-bar">
       <div class="copy-actions">
         <button class="copy" type="button" data-copy="next">Next game</button>
         <button class="copy copy-all" type="button" data-copy="all">All fixtures</button>
+        ${tableText ? '<button class="copy copy-all copy-table" type="button" data-copy="table">League table</button>' : ''}
       </div>
     </div>`
   app.querySelector('[data-copy="next"]').addEventListener('click', (event) => copyText(nextText, event.currentTarget))
   app.querySelector('[data-copy="all"]').addEventListener('click', (event) => copyText(allText, event.currentTarget))
+  app.querySelector('[data-copy="table"]')?.addEventListener('click', (event) => copyText(tableText, event.currentTarget))
 }
 
 function squadName(full) {
@@ -157,19 +204,20 @@ async function copyText(text, button) {
 
 function show() {
   const id = location.hash.replace(/^#\/?/, '')
-  if (!id) {
-    renderHome(window.__fixtures)
-  } else {
-    const team = window.__fixtures.teams.find((item) => item.id === id)
-    if (!team) renderHome(window.__fixtures)
-    else renderTeam(window.__fixtures, team)
-  }
+  const team = id ? window.__fixtures.teams.find((item) => item.id === id) : null
+  if (!team) renderHome(window.__fixtures)
+  else renderTeam(window.__fixtures, team)
+  document.body.classList.toggle('has-copy', Boolean(team))
   const goTop = () => window.scrollTo(0, 0)
   goTop()
   requestAnimationFrame(goTop)
 }
 
-const response = await fetch('./fixtures.json', { cache: 'no-store' })
+const [response, tablesResponse] = await Promise.all([
+  fetch('./fixtures.json', { cache: 'no-store' }),
+  fetch('./tables.json', { cache: 'no-store' }),
+])
+window.__tables = tablesResponse.ok ? await tablesResponse.json() : { tables: [] }
 if (!response.ok) {
   checked.textContent = 'Fixtures have not been downloaded yet.'
   app.innerHTML = `<section class="empty"><h2>Run the checker first</h2><p>From the project folder, run <strong>npm run scrape</strong>, then refresh this page.</p></section>`

@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { ageGroup, dateLabel, formatPlace, formatWhatsApp } from '../format.mjs'
+import { ageGroup, dateLabel, formatPlace, formatTableWhatsApp, formatWhatsApp } from '../format.mjs'
 import {
   diffFixtures,
   displayTeam,
@@ -8,7 +8,10 @@ import {
   isPast,
   parseCourt,
   parseSeason,
+  presentSeason,
   readFixtures,
+  readStandings,
+  readTableDivisions,
   teamSlug,
 } from './lib.mjs'
 
@@ -111,6 +114,45 @@ test('a bye week is kept for Vikings and ignored for other clubs', () => {
   const slayersBye = byes[0]
   assert.equal(diffFixtures([slayersBye], [slayersBye], '2026-11-14T18:00').length, 1)
   assert.equal(diffFixtures([slayersBye], [slayersBye], '2026-11-15T09:00').length, 0)
+})
+
+test('the current table is summer once summer fixtures exist, otherwise winter', () => {
+  assert.deepEqual(presentSeason({
+    teams: [{ fixtures: [{ season: 'Winter Season 26' }] }],
+  }), { kind: 'winter', label: 'Winter Season 26' })
+  assert.deepEqual(presentSeason({
+    teams: [{ fixtures: [{ season: 'Winter Season 26' }, { season: 'Summer Season 27' }] }],
+  }), { kind: 'summer', label: 'Summer Season 27' })
+  assert.equal(presentSeason({ teams: [] }), null)
+})
+
+test('a division table keeps position, results, and points', () => {
+  const divisions = readTableDivisions(`
+    <select id="leagueDropdown">
+      <option value="">Select a League and Division</option>
+      <option value="57|828">Saturday school years 3&amp;4 basketball - Division 1</option>
+    </select>`)
+  assert.deepEqual(divisions, [{
+    id: '57|828',
+    leagueId: '57',
+    divisionId: '828',
+    league: 'Saturday school years 3&4 basketball',
+    division: 'Division 1',
+    label: 'Saturday school years 3&4 basketball - Division 1',
+  }])
+
+  const rows = readStandings(`
+    <table class="league-table">
+      <thead><tr><th>Team Name</th><th>Played</th><th>Won</th><th>Drawn</th><th>Lost</th><th>Byes</th><th>W/O</th><th>Pts For</th><th>Pts Against</th><th>Pt Diff</th><th>League Pts</th></tr></thead>
+      <tbody>
+        <tr><td><button>Thunder Strikers</button></td><td>2</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>27</td><td>13</td><td>14</td><td>6</td></tr>
+        <tr><td><button>Tameside Vikings Slayers</button></td><td>2</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>20</td><td>18</td><td>2</td><td>3</td></tr>
+      </tbody>
+    </table>`)
+  assert.deepEqual(rows, [
+    { position: 1, team: 'Thunder Strikers', played: 2, won: 2, lost: 0, points: 6 },
+    { position: 2, team: 'Tameside Vikings Slayers', played: 2, won: 1, lost: 1, points: 3 },
+  ])
 })
 
 test('the table keeps Vikings games and names the usual hall', () => {
@@ -234,6 +276,20 @@ test('WhatsApp text uses icons, a short hall, and leaves out new badges', () => 
     '~⏰ 2:20pm~',
     '~📍 Reddish, Court 3~',
     '~🆚 Southside~',
+  ].join('\n'))
+  assert.equal(formatTableWhatsApp('Tameside Vikings Slayers', {
+    division: 'Division 1',
+    league: 'Saturday school years 3&4 basketball',
+    rows: [
+      { position: 1, team: 'Thunder Strikers', points: 6 },
+      { position: 7, team: 'Tameside Vikings Slayers', points: 2 },
+    ],
+  }), [
+    '🏆 Division 1',
+    'Saturday school years 3&4 basketball',
+    '',
+    '1. Thunder Strikers — 6pts',
+    '*👉 7. Slayers — 2pts*',
   ].join('\n'))
   assert.equal(formatPlace('Reddish Vale High School', '3'), 'Reddish Vale High School, Court 3')
   assert.equal(formatPlace('Hollinwood', ''), 'Hollinwood')

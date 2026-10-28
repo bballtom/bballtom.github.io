@@ -263,12 +263,68 @@ main {
   color: #e7f2ea;
 }
 
+.copy-table { grid-column: 1 / -1; }
+
+body.has-copy main { padding-bottom: 190px; }
+
 .empty {
   border: 1px dashed #3d5c48;
   background: #132018;
   color: #e7f2ea;
   padding: 20px;
 }
+
+.standings { margin-top: 28px; }
+
+.standings h2 {
+  margin: 0;
+  color: white;
+  font-family: Bahnschrift, "Arial Narrow", "Segoe UI", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.standings .league { margin: 4px 0 12px; color: #b7cfc0; }
+
+.standings-wrap {
+  overflow-x: auto;
+  background: var(--card);
+  color: var(--ink);
+  border-radius: 12px;
+}
+
+.standings table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.standings th, .standings td {
+  padding: 9px 8px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.standings th:nth-child(2), .standings td:nth-child(2) { text-align: left; }
+
+.standings th {
+  color: #5d6b62;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.standings td:first-child, .standings th:first-child { padding-left: 14px; }
+.standings td:last-child, .standings th:last-child { padding-right: 14px; font-weight: 800; }
+
+.standings tr.us td {
+  background: var(--new-bg);
+  color: var(--new);
+}
+
+.standings .source { margin-top: 10px; }
 
 .source {
   margin-top: 22px;

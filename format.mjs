@@ -102,3 +102,19 @@ export function formatWhatsApp(_teamName, fixtures, nowStamp = '') {
     return lines.join('\n')
   }).join('\n\n')
 }
+
+function plainName(value) {
+  return String(value ?? '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
+}
+
+export function formatTableWhatsApp(teamName, table) {
+  if (!table?.rows?.length) return ''
+  const lines = table.rows.map((row) => {
+    const name = String(row.team ?? '').replace(/^Tameside Vikings\s+/i, '')
+    const line = `${row.position}. ${name} — ${row.points}pts`
+    return plainName(row.team) === plainName(teamName) ? `*👉 ${line}*` : line
+  })
+  const title = table.division || 'League table'
+  const league = table.league ? `\n${table.league}` : ''
+  return `🏆 ${title}${league}\n\n${lines.join('\n')}`
+}

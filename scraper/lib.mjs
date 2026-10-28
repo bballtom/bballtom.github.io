@@ -117,6 +117,67 @@ function opponentKey(fixture) {
   return [fixture.season, String(fixture.leagueId), norm(fixture.team), fixture.date].join('|')
 }
 
+export function presentSeason(data) {
+  const labels = new Set()
+  for (const team of data?.teams ?? []) {
+    for (const fixture of team.fixtures ?? []) {
+      if (fixture.season) labels.add(fixture.season)
+    }
+  }
+  const summer = [...labels].find((label) => /summer/i.test(label))
+  if (summer) return { kind: 'summer', label: summer }
+  const winter = [...labels].find((label) => /winter/i.test(label))
+  if (winter) return { kind: 'winter', label: winter }
+  return null
+}
+
+export function readTableDivisions(html) {
+  const $ = load(html)
+  const divisions = []
+  $('select#leagueDropdown option').each((_, option) => {
+    const id = clean($(option).attr('value'))
+    const label = clean($(option).text())
+    if (!id || !label || /^select a league/i.test(label)) return
+    const [leagueId, divisionId] = id.split('|')
+    const split = label.match(/^(.*?)\s+-\s+(.*)$/)
+    divisions.push({
+      id,
+      leagueId: leagueId || id,
+      divisionId: divisionId || '',
+      league: split ? clean(split[1]) : label,
+      division: split ? clean(split[2]) : '',
+      label,
+    })
+  })
+  return divisions
+}
+
+export function readStandings(html) {
+  const $ = load(html)
+  const table = $('table.league-table').first()
+  if (!table.length) return []
+  const rows = []
+  table.find('tbody tr').each((_, row) => {
+    const cells = $(row).find('td')
+    if (cells.length < 11) return
+    const team = clean($(cells[0]).text())
+    if (!team) return
+    const num = (cell) => {
+      const value = Number(clean($(cell).text()))
+      return Number.isFinite(value) ? value : 0
+    }
+    rows.push({
+      position: rows.length + 1,
+      team,
+      played: num(cells[1]),
+      won: num(cells[2]),
+      lost: num(cells[4]),
+      points: num(cells[10]),
+    })
+  })
+  return rows
+}
+
 export function readLeagues(html) {
   const $ = load(html)
   const leagues = []

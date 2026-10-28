@@ -1,0 +1,795 @@
+{
+  "checkedAt": "2026-10-28T17:01",
+  "timezone": "Europe/London",
+  "season": "Winter Season 26",
+  "tables": [
+    {
+      "id": "57|828",
+      "leagueId": "57",
+      "league": "Saturday school years 3&4 basketball",
+      "division": "Division 1",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-league/?id=57%7C828",
+      "rows": [
+        {
+          "position": 1,
+          "team": "Thunder Strikers",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 2,
+          "team": "Reddish Monkeys",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team": "SK Nukes Storm",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team": "Southside",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "points": 4
+        },
+        {
+          "position": 5,
+          "team": "Trafford Titans Y3",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "points": 4
+        },
+        {
+          "position": 6,
+          "team": "Tameside Vikings Storm Maidens",
+          "played": 2,
+          "won": 0,
+          "lost": 2,
+          "points": 2
+        },
+        {
+          "position": 7,
+          "team": "Tameside Vikings Slayers",
+          "played": 2,
+          "won": 0,
+          "lost": 2,
+          "points": 2
+        }
+      ]
+    },
+    {
+      "id": "58|830",
+      "leagueId": "58",
+      "league": "Saturday school years 5&6 basketball",
+      "division": "Premier Division",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-league/?id=58%7C830",
+      "rows": [
+        {
+          "position": 1,
+          "team": "ABC Basketball",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 2,
+          "team": "Stockport Buzz",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team": "The wizards",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team": "Trafford Titans Year 6",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 5,
+          "team": "Tameside Vikings-Invaders",
+          "played": 2,
+          "won": 1,
+          "lost": 0,
+          "points": 3
+        },
+        {
+          "position": 6,
+          "team": "Macc Town Team Ben",
+          "played": 2,
+          "won": 0,
+          "lost": 2,
+          "points": 2
+        },
+        {
+          "position": 7,
+          "team": "MBC Bee Ballers",
+          "played": 2,
+          "won": 0,
+          "lost": 1,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "58|832",
+      "leagueId": "58",
+      "league": "Saturday school years 5&6 basketball",
+      "division": "Division 2",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-league/?id=58%7C832",
+      "rows": [
+        {
+          "position": 1,
+          "team": "Tameside Vikings-Tornadoes",
+          "played": 2,
+          "won": 1,
+          "lost": 0,
+          "points": 5
+        },
+        {
+          "position": 2,
+          "team": "Glossopdale Hoops Purple",
+          "played": 2,
+          "won": 1,
+          "lost": 0,
+          "points": 5
+        },
+        {
+          "position": 3,
+          "team": "Trafford Titans Yr5",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team": "Blue Whale sports 5/6",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 5,
+          "team": "Heaton Warriors",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 6,
+          "team": "Reddish Hawks",
+          "played": 2,
+          "won": 0,
+          "lost": 2,
+          "points": 2
+        }
+      ]
+    },
+    {
+      "id": "58|845",
+      "leagueId": "58",
+      "league": "Saturday school years 5&6 basketball",
+      "division": "Division 3",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-league/?id=58%7C845",
+      "rows": [
+        {
+          "position": 1,
+          "team": "Phoenix Flames",
+          "played": 2,
+          "won": 1,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 2,
+          "team": "Heaton Hornets",
+          "played": 2,
+          "won": 1,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team": "Reddish Rumble",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team": "Cheadle Cougars",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 5,
+          "team": "Tameside Vikings Iron Maidens",
+          "played": 2,
+          "won": 0,
+          "lost": 0,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "59|833",
+      "leagueId": "59",
+      "league": "Saturday school years 7&8 basketball (boys)",
+      "division": "Premier Division",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-league/?id=59%7C833",
+      "rows": [
+        {
+          "position": 1,
+          "team": "Manchester Bulls",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 2,
+          "team": "MBC Hornets",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team": "ABC Basketball Y7/8",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team": "MBC SWARM",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 5,
+          "team": "Trafford Titans Y8 Sky",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 6,
+          "team": "Tameside Vikings Thunder",
+          "played": 2,
+          "won": 1,
+          "lost": 0,
+          "points": 3
+        },
+        {
+          "position": 7,
+          "team": "Macc Town Raiders Zac",
+          "played": 2,
+          "won": 0,
+          "lost": 2,
+          "points": 2
+        },
+        {
+          "position": 8,
+          "team": "Southside Lions 7&8",
+          "played": 2,
+          "won": 0,
+          "lost": 1,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "59|835",
+      "leagueId": "59",
+      "league": "Saturday school years 7&8 basketball (boys)",
+      "division": "Division 2",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-league/?id=59%7C835",
+      "rows": [
+        {
+          "position": 1,
+          "team": "Tameside Vikings - Dreki",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 2,
+          "team": "Raiders",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team": "Reddish Romans U13",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 4,
+          "team": "Reddish Eagles Silver",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "points": 4
+        },
+        {
+          "position": 5,
+          "team": "SK Nukes Saints",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 6,
+          "team": "Stockport Storm",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 7,
+          "team": "Glossopdale Hoops Yellow",
+          "played": 2,
+          "won": 0,
+          "lost": 2,
+          "points": 2
+        },
+        {
+          "position": 8,
+          "team": "Team Red Viper",
+          "played": 2,
+          "won": 0,
+          "lost": 2,
+          "points": 2
+        },
+        {
+          "position": 9,
+          "team": "Tameside Vikings - Guardians",
+          "played": 2,
+          "won": 0,
+          "lost": 1,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "60|836",
+      "leagueId": "60",
+      "league": "Saturday school years 7&8 basketball (girls)",
+      "division": "Premier Division",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-league/?id=60%7C836",
+      "rows": [
+        {
+          "position": 1,
+          "team": "Southside Bluejays",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 2,
+          "team": "Tameside Vikings Shield Maidens",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 3,
+          "team": "Southside dream",
+          "played": 2,
+          "won": 1,
+          "lost": 0,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team": "Trafford Titans Y7 Sky",
+          "played": 2,
+          "won": 0,
+          "lost": 0,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "61|837",
+      "leagueId": "61",
+      "league": "Saturday school years 9&10 basketball (girls)",
+      "division": "Premier Division",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-league/?id=61%7C837",
+      "rows": [
+        {
+          "position": 1,
+          "team": "Spirits",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 2,
+          "team": "Devils",
+          "played": 2,
+          "won": 1,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team": "MMG ELITE",
+          "played": 2,
+          "won": 1,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 4,
+          "team": "Blue whale sports 9/10 girls",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 5,
+          "team": "Southside Storm",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 6,
+          "team": "Tameside Vikings Valkyries",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 7,
+          "team": "Southside Panthers",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 8,
+          "team": "Trafford Titans Y 9 Orange",
+          "played": 2,
+          "won": 0,
+          "lost": 2,
+          "points": 2
+        },
+        {
+          "position": 9,
+          "team": "Trafford Titans Y9 Sky",
+          "played": 2,
+          "won": 0,
+          "lost": 1,
+          "points": 1
+        },
+        {
+          "position": 10,
+          "team": "Glossopdale Hoops Teal",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "54|856",
+      "leagueId": "54",
+      "league": "Thursday & Friday school years 9&10 basketball",
+      "division": "Division 3",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-league/?id=54%7C856",
+      "rows": [
+        {
+          "position": 1,
+          "team": "Reddish Rebels",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 2,
+          "team": "Reddish Romans",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 3,
+          "team": "Tameside Vikings Hammers",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team": "Lion Mountain",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 5,
+          "team": "Tameside Vikings Vekso",
+          "played": 2,
+          "won": 1,
+          "lost": 0,
+          "points": 3
+        },
+        {
+          "position": 6,
+          "team": "Black Panthers",
+          "played": 2,
+          "won": 0,
+          "lost": 2,
+          "points": 2
+        }
+      ]
+    },
+    {
+      "id": "54|859",
+      "leagueId": "54",
+      "league": "Thursday & Friday school years 9&10 basketball",
+      "division": "Premier Division",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-league/?id=54%7C859",
+      "rows": [
+        {
+          "position": 1,
+          "team": "Stingrays",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 2,
+          "team": "Globetrotters",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team": "Tameside Vikings - Berserkers",
+          "played": 2,
+          "won": 1,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 4,
+          "team": "Mannchester Bulls 9-10",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 5,
+          "team": "SK Nukes Green",
+          "played": 2,
+          "won": 0,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 6,
+          "team": "Tameside Vikings - Warriors",
+          "played": 2,
+          "won": 0,
+          "lost": 2,
+          "points": 2
+        },
+        {
+          "position": 7,
+          "team": "Trafford Titans Y10",
+          "played": 2,
+          "won": 0,
+          "lost": 2,
+          "points": 2
+        }
+      ]
+    },
+    {
+      "id": "55|853",
+      "leagueId": "55",
+      "league": "Thursday & Friday under 18s basketball basketball",
+      "division": "Division 1",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-league/?id=55%7C853",
+      "rows": [
+        {
+          "position": 1,
+          "team": "Tameside Vikings - Valhalla",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 2,
+          "team": "Teal Dragons",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team": "Southside Golden Lions",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team": "Macc town alex",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 5,
+          "team": "Trafford Titans U18 Orange",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 6,
+          "team": "High Peak Brigands",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 7,
+          "team": "Manchester Mavericks",
+          "played": 2,
+          "won": 0,
+          "lost": 2,
+          "points": 2
+        },
+        {
+          "position": 8,
+          "team": "Tameside Vikings Ballers",
+          "played": 2,
+          "won": 0,
+          "lost": 2,
+          "points": 2
+        }
+      ]
+    },
+    {
+      "id": "55|854",
+      "leagueId": "55",
+      "league": "Thursday & Friday under 18s basketball basketball",
+      "division": "Division 2",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-league/?id=55%7C854",
+      "rows": [
+        {
+          "position": 1,
+          "team": "Stockport Sharks",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 2,
+          "team": "Tornados",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team": "Reddish Reapers White",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team": "Vale Vikings",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 5,
+          "team": "Evo Elite",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 6,
+          "team": "North Manchester Falcons",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "points": 4
+        },
+        {
+          "position": 7,
+          "team": "Tameside Vikings - Ravens",
+          "played": 2,
+          "won": 0,
+          "lost": 2,
+          "points": 2
+        },
+        {
+          "position": 8,
+          "team": "Reddish Eagles",
+          "played": 2,
+          "won": 0,
+          "lost": 2,
+          "points": 2
+        }
+      ]
+    }
+  ]
+}

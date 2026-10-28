@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "scrape": "node scraper/scrape.mjs",
+    "tables": "node scraper/tables.mjs",
     "start": "node scraper/serve.mjs",
     "test": "node --test scraper/lib.test.mjs"
   },
