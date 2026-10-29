@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-29T20:40",
-  "changedAt": "2026-10-29T20:40",
+  "checkedAt": "2026-10-29T22:37",
+  "changedAt": "2026-10-29T22:37",
   "timezone": "Europe/London",
   "defaultHall": "Reddish Vale High School",
   "teams": [
@@ -505,68 +505,6 @@
           "opponent": "Glossopdale Hoops Teal",
           "hall": "Reddish Vale High School",
           "court": "2",
-          "division": "Premier Division",
-          "status": "scheduled",
-          "change": null
-        }
-      ]
-    },
-    {
-      "id": "shield-maidens",
-      "name": "Tameside Vikings Shield Maidens",
-      "fixtures": [
-        {
-          "season": "Winter Season 26",
-          "leagueId": "60",
-          "league": "Saturday school years 7&8 basketball (girls)",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=60",
-          "date": "2026-10-31",
-          "time": "11:50",
-          "opponent": "Southside Bluejays",
-          "hall": "Reddish Vale High School",
-          "court": "1",
-          "division": "Premier Division",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "60",
-          "league": "Saturday school years 7&8 basketball (girls)",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=60",
-          "date": "2026-11-07",
-          "time": "11:50",
-          "opponent": "Trafford Titans Y7 Sky",
-          "hall": "Reddish Vale High School",
-          "court": "1",
-          "division": "Premier Division",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "60",
-          "league": "Saturday school years 7&8 basketball (girls)",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=60",
-          "date": "2026-11-14",
-          "time": "11:00",
-          "opponent": "Southside dream",
-          "hall": "Reddish Vale High School",
-          "court": "1",
-          "division": "Premier Division",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "60",
-          "league": "Saturday school years 7&8 basketball (girls)",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=60",
-          "date": "2026-11-21",
-          "time": "11:50",
-          "opponent": "Southside Bluejays",
-          "hall": "Reddish Vale High School",
-          "court": "1",
           "division": "Premier Division",
           "status": "scheduled",
           "change": null
@@ -1087,6 +1025,72 @@
           "hall": "Reddish Vale High School",
           "court": "2",
           "division": "Division 1",
+          "status": "scheduled",
+          "change": null
+        }
+      ]
+    },
+    {
+      "id": "shield-maidens",
+      "name": "Tameside Vikings Shield Maidens",
+      "fixtures": [
+        {
+          "season": "Winter Season 26",
+          "leagueId": "60",
+          "league": "Saturday school years 7&8 basketball (girls)",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=60",
+          "date": "2026-10-31",
+          "time": "11:50",
+          "opponent": "Southside Bluejays",
+          "hall": "Reddish Vale High School",
+          "court": "1",
+          "division": "Premier Division",
+          "status": "removed",
+          "change": {
+            "type": "removed",
+            "detectedAt": "2026-10-29T22:37",
+            "previous": null
+          }
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "60",
+          "league": "Saturday school years 7&8 basketball (girls)",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=60",
+          "date": "2026-11-07",
+          "time": "11:50",
+          "opponent": "Trafford Titans Y7 Sky",
+          "hall": "Reddish Vale High School",
+          "court": "1",
+          "division": "Premier Division",
+          "status": "scheduled",
+          "change": null
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "60",
+          "league": "Saturday school years 7&8 basketball (girls)",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=60",
+          "date": "2026-11-14",
+          "time": "11:00",
+          "opponent": "Southside dream",
+          "hall": "Reddish Vale High School",
+          "court": "1",
+          "division": "Premier Division",
+          "status": "scheduled",
+          "change": null
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "60",
+          "league": "Saturday school years 7&8 basketball (girls)",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=60",
+          "date": "2026-11-21",
+          "time": "11:50",
+          "opponent": "Southside Bluejays",
+          "hall": "Reddish Vale High School",
+          "court": "1",
+          "division": "Premier Division",
           "status": "scheduled",
           "change": null
         }
