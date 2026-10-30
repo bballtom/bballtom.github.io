@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-28T17:01",
+  "checkedAt": "2026-10-30T19:40",
   "timezone": "Europe/London",
   "season": "Winter Season 26",
   "tables": [
@@ -589,6 +589,22 @@
       "rows": [
         {
           "position": 1,
+          "team": "SK Nukes Green",
+          "played": 3,
+          "won": 1,
+          "lost": 1,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team": "Mannchester Bulls 9-10",
+          "played": 3,
+          "won": 1,
+          "lost": 1,
+          "points": 7
+        },
+        {
+          "position": 3,
           "team": "Stingrays",
           "played": 2,
           "won": 2,
@@ -596,7 +612,7 @@
           "points": 6
         },
         {
-          "position": 2,
+          "position": 4,
           "team": "Globetrotters",
           "played": 2,
           "won": 2,
@@ -604,7 +620,7 @@
           "points": 6
         },
         {
-          "position": 3,
+          "position": 5,
           "team": "Tameside Vikings - Berserkers",
           "played": 2,
           "won": 1,
@@ -612,28 +628,12 @@
           "points": 6
         },
         {
-          "position": 4,
-          "team": "Mannchester Bulls 9-10",
-          "played": 2,
-          "won": 1,
-          "lost": 1,
-          "points": 4
-        },
-        {
-          "position": 5,
-          "team": "SK Nukes Green",
-          "played": 2,
-          "won": 0,
-          "lost": 1,
-          "points": 4
-        },
-        {
           "position": 6,
           "team": "Tameside Vikings - Warriors",
-          "played": 2,
+          "played": 3,
           "won": 0,
-          "lost": 2,
-          "points": 2
+          "lost": 3,
+          "points": 3
         },
         {
           "position": 7,
@@ -654,31 +654,31 @@
       "rows": [
         {
           "position": 1,
-          "team": "Tameside Vikings - Valhalla",
-          "played": 2,
-          "won": 2,
+          "team": "Teal Dragons",
+          "played": 3,
+          "won": 3,
           "lost": 0,
-          "points": 6
+          "points": 9
         },
         {
           "position": 2,
-          "team": "Teal Dragons",
-          "played": 2,
+          "team": "Southside Golden Lions",
+          "played": 3,
           "won": 2,
-          "lost": 0,
-          "points": 6
+          "lost": 1,
+          "points": 7
         },
         {
           "position": 3,
-          "team": "Southside Golden Lions",
-          "played": 2,
-          "won": 1,
+          "team": "Tameside Vikings - Valhalla",
+          "played": 3,
+          "won": 2,
           "lost": 1,
-          "points": 4
+          "points": 7
         },
         {
           "position": 4,
-          "team": "Macc town alex",
+          "team": "Trafford Titans U18 Orange",
           "played": 2,
           "won": 1,
           "lost": 1,
@@ -686,7 +686,7 @@
         },
         {
           "position": 5,
-          "team": "Trafford Titans U18 Orange",
+          "team": "Macc town alex",
           "played": 2,
           "won": 1,
           "lost": 1,
@@ -703,10 +703,10 @@
         {
           "position": 7,
           "team": "Manchester Mavericks",
-          "played": 2,
+          "played": 3,
           "won": 0,
-          "lost": 2,
-          "points": 2
+          "lost": 3,
+          "points": 3
         },
         {
           "position": 8,
@@ -727,6 +727,22 @@
       "rows": [
         {
           "position": 1,
+          "team": "Reddish Reapers White",
+          "played": 3,
+          "won": 2,
+          "lost": 1,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team": "North Manchester Falcons",
+          "played": 3,
+          "won": 2,
+          "lost": 1,
+          "points": 7
+        },
+        {
+          "position": 3,
           "team": "Stockport Sharks",
           "played": 2,
           "won": 2,
@@ -734,28 +750,12 @@
           "points": 6
         },
         {
-          "position": 2,
+          "position": 4,
           "team": "Tornados",
           "played": 2,
           "won": 2,
           "lost": 0,
           "points": 6
-        },
-        {
-          "position": 3,
-          "team": "Reddish Reapers White",
-          "played": 2,
-          "won": 1,
-          "lost": 1,
-          "points": 4
-        },
-        {
-          "position": 4,
-          "team": "Vale Vikings",
-          "played": 2,
-          "won": 1,
-          "lost": 1,
-          "points": 4
         },
         {
           "position": 5,
@@ -767,7 +767,7 @@
         },
         {
           "position": 6,
-          "team": "North Manchester Falcons",
+          "team": "Vale Vikings",
           "played": 2,
           "won": 1,
           "lost": 1,
@@ -776,18 +776,18 @@
         {
           "position": 7,
           "team": "Tameside Vikings - Ravens",
-          "played": 2,
+          "played": 3,
           "won": 0,
-          "lost": 2,
-          "points": 2
+          "lost": 3,
+          "points": 3
         },
         {
           "position": 8,
           "team": "Reddish Eagles",
-          "played": 2,
+          "played": 3,
           "won": 0,
-          "lost": 2,
-          "points": 2
+          "lost": 3,
+          "points": 3
         }
       ]
     }
