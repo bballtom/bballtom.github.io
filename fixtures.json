@@ -1,71 +1,9 @@
 {
-  "checkedAt": "2026-10-30T18:42",
-  "changedAt": "2026-10-30T18:42",
+  "checkedAt": "2026-10-30T22:37",
+  "changedAt": "2026-10-30T22:37",
   "timezone": "Europe/London",
   "defaultHall": "Reddish Vale High School",
   "teams": [
-    {
-      "id": "ballers",
-      "name": "Tameside Vikings Ballers",
-      "fixtures": [
-        {
-          "season": "Winter Season 26",
-          "leagueId": "55",
-          "league": "Thursday & Friday under 18s basketball basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=55",
-          "date": "2026-10-30",
-          "time": "21:00",
-          "opponent": "Macc town alex",
-          "hall": "Reddish Vale High School",
-          "court": "3",
-          "division": "Division 1",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "55",
-          "league": "Thursday & Friday under 18s basketball basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=55",
-          "date": "2026-11-05",
-          "time": "19:30",
-          "opponent": "Southside Golden Lions",
-          "hall": "Reddish Vale High School",
-          "court": "2",
-          "division": "Division 1",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "55",
-          "league": "Thursday & Friday under 18s basketball basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=55",
-          "date": "2026-11-13",
-          "time": "21:00",
-          "opponent": "Manchester Mavericks",
-          "hall": "Reddish Vale High School",
-          "court": "2",
-          "division": "Division 1",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "55",
-          "league": "Thursday & Friday under 18s basketball basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=55",
-          "date": "2026-11-19",
-          "time": "19:30",
-          "opponent": "Tameside Vikings Valhalla",
-          "hall": "Reddish Vale High School",
-          "court": "2",
-          "division": "Division 1",
-          "status": "scheduled",
-          "change": null
-        }
-      ]
-    },
     {
       "id": "hammers",
       "name": "Tameside Vikings Hammers",
@@ -788,6 +726,54 @@
               "time": "11:00"
             }
           }
+        }
+      ]
+    },
+    {
+      "id": "ballers",
+      "name": "Tameside Vikings Ballers",
+      "fixtures": [
+        {
+          "season": "Winter Season 26",
+          "leagueId": "55",
+          "league": "Thursday & Friday under 18s basketball basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=55",
+          "date": "2026-11-05",
+          "time": "19:30",
+          "opponent": "Southside Golden Lions",
+          "hall": "Reddish Vale High School",
+          "court": "2",
+          "division": "Division 1",
+          "status": "scheduled",
+          "change": null
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "55",
+          "league": "Thursday & Friday under 18s basketball basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=55",
+          "date": "2026-11-13",
+          "time": "21:00",
+          "opponent": "Manchester Mavericks",
+          "hall": "Reddish Vale High School",
+          "court": "2",
+          "division": "Division 1",
+          "status": "scheduled",
+          "change": null
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "55",
+          "league": "Thursday & Friday under 18s basketball basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=55",
+          "date": "2026-11-19",
+          "time": "19:30",
+          "opponent": "Tameside Vikings Valhalla",
+          "hall": "Reddish Vale High School",
+          "court": "2",
+          "division": "Division 1",
+          "status": "scheduled",
+          "change": null
         }
       ]
     },
