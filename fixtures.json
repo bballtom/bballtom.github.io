@@ -1,76 +1,9 @@
 {
-  "checkedAt": "2026-10-31T14:31",
-  "changedAt": "2026-10-31T14:31",
+  "checkedAt": "2026-10-31T16:32",
+  "changedAt": "2026-10-31T16:32",
   "timezone": "Europe/London",
   "defaultHall": "Reddish Vale High School",
   "teams": [
-    {
-      "id": "dreki",
-      "name": "Tameside Vikings Dreki",
-      "fixtures": [
-        {
-          "season": "Winter Season 26",
-          "leagueId": "59",
-          "league": "Saturday school years 7&8 basketball (boys)",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
-          "date": "2026-10-31",
-          "time": "16:00",
-          "opponent": "Reddish Romans U13",
-          "hall": "Reddish Vale High School",
-          "court": "2",
-          "division": "Division 2",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "59",
-          "league": "Saturday school years 7&8 basketball (boys)",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
-          "date": "2026-11-07",
-          "time": "11:50",
-          "opponent": "Glossopdale Hoops Yellow",
-          "hall": "Hollinwood",
-          "court": "",
-          "division": "Division 2",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "59",
-          "league": "Saturday school years 7&8 basketball (boys)",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
-          "date": "2026-11-14",
-          "time": "11:50",
-          "opponent": "Team Red Viper",
-          "hall": "Hollinwood",
-          "court": "",
-          "division": "Division 2",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "59",
-          "league": "Saturday school years 7&8 basketball (boys)",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
-          "date": "2026-11-21",
-          "time": "",
-          "opponent": "",
-          "hall": "",
-          "court": "",
-          "division": "",
-          "bye": true,
-          "status": "bye",
-          "change": {
-            "type": "new",
-            "detectedAt": "2026-10-25T09:27",
-            "previous": null
-          }
-        }
-      ]
-    },
     {
       "id": "guardians",
       "name": "Tameside Vikings Guardians",
@@ -589,6 +522,59 @@
           "division": "Division 3",
           "status": "scheduled",
           "change": null
+        }
+      ]
+    },
+    {
+      "id": "dreki",
+      "name": "Tameside Vikings Dreki",
+      "fixtures": [
+        {
+          "season": "Winter Season 26",
+          "leagueId": "59",
+          "league": "Saturday school years 7&8 basketball (boys)",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
+          "date": "2026-11-07",
+          "time": "11:50",
+          "opponent": "Glossopdale Hoops Yellow",
+          "hall": "Hollinwood",
+          "court": "",
+          "division": "Division 2",
+          "status": "scheduled",
+          "change": null
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "59",
+          "league": "Saturday school years 7&8 basketball (boys)",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
+          "date": "2026-11-14",
+          "time": "11:50",
+          "opponent": "Team Red Viper",
+          "hall": "Hollinwood",
+          "court": "",
+          "division": "Division 2",
+          "status": "scheduled",
+          "change": null
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "59",
+          "league": "Saturday school years 7&8 basketball (boys)",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
+          "date": "2026-11-21",
+          "time": "",
+          "opponent": "",
+          "hall": "",
+          "court": "",
+          "division": "",
+          "bye": true,
+          "status": "bye",
+          "change": {
+            "type": "new",
+            "detectedAt": "2026-10-25T09:27",
+            "previous": null
+          }
         }
       ]
     },
