@@ -1,82 +1,9 @@
 {
-  "checkedAt": "2026-10-31T16:32",
-  "changedAt": "2026-10-31T16:32",
+  "checkedAt": "2026-10-31T18:37",
+  "changedAt": "2026-10-31T18:37",
   "timezone": "Europe/London",
   "defaultHall": "Reddish Vale High School",
   "teams": [
-    {
-      "id": "guardians",
-      "name": "Tameside Vikings Guardians",
-      "fixtures": [
-        {
-          "season": "Winter Season 26",
-          "leagueId": "59",
-          "league": "Saturday school years 7&8 basketball (boys)",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
-          "date": "2026-10-31",
-          "time": "16:50",
-          "opponent": "Raiders",
-          "hall": "Reddish Vale High School",
-          "court": "2",
-          "division": "Division 2",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "59",
-          "league": "Saturday school years 7&8 basketball (boys)",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
-          "date": "2026-11-07",
-          "time": "13:30",
-          "opponent": "Reddish Eagles Silver",
-          "hall": "Hollinwood",
-          "court": "",
-          "division": "Division 2",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "59",
-          "league": "Saturday school years 7&8 basketball (boys)",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
-          "date": "2026-11-14",
-          "time": "",
-          "opponent": "",
-          "hall": "",
-          "court": "",
-          "division": "",
-          "bye": true,
-          "status": "bye",
-          "change": {
-            "type": "new",
-            "detectedAt": "2026-10-25T09:27",
-            "previous": null
-          }
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "59",
-          "league": "Saturday school years 7&8 basketball (boys)",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
-          "date": "2026-11-21",
-          "time": "11:50",
-          "opponent": "Stockport Storm",
-          "hall": "Hollinwood",
-          "court": "",
-          "division": "Division 2",
-          "status": "scheduled",
-          "change": {
-            "type": "updated",
-            "detectedAt": "2026-10-26T20:30",
-            "previous": {
-              "time": "11:00"
-            }
-          }
-        }
-      ]
-    },
     {
       "id": "ballers",
       "name": "Tameside Vikings Ballers",
@@ -776,6 +703,65 @@
             "detectedAt": "2026-10-26T20:30",
             "previous": {
               "time": "10:10"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "guardians",
+      "name": "Tameside Vikings Guardians",
+      "fixtures": [
+        {
+          "season": "Winter Season 26",
+          "leagueId": "59",
+          "league": "Saturday school years 7&8 basketball (boys)",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
+          "date": "2026-11-07",
+          "time": "13:30",
+          "opponent": "Reddish Eagles Silver",
+          "hall": "Hollinwood",
+          "court": "",
+          "division": "Division 2",
+          "status": "scheduled",
+          "change": null
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "59",
+          "league": "Saturday school years 7&8 basketball (boys)",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
+          "date": "2026-11-14",
+          "time": "",
+          "opponent": "",
+          "hall": "",
+          "court": "",
+          "division": "",
+          "bye": true,
+          "status": "bye",
+          "change": {
+            "type": "new",
+            "detectedAt": "2026-10-25T09:27",
+            "previous": null
+          }
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "59",
+          "league": "Saturday school years 7&8 basketball (boys)",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
+          "date": "2026-11-21",
+          "time": "11:50",
+          "opponent": "Stockport Storm",
+          "hall": "Hollinwood",
+          "court": "",
+          "division": "Division 2",
+          "status": "scheduled",
+          "change": {
+            "type": "updated",
+            "detectedAt": "2026-10-26T20:30",
+            "previous": {
+              "time": "11:00"
             }
           }
         }
