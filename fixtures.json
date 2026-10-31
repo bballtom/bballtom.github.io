@@ -1,133 +1,9 @@
 {
-  "checkedAt": "2026-10-30T22:37",
-  "changedAt": "2026-10-30T22:37",
+  "checkedAt": "2026-10-31T10:32",
+  "changedAt": "2026-10-31T10:32",
   "timezone": "Europe/London",
   "defaultHall": "Reddish Vale High School",
   "teams": [
-    {
-      "id": "hammers",
-      "name": "Tameside Vikings Hammers",
-      "fixtures": [
-        {
-          "season": "Winter Season 26",
-          "leagueId": "54",
-          "league": "Thursday & Friday school years 9&10 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
-          "date": "2026-10-31",
-          "time": "10:10",
-          "opponent": "Tameside Vikings Vekso",
-          "hall": "Hollinwood",
-          "court": "",
-          "division": "Division 3",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "54",
-          "league": "Thursday & Friday school years 9&10 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
-          "date": "2026-11-07",
-          "time": "10:10",
-          "opponent": "Lion Mountain",
-          "hall": "Hollinwood",
-          "court": "",
-          "division": "Division 3",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "54",
-          "league": "Thursday & Friday school years 9&10 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
-          "date": "2026-11-14",
-          "time": "09:00",
-          "opponent": "Reddish Romans",
-          "hall": "Manchester College",
-          "court": "",
-          "division": "Division 3",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "54",
-          "league": "Thursday & Friday school years 9&10 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
-          "date": "2026-11-21",
-          "time": "10:40",
-          "opponent": "Reddish Rebels",
-          "hall": "Manchester College",
-          "court": "",
-          "division": "Division 3",
-          "status": "scheduled",
-          "change": null
-        }
-      ]
-    },
-    {
-      "id": "vekso",
-      "name": "Tameside Vikings Vekso",
-      "fixtures": [
-        {
-          "season": "Winter Season 26",
-          "leagueId": "54",
-          "league": "Thursday & Friday school years 9&10 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
-          "date": "2026-10-31",
-          "time": "10:10",
-          "opponent": "Tameside Vikings Hammers",
-          "hall": "Hollinwood",
-          "court": "",
-          "division": "Division 3",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "54",
-          "league": "Thursday & Friday school years 9&10 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
-          "date": "2026-11-07",
-          "time": "11:00",
-          "opponent": "Black Panthers",
-          "hall": "Hollinwood",
-          "court": "",
-          "division": "Division 3",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "54",
-          "league": "Thursday & Friday school years 9&10 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
-          "date": "2026-11-14",
-          "time": "09:50",
-          "opponent": "Reddish Rebels",
-          "hall": "Manchester College",
-          "court": "",
-          "division": "Division 3",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "54",
-          "league": "Thursday & Friday school years 9&10 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
-          "date": "2026-11-21",
-          "time": "09:50",
-          "opponent": "Lion Mountain",
-          "hall": "Manchester College",
-          "court": "",
-          "division": "Division 3",
-          "status": "scheduled",
-          "change": null
-        }
-      ]
-    },
     {
       "id": "storm-maidens",
       "name": "Tameside Vikings Storm Maidens",
@@ -322,73 +198,6 @@
             "detectedAt": "2026-10-25T09:27",
             "previous": null
           }
-        }
-      ]
-    },
-    {
-      "id": "iron-maidens",
-      "name": "Tameside Vikings Iron Maidens",
-      "fixtures": [
-        {
-          "season": "Winter Season 26",
-          "leagueId": "58",
-          "league": "Saturday school years 5&6 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=58",
-          "date": "2026-10-31",
-          "time": "13:30",
-          "opponent": "Heaton Hornets",
-          "hall": "Hollinwood",
-          "court": "",
-          "division": "Division 3",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "58",
-          "league": "Saturday school years 5&6 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=58",
-          "date": "2026-11-07",
-          "time": "",
-          "opponent": "",
-          "hall": "",
-          "court": "",
-          "division": "",
-          "bye": true,
-          "status": "bye",
-          "change": {
-            "type": "new",
-            "detectedAt": "2026-10-25T09:27",
-            "previous": null
-          }
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "58",
-          "league": "Saturday school years 5&6 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=58",
-          "date": "2026-11-14",
-          "time": "13:30",
-          "opponent": "Phoenix Flames",
-          "hall": "Oldham",
-          "court": "2",
-          "division": "Division 3",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "58",
-          "league": "Saturday school years 5&6 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=58",
-          "date": "2026-11-21",
-          "time": "12:20",
-          "opponent": "Cheadle Cougars",
-          "hall": "St Anne's",
-          "court": "",
-          "division": "Division 3",
-          "status": "scheduled",
-          "change": null
         }
       ]
     },
@@ -969,6 +778,173 @@
           "hall": "Reddish Vale High School",
           "court": "2",
           "division": "Division 1",
+          "status": "scheduled",
+          "change": null
+        }
+      ]
+    },
+    {
+      "id": "iron-maidens",
+      "name": "Tameside Vikings Iron Maidens",
+      "fixtures": [
+        {
+          "season": "Winter Season 26",
+          "leagueId": "58",
+          "league": "Saturday school years 5&6 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=58",
+          "date": "2026-10-31",
+          "time": "13:30",
+          "opponent": "Heaton Hornets",
+          "hall": "Hollinwood",
+          "court": "",
+          "division": "Division 3",
+          "status": "removed",
+          "change": {
+            "type": "removed",
+            "detectedAt": "2026-10-31T10:32",
+            "previous": null
+          }
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "58",
+          "league": "Saturday school years 5&6 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=58",
+          "date": "2026-11-07",
+          "time": "",
+          "opponent": "",
+          "hall": "",
+          "court": "",
+          "division": "",
+          "bye": true,
+          "status": "bye",
+          "change": {
+            "type": "new",
+            "detectedAt": "2026-10-25T09:27",
+            "previous": null
+          }
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "58",
+          "league": "Saturday school years 5&6 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=58",
+          "date": "2026-11-14",
+          "time": "13:30",
+          "opponent": "Phoenix Flames",
+          "hall": "Oldham",
+          "court": "2",
+          "division": "Division 3",
+          "status": "scheduled",
+          "change": null
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "58",
+          "league": "Saturday school years 5&6 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=58",
+          "date": "2026-11-21",
+          "time": "12:20",
+          "opponent": "Cheadle Cougars",
+          "hall": "St Anne's",
+          "court": "",
+          "division": "Division 3",
+          "status": "scheduled",
+          "change": null
+        }
+      ]
+    },
+    {
+      "id": "hammers",
+      "name": "Tameside Vikings Hammers",
+      "fixtures": [
+        {
+          "season": "Winter Season 26",
+          "leagueId": "54",
+          "league": "Thursday & Friday school years 9&10 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
+          "date": "2026-11-07",
+          "time": "10:10",
+          "opponent": "Lion Mountain",
+          "hall": "Hollinwood",
+          "court": "",
+          "division": "Division 3",
+          "status": "scheduled",
+          "change": null
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "54",
+          "league": "Thursday & Friday school years 9&10 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
+          "date": "2026-11-14",
+          "time": "09:00",
+          "opponent": "Reddish Romans",
+          "hall": "Manchester College",
+          "court": "",
+          "division": "Division 3",
+          "status": "scheduled",
+          "change": null
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "54",
+          "league": "Thursday & Friday school years 9&10 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
+          "date": "2026-11-21",
+          "time": "10:40",
+          "opponent": "Reddish Rebels",
+          "hall": "Manchester College",
+          "court": "",
+          "division": "Division 3",
+          "status": "scheduled",
+          "change": null
+        }
+      ]
+    },
+    {
+      "id": "vekso",
+      "name": "Tameside Vikings Vekso",
+      "fixtures": [
+        {
+          "season": "Winter Season 26",
+          "leagueId": "54",
+          "league": "Thursday & Friday school years 9&10 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
+          "date": "2026-11-07",
+          "time": "11:00",
+          "opponent": "Black Panthers",
+          "hall": "Hollinwood",
+          "court": "",
+          "division": "Division 3",
+          "status": "scheduled",
+          "change": null
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "54",
+          "league": "Thursday & Friday school years 9&10 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
+          "date": "2026-11-14",
+          "time": "09:50",
+          "opponent": "Reddish Rebels",
+          "hall": "Manchester College",
+          "court": "",
+          "division": "Division 3",
+          "status": "scheduled",
+          "change": null
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "54",
+          "league": "Thursday & Friday school years 9&10 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
+          "date": "2026-11-21",
+          "time": "09:50",
+          "opponent": "Lion Mountain",
+          "hall": "Manchester College",
+          "court": "",
+          "division": "Division 3",
           "status": "scheduled",
           "change": null
         }
