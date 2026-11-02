@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { ageGroup, dateLabel, formatPlace, formatTableWhatsApp, formatWhatsApp, meetingsAgainst } from '../format.mjs'
+import { ageGroup, dateLabel, formatPlace, formatTableWhatsApp, formatWhatsApp, meetingsAgainst, recentResults } from '../format.mjs'
 import {
   diffFixtures,
   displayTeam,
@@ -392,4 +392,12 @@ test('previous meetings against the next opponent stay in date order', () => {
     outcome: `g${month}`,
   }))
   assert.deepEqual(meetingsAgainst(longer, 'slayers', 'SK Nukes Storm').map((row) => row.outcome), ['g2', 'g3', 'g4', 'g5', 'g6'])
+  const anyone = [1, 2, 3, 4, 5, 6].map((month) => ({
+    teamId: 'slayers',
+    opponent: month % 2 ? 'Reddish' : 'SK Nukes Storm',
+    date: `2026-${String(month).padStart(2, '0')}-02`,
+    time: '11:00',
+    outcome: `a${month}`,
+  }))
+  assert.deepEqual(recentResults(anyone, 'slayers').map((row) => row.outcome), ['a2', 'a3', 'a4', 'a5', 'a6'])
 })

@@ -39,6 +39,14 @@ function plainName(name) {
   return String(name ?? '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
 }
 
+export function recentResults(results, teamId, limit = 5) {
+  if (!teamId) return []
+  const rows = (results ?? [])
+    .filter((row) => row.teamId === teamId)
+    .sort((a, b) => a.date.localeCompare(b.date) || String(a.time ?? '').localeCompare(String(b.time ?? '')))
+  return limit > 0 ? rows.slice(-limit) : rows
+}
+
 export function meetingsAgainst(results, teamId, opponent, limit = 5) {
   const wanted = plainName(opponent)
   if (!teamId || !wanted) return []

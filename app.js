@@ -1,4 +1,4 @@
-import { ageGroup, changeSummary, dateLabel, formatPlace, formatTableWhatsApp, formatWhatsApp, meetingsAgainst } from './format.mjs'
+import { ageGroup, changeSummary, dateLabel, formatPlace, formatTableWhatsApp, formatWhatsApp, meetingsAgainst, recentResults } from './format.mjs'
 
 const app = document.querySelector('#app')
 const checked = document.querySelector('#checked')
@@ -166,19 +166,31 @@ function tabBar(team, tab) {
   </nav>`
 }
 
-function recordHtml(teamId, opponent) {
-  const meetings = meetingsAgainst(window.__results?.results, teamId, opponent)
-  if (!meetings.length) return ''
+function pillsHtml(rows) {
   const words = { win: 'Won', loss: 'Lost', draw: 'Drew' }
   const letters = { win: 'W', loss: 'L', draw: 'D' }
-  const spoken = meetings.map((row) => words[row.outcome] ?? 'Played').join(', ')
-  return `<p class="record" aria-label="Previous results: ${spoken}">
-    ${meetings.map((row) => {
-      const word = words[row.outcome] ?? 'Played'
-      const letter = letters[row.outcome] ?? '?'
-      return `<span class="blob ${escapeHtml(row.outcome)}" title="${word} ${row.teamScore}–${row.opponentScore}">${letter}</span>`
-    }).join('')}
+  return rows.map((row) => {
+    const word = words[row.outcome] ?? 'Played'
+    const letter = letters[row.outcome] ?? '?'
+    return `<span class="blob ${escapeHtml(row.outcome)}" title="${word} ${row.teamScore}–${row.opponentScore}">${letter}</span>`
+  }).join('')
+}
+
+function recordRow(label, rows) {
+  if (!rows.length) return ''
+  const words = { win: 'Won', loss: 'Lost', draw: 'Drew' }
+  const spoken = rows.map((row) => words[row.outcome] ?? 'Played').join(', ')
+  return `<p class="record" aria-label="${escapeHtml(label)}: ${spoken}">
+    <span class="record-label">${escapeHtml(label)}</span>
+    ${pillsHtml(rows)}
   </p>`
+}
+
+function recordHtml(teamId, opponent) {
+  const recent = recordRow('Last 5 games', recentResults(window.__results?.results, teamId))
+  const against = recordRow('Next opponent', meetingsAgainst(window.__results?.results, teamId, opponent))
+  if (!recent && !against) return ''
+  return `<div class="records">${recent}${against}</div>`
 }
 
 function resultTally(rows) {

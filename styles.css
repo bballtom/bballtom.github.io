@@ -270,24 +270,38 @@ main {
 
 .bye-mark { margin: 4px 0 0; color: var(--cancel); font-weight: 800; }
 
+.records {
+  display: grid;
+  gap: 6px;
+  margin: 8px 0 0;
+}
+
 .record {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 6px;
-  margin: 8px 0 0;
+  margin: 0;
+}
+
+.record-label {
+  flex: none;
+  min-width: 7.2rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
 }
 
 .blob {
   display: inline-grid;
   place-items: center;
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   flex: none;
   border-radius: 50%;
   color: white;
   font-family: Bahnschrift, "Arial Narrow", "Segoe UI", sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.62rem;
   font-weight: 700;
 }
 
