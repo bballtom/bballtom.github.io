@@ -16,10 +16,12 @@
   "sources": [
     {
       "name": "Stockport winter",
+      "season": "winter",
       "url": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/"
     },
     {
       "name": "Stockport summer",
+      "season": "summer",
       "url": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures-summer/"
     }
   ]

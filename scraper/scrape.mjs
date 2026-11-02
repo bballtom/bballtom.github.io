@@ -7,6 +7,7 @@ import {
   londonStamp,
   readFixtures,
   readLeagues,
+  rowsForActiveSeasons,
 } from './lib.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
@@ -49,13 +50,16 @@ async function main() {
   }
 
   const scraped = []
+  const activeKinds = []
   for (const source of sources.sources) {
     console.log(`Reading ${source.name}`)
     const indexHtml = await fetchHtml(source.url)
     const leagues = readLeagues(indexHtml)
     if (leagues.length === 0) {
-      throw new Error(`No leagues found at ${source.url}. Left the saved fixtures untouched.`)
+      console.log(`No leagues at ${source.name}. Skipping it and checking the other season.`)
+      continue
     }
+    if (source.season) activeKinds.push(source.season)
     for (const league of leagues) {
       await sleep(DELAY_MS)
       const sourceUrl = new URL(`?id=${league.id}`, source.url).href
@@ -72,8 +76,13 @@ async function main() {
     }
   }
 
+  if (activeKinds.length === 0) {
+    console.log('No leagues on either season. Left the saved fixtures untouched.')
+    return
+  }
+
   const nowStamp = londonStamp()
-  const previousRows = flatten(previous)
+  const previousRows = rowsForActiveSeasons(flatten(previous), activeKinds)
   const merged = diffFixtures(previousRows, scraped, nowStamp)
   const teams = groupTeams(merged)
   const next = {

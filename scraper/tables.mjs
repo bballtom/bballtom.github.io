@@ -45,59 +45,67 @@ async function main() {
     if (error.code !== 'ENOENT') throw error
   }
 
-  const season = presentSeason(fixtures)
-  if (!season) {
-    console.log('No current fixtures, so no league table to show.')
-    return
-  }
-  const source = (sources.tables ?? []).find((item) => item.season === season.kind)
-  if (!source) throw new Error(`No table source for ${season.label}`)
-
-  console.log(`Reading ${source.name} tables`)
-  const indexHtml = await fetchHtml(source.url)
-  const divisions = readTableDivisions(indexHtml)
-  if (divisions.length === 0) {
-    throw new Error(`No divisions found at ${source.url}. Left the saved tables untouched.`)
+  const preferred = presentSeason(fixtures)
+  const order = []
+  if (preferred) order.push(preferred.kind)
+  for (const item of sources.tables ?? []) {
+    if (item.season && !order.includes(item.season)) order.push(item.season)
   }
 
   const teamRe = new RegExp(sources.teamPattern, 'i')
-  const tables = []
-  for (const division of divisions) {
-    await sleep(DELAY_MS)
-    const sourceUrl = new URL(source.url)
-    sourceUrl.searchParams.set('id', division.id)
-    const html = await fetchHtml(sourceUrl)
-    const rows = readStandings(html)
-    if (!rows.some((row) => teamRe.test(row.team))) continue
-    console.log(`  ${division.label}: ${rows.length}`)
-    tables.push({
-      id: division.id,
-      leagueId: division.leagueId,
-      league: division.league,
-      division: division.division,
-      sourceUrl: sourceUrl.href,
-      rows,
-    })
-  }
+  for (const kind of order) {
+    const source = (sources.tables ?? []).find((item) => item.season === kind)
+    if (!source) continue
+    console.log(`Reading ${source.name} tables`)
+    const indexHtml = await fetchHtml(source.url)
+    const divisions = readTableDivisions(indexHtml)
+    if (divisions.length === 0) {
+      console.log(`No leagues at ${source.name}. Skipping it and checking the other season.`)
+      continue
+    }
 
-  if (tables.length === 0) {
-    throw new Error(`No Vikings tables found for ${season.label}. Left the saved tables untouched.`)
-  }
+    const tables = []
+    for (const division of divisions) {
+      await sleep(DELAY_MS)
+      const sourceUrl = new URL(source.url)
+      sourceUrl.searchParams.set('id', division.id)
+      const html = await fetchHtml(sourceUrl)
+      const rows = readStandings(html)
+      if (!rows.some((row) => teamRe.test(row.team))) continue
+      console.log(`  ${division.label}: ${rows.length}`)
+      tables.push({
+        id: division.id,
+        leagueId: division.leagueId,
+        league: division.league,
+        division: division.division,
+        sourceUrl: sourceUrl.href,
+        rows,
+      })
+    }
 
-  const next = {
-    checkedAt: londonStamp(),
-    timezone: 'Europe/London',
-    season: season.label,
-    tables,
-  }
-  const snapshot = (data) => JSON.stringify(data.tables ?? [])
-  if (previous.season === next.season && snapshot(previous) === snapshot(next)) {
-    console.log('No table changes.')
+    if (tables.length === 0) {
+      console.log(`No Vikings tables at ${source.name}. Checking the other season.`)
+      continue
+    }
+
+    const next = {
+      checkedAt: londonStamp(),
+      timezone: 'Europe/London',
+      season: preferred?.kind === kind ? preferred.label : source.name,
+      tables,
+    }
+    const snapshot = (data) => JSON.stringify(data.tables ?? [])
+    if (previous.season === next.season && snapshot(previous) === snapshot(next)) {
+      console.log('No table changes.')
+      return
+    }
+
+    await writeFile(tablesPath, `${JSON.stringify(next, null, 2)}\n`)
+    console.log(`Saved ${tables.length} tables for ${next.season}.`)
     return
   }
 
-  await writeFile(tablesPath, `${JSON.stringify(next, null, 2)}\n`)
-  console.log(`Saved ${tables.length} tables for ${season.label}.`)
+  console.log('No leagues on either season. Left the saved tables untouched.')
 }
 
 main().catch((error) => {

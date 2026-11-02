@@ -9,6 +9,7 @@ import {
   parseCourt,
   parseSeason,
   presentSeason,
+  rowsForActiveSeasons,
   readFixtures,
   readStandings,
   readTableDivisions,
@@ -114,6 +115,19 @@ test('a bye week is kept for Vikings and ignored for other clubs', () => {
   const slayersBye = byes[0]
   assert.equal(diffFixtures([slayersBye], [slayersBye], '2026-11-14T18:00').length, 1)
   assert.equal(diffFixtures([slayersBye], [slayersBye], '2026-11-15T09:00').length, 0)
+})
+
+test('a closed season is dropped instead of marked cancelled', () => {
+  const rows = [
+    { season: 'Winter Season 26', team: 'Slayers' },
+    { season: 'Summer Season 27', team: 'Slayers' },
+    { season: '', team: 'Slayers' },
+  ]
+  assert.deepEqual(rowsForActiveSeasons(rows, ['summer']).map((row) => row.season), [
+    'Summer Season 27',
+    '',
+  ])
+  assert.equal(rowsForActiveSeasons(rows, ['winter', 'summer']).length, 3)
 })
 
 test('the current table is summer once summer fixtures exist, otherwise winter', () => {

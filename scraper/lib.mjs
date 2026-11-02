@@ -117,6 +117,21 @@ function opponentKey(fixture) {
   return [fixture.season, String(fixture.leagueId), norm(fixture.team), fixture.date].join('|')
 }
 
+export function seasonKind(label) {
+  const text = String(label ?? '')
+  if (/summer/i.test(text)) return 'summer'
+  if (/winter/i.test(text)) return 'winter'
+  return ''
+}
+
+export function rowsForActiveSeasons(rows, activeKinds) {
+  const active = new Set(activeKinds)
+  return rows.filter((row) => {
+    const kind = seasonKind(row.season)
+    return !kind || active.has(kind)
+  })
+}
+
 export function presentSeason(data) {
   const labels = new Set()
   for (const team of data?.teams ?? []) {
