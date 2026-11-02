@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-31T18:37",
-  "changedAt": "2026-10-31T18:37",
+  "checkedAt": "2026-11-02T08:59",
+  "changedAt": "2026-11-02T08:59",
   "timezone": "Europe/London",
   "defaultHall": "Reddish Vale High School",
   "teams": [
@@ -64,11 +64,18 @@
           "date": "2026-11-05",
           "time": "19:30",
           "opponent": "Evo Elite",
-          "hall": "Reddish Vale High School",
-          "court": "3",
+          "hall": "Cancelled",
+          "court": "",
           "division": "Division 2",
           "status": "scheduled",
-          "change": null
+          "change": {
+            "type": "updated",
+            "detectedAt": "2026-11-02T08:59",
+            "previous": {
+              "hall": "Reddish Vale High School",
+              "court": "3"
+            }
+          }
         },
         {
           "season": "Winter Season 26",
