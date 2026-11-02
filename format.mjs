@@ -35,6 +35,19 @@ export function ageGroup(league) {
   }
 }
 
+function plainName(name) {
+  return String(name ?? '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
+}
+
+export function meetingsAgainst(results, teamId, opponent, limit = 5) {
+  const wanted = plainName(opponent)
+  if (!teamId || !wanted) return []
+  const rows = (results ?? [])
+    .filter((row) => row.teamId === teamId && plainName(row.opponent) === wanted)
+    .sort((a, b) => a.date.localeCompare(b.date) || String(a.time ?? '').localeCompare(String(b.time ?? '')))
+  return limit > 0 ? rows.slice(-limit) : rows
+}
+
 export function dateLabel(iso, nowStamp = '') {
   const [year, month, day] = iso.split('-').map(Number)
   const dt = new Date(Date.UTC(year, month - 1, day, 12))
@@ -101,10 +114,6 @@ export function formatWhatsApp(_teamName, fixtures, nowStamp = '') {
     lines.push(...body.map((line) => (struck ? `~${line}~` : line)))
     return lines.join('\n')
   }).join('\n\n')
-}
-
-function plainName(value) {
-  return String(value ?? '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
 }
 
 export function formatTableWhatsApp(teamName, table) {

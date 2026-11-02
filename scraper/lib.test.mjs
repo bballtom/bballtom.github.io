@@ -1,16 +1,19 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { ageGroup, dateLabel, formatPlace, formatTableWhatsApp, formatWhatsApp } from '../format.mjs'
+import { ageGroup, dateLabel, formatPlace, formatTableWhatsApp, formatWhatsApp, meetingsAgainst } from '../format.mjs'
 import {
   diffFixtures,
   displayTeam,
   inferIsoDate,
   isPast,
+  mergeResults,
   parseCourt,
   parseSeason,
   presentSeason,
   rowsForActiveSeasons,
   readFixtures,
+  readResultLeagues,
+  readResults,
   readStandings,
   readTableDivisions,
   teamSlug,
@@ -309,4 +312,84 @@ test('WhatsApp text uses icons, a short hall, and leaves out new badges', () => 
   assert.equal(formatPlace('Hollinwood', ''), 'Hollinwood')
   assert.equal(formatPlace('Oldham', '2'), 'Oldham, Court 2')
   assert.equal(dateLabel('2027-01-09', '2026-10-19T20:00'), 'Sat 9 Jan 2027')
+})
+
+const resultsHtml = `
+  <select id="leagueDropdown">
+    <option value="">Select a league</option>
+    <option value="57" data-season="9">Stockport - Saturday school years 3&amp;4 basketball - Winter Season 26</option>
+  </select>
+  <table>
+    <tr><th>Time</th><th>Teams</th><th>Divison</th><th>Court</th></tr>
+    <tr><td>Saturday 17th Oct</td><td></td><td></td><td></td></tr>
+    <tr><td>13:30</td><td>Reddish Monkeys (10) vs (5) Tameside Vikings Slayers</td><td>Division 1</td><td>Court 3</td></tr>
+    <tr><td>Bye</td><td>Tameside Vikings Slayers</td><td></td><td></td></tr>
+    <tr><td>Saturday 24th Oct</td><td></td><td></td><td></td></tr>
+    <tr><td>11:00</td><td>Tameside Vikings Slayers (14) vs (8) Tameside Vikings Storm Maidens</td><td>Division 1</td><td>Court 3</td></tr>
+    <tr><td>12:40</td><td>Other Club (9) vs (9) Somebody Else</td><td>Division 1</td><td>Court 3</td></tr>
+  </table>`
+
+test('a played game is kept for each Vikings side, and a bye is ignored', () => {
+  const leagues = readResultLeagues(resultsHtml)
+  assert.deepEqual(leagues, [{
+    id: '57',
+    label: 'Stockport - Saturday school years 3&4 basketball - Winter Season 26',
+    seasonId: '9',
+  }])
+  const rows = readResults(resultsHtml, {
+    leagueId: '57',
+    leagueLabel: leagues[0].label,
+    sourceUrl: 'https://example.test/results?id=57',
+    teamPattern: 'tameside\\s*vikings',
+  })
+  assert.deepEqual(rows.map((row) => [row.date, row.teamId, row.opponent, row.teamScore, row.opponentScore, row.outcome, row.league]), [
+    ['2026-10-17', 'slayers', 'Reddish Monkeys', 5, 10, 'loss', 'Saturday school years 3&4 basketball'],
+    ['2026-10-24', 'slayers', 'Tameside Vikings Storm Maidens', 14, 8, 'win', 'Saturday school years 3&4 basketball'],
+    ['2026-10-24', 'storm-maidens', 'Tameside Vikings Slayers', 8, 14, 'loss', 'Saturday school years 3&4 basketball'],
+  ])
+})
+
+test('results we already know are kept when they leave the page', () => {
+  const kept = {
+    season: 'Winter Season 25',
+    leagueId: '57',
+    date: '2025-11-01',
+    time: '10:00',
+    team: 'Tameside Vikings Slayers',
+    opponent: 'Old Side',
+    teamScore: 20,
+    opponentScore: 10,
+    outcome: 'win',
+    division: 'Division 1',
+    league: 'Saturday school years 3&4 basketball',
+  }
+  const oldScore = { ...kept, season: 'Winter Season 26', date: '2026-10-17', time: '13:30', opponent: 'Reddish Monkeys', teamScore: 1, opponentScore: 2, outcome: 'loss' }
+  const corrected = { ...oldScore, teamScore: 5, opponentScore: 10 }
+  const first = mergeResults([kept, oldScore], [corrected])
+  assert.equal(first.changed, true)
+  assert.equal(first.results.length, 2)
+  assert.equal(first.results.find((row) => row.season === 'Winter Season 25').teamScore, 20)
+  assert.equal(first.results.find((row) => row.opponent === 'Reddish Monkeys').teamScore, 5)
+  const again = mergeResults(first.results, [corrected])
+  assert.equal(again.changed, false)
+  assert.equal(again.results.length, 2)
+})
+
+test('previous meetings against the next opponent stay in date order', () => {
+  const rows = [
+    { teamId: 'slayers', opponent: 'SK Nukes Storm', date: '2026-10-24', time: '11:00', outcome: 'loss' },
+    { teamId: 'slayers', opponent: 'Reddish Monkeys', date: '2026-10-17', time: '13:30', outcome: 'win' },
+    { teamId: 'storm-maidens', opponent: 'SK Nukes Storm', date: '2026-10-10', time: '10:00', outcome: 'win' },
+    { teamId: 'slayers', opponent: 'SK Nukes Storm', date: '2026-10-10', time: '12:40', outcome: 'win' },
+  ]
+  assert.deepEqual(meetingsAgainst(rows, 'slayers', 'SK Nukes Storm').map((row) => row.outcome), ['win', 'loss'])
+  assert.deepEqual(meetingsAgainst(rows, 'slayers', ''), [])
+  const longer = [1, 2, 3, 4, 5, 6].map((month) => ({
+    teamId: 'slayers',
+    opponent: 'SK Nukes Storm',
+    date: `2026-${String(month).padStart(2, '0')}-01`,
+    time: '10:00',
+    outcome: `g${month}`,
+  }))
+  assert.deepEqual(meetingsAgainst(longer, 'slayers', 'SK Nukes Storm').map((row) => row.outcome), ['g2', 'g3', 'g4', 'g5', 'g6'])
 })

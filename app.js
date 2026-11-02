@@ -1,7 +1,26 @@
-import { ageGroup, changeSummary, dateLabel, formatPlace, formatTableWhatsApp, formatWhatsApp } from './format.mjs'
+import { ageGroup, changeSummary, dateLabel, formatPlace, formatTableWhatsApp, formatWhatsApp, meetingsAgainst } from './format.mjs'
 
 const app = document.querySelector('#app')
 const checked = document.querySelector('#checked')
+const adminSwitch = document.querySelector('#admin')
+const ADMIN_KEY = 'vikings-team-admin'
+
+function teamAdmin() {
+  try {
+    return localStorage.getItem(ADMIN_KEY) === '1'
+  } catch {
+    return false
+  }
+}
+
+function setTeamAdmin(on) {
+  try {
+    localStorage.setItem(ADMIN_KEY, on ? '1' : '0')
+  } catch {
+    // A private browser can refuse storage. The switch still works for this visit.
+  }
+  adminSwitch.setAttribute('aria-checked', on ? 'true' : 'false')
+}
 
 function stampLabel(stamp) {
   if (!stamp) return ''
@@ -47,19 +66,21 @@ function whenText(fixture, checkedAt) {
   return fixture.bye || !fixture.time ? day : `${day}, ${fixture.time}`
 }
 
-function fixtureDetail(fixture) {
+function fixtureDetail(fixture, record = '') {
   if (fixture.bye) return '<p class="bye-mark">❌ Bye</p>'
   return `<p class="opponent">vs ${escapeHtml(fixture.opponent)}</p>
+    ${record}
     <p class="place">${escapeHtml(formatPlace(fixture.hall, fixture.court))}</p>`
 }
 
 function teamCard(team, checkedAt) {
   const fixture = nextFixture(team)
   const removed = fixture.status === 'removed' ? ' removed' : ''
+  const record = fixture.bye ? '' : recordHtml(team.id, fixture.opponent)
   return `<li><a class="team-card${fixture.bye ? ' bye' : ''}${removed}" href="#/${team.id}">
     <div class="squad"><h3>${squadName(team.name)}</h3>${pill(fixture)}</div>
     <p class="when">${whenText(fixture, checkedAt)}</p>
-    ${fixtureDetail(fixture)}
+    ${fixtureDetail(fixture, record)}
   </a></li>`
 }
 
@@ -128,45 +149,161 @@ function standingsHtml(team) {
   </section>`
 }
 
-function renderTeam(data, team) {
+function route() {
+  const [id = '', section = ''] = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean)
+  const tab = section === 'league' || section === 'results' ? section : 'fixtures'
+  return { id, tab }
+}
+
+function tabBar(team, tab) {
+  const tabs = [
+    ['fixtures', 'Fixtures', `#/${team.id}`],
+    ['league', 'League', `#/${team.id}/league`],
+    ['results', 'Results', `#/${team.id}/results`],
+  ]
+  return `<nav class="tabs" aria-label="Squad">
+    ${tabs.map(([key, label, href]) => `<a href="${href}"${key === tab ? ' class="on" aria-current="page"' : ''}>${label}</a>`).join('')}
+  </nav>`
+}
+
+function recordHtml(teamId, opponent) {
+  const meetings = meetingsAgainst(window.__results?.results, teamId, opponent)
+  if (!meetings.length) return ''
+  const words = { win: 'Won', loss: 'Lost', draw: 'Drew' }
+  const letters = { win: 'W', loss: 'L', draw: 'D' }
+  const spoken = meetings.map((row) => words[row.outcome] ?? 'Played').join(', ')
+  return `<p class="record" aria-label="Previous results: ${spoken}">
+    ${meetings.map((row) => {
+      const word = words[row.outcome] ?? 'Played'
+      const letter = letters[row.outcome] ?? '?'
+      return `<span class="blob ${escapeHtml(row.outcome)}" title="${word} ${row.teamScore}–${row.opponentScore}">${letter}</span>`
+    }).join('')}
+  </p>`
+}
+
+function resultTally(rows) {
+  const counts = { win: 0, draw: 0, loss: 0 }
+  for (const row of rows) if (counts[row.outcome] != null) counts[row.outcome] += 1
+  const parts = []
+  if (counts.win) parts.push(`${counts.win} ${counts.win === 1 ? 'win' : 'wins'}`)
+  if (counts.draw) parts.push(`${counts.draw} ${counts.draw === 1 ? 'draw' : 'draws'}`)
+  if (counts.loss) parts.push(`${counts.loss} ${counts.loss === 1 ? 'loss' : 'losses'}`)
+  return parts.join(' · ')
+}
+
+function currentSeasonLabel() {
+  const labels = new Set()
+  for (const team of window.__fixtures?.teams ?? []) {
+    for (const fixture of team.fixtures ?? []) {
+      if (fixture.season) labels.add(fixture.season)
+    }
+  }
+  return [...labels].find((label) => /summer/i.test(label))
+    || [...labels].find((label) => /winter/i.test(label))
+    || ''
+}
+
+function resultGroups(rows) {
+  const present = currentSeasonLabel()
+  const groups = new Map()
+  for (const row of rows) {
+    const season = row.season || 'Results'
+    if (!groups.has(season)) groups.set(season, [])
+    groups.get(season).push(row)
+  }
+  return [...groups.entries()]
+    .map(([season, list]) => ({
+      season,
+      rows: list.sort((a, b) => b.date.localeCompare(a.date) || String(b.time).localeCompare(String(a.time))),
+    }))
+    .sort((a, b) => {
+      if (a.season === present) return -1
+      if (b.season === present) return 1
+      return (b.rows[0]?.date ?? '').localeCompare(a.rows[0]?.date ?? '')
+    })
+}
+
+function resultWhen(row) {
+  const day = dateLabel(row.date, window.__results?.checkedAt || window.__fixtures?.checkedAt)
+  return row.time ? `${day}, ${row.time}` : day
+}
+
+function fixturesPanel(data, team) {
+  return `<ul class="fixture-list">
+    ${team.fixtures.map((fixture, index) => {
+      const note = fixture.status === 'removed' ? 'CANCELLED' : changeSummary(fixture)
+      const classes = ['fixture-card', fixture.status === 'removed' ? 'removed' : '', fixture.bye ? 'bye' : ''].filter(Boolean).join(' ')
+      const extra = fixture.bye
+        ? ''
+        : `<p class="league">${escapeHtml(fixture.division)}${fixture.division ? ' · ' : ''}${escapeHtml(fixture.league)}</p>`
+      const record = index === 0 && !fixture.bye ? recordHtml(team.id, fixture.opponent) : ''
+      return `<li class="${classes}">
+        ${note ? `<p class="note ${fixture.change?.type ?? 'removed'}">${escapeHtml(note)}</p>` : ''}
+        <p class="when">${whenText(fixture, data.checkedAt)}</p>
+        ${fixtureDetail(fixture, record)}
+        ${extra}
+        <p class="meta"><a href="${escapeHtml(fixture.sourceUrl)}">League page</a></p>
+      </li>`
+    }).join('')}
+  </ul>`
+}
+
+function resultsPanel(team) {
+  const rows = (window.__results?.results ?? []).filter((row) => row.teamId === team.id)
+  if (!rows.length) {
+    return `<section class="empty"><h2>No results yet</h2><p>Played games will show here once they are published.</p></section>`
+  }
+  const when = stampLabel(window.__results?.checkedAt)
+  return `${resultGroups(rows).map((group) => `
+    <section class="result-season">
+      <h2>${escapeHtml(group.season)}</h2>
+      <p class="result-tally">${escapeHtml(resultTally(group.rows))}</p>
+      <ul class="result-list">
+        ${group.rows.map((row) => `<li class="result ${escapeHtml(row.outcome)}">
+          <span class="blob ${escapeHtml(row.outcome)}" aria-label="${row.outcome === 'win' ? 'Won' : row.outcome === 'loss' ? 'Lost' : 'Drew'}">${row.outcome === 'win' ? 'W' : row.outcome === 'loss' ? 'L' : 'D'}</span>
+          <div>
+            <p class="when">${escapeHtml(resultWhen(row))}</p>
+            <p class="opponent">vs ${escapeHtml(row.opponent)}</p>
+            ${row.division ? `<p class="league">${escapeHtml(row.division)}</p>` : ''}
+          </div>
+          <p class="score">${row.teamScore}–${row.opponentScore}</p>
+        </li>`).join('')}
+      </ul>
+    </section>`).join('')}
+    ${when ? `<p class="source">Results checked ${escapeHtml(when)}.</p>` : ''}`
+}
+
+function renderTeam(data, team, tab) {
   const allText = formatWhatsApp(team.name, team.fixtures, data.checkedAt)
   const next = nextFixture(team)
   const nextText = formatWhatsApp(team.name, next ? [next] : [], data.checkedAt)
   const table = standingsFor(team)
   const tableText = formatTableWhatsApp(team.name, table)
   const groups = [...new Set(team.fixtures.map((fixture) => ageGroup(fixture.league).label))]
+  const panel = tab === 'league'
+    ? (standingsHtml(team) || `<section class="empty"><h2>No league table yet</h2><p>This squad is not on a published table right now.</p></section>`)
+    : tab === 'results'
+      ? resultsPanel(team)
+      : fixturesPanel(data, team)
+  const copies = !teamAdmin()
+    ? ''
+    : tab === 'fixtures'
+      ? `<button class="copy" type="button" data-copy="next">Next game</button>
+       <button class="copy copy-all" type="button" data-copy="all">All fixtures</button>`
+      : tab === 'league' && tableText
+        ? '<button class="copy" type="button" data-copy="table">League table</button>'
+        : ''
   app.innerHTML = `
     <a class="back" href="#/">All teams</a>
     <section class="team-heading">
       <h2>${escapeHtml(team.name)}</h2>
       <p class="league">${escapeHtml(groups.join(' · '))}</p>
     </section>
-    <ul class="fixture-list">
-      ${team.fixtures.map((fixture) => {
-        const note = fixture.status === 'removed' ? 'CANCELLED' : changeSummary(fixture)
-        const classes = ['fixture-card', fixture.status === 'removed' ? 'removed' : '', fixture.bye ? 'bye' : ''].filter(Boolean).join(' ')
-        const extra = fixture.bye
-          ? ''
-          : `<p class="league">${escapeHtml(fixture.division)}${fixture.division ? ' · ' : ''}${escapeHtml(fixture.league)}</p>`
-        return `<li class="${classes}">
-          ${note ? `<p class="note ${fixture.change?.type ?? 'removed'}">${escapeHtml(note)}</p>` : ''}
-          <p class="when">${whenText(fixture, data.checkedAt)}</p>
-          ${fixtureDetail(fixture)}
-          ${extra}
-          <p class="meta"><a href="${escapeHtml(fixture.sourceUrl)}">League page</a></p>
-        </li>`
-      }).join('')}
-    </ul>
-    ${standingsHtml(team)}
-    <div class="copy-bar">
-      <div class="copy-actions">
-        <button class="copy" type="button" data-copy="next">Next game</button>
-        <button class="copy copy-all" type="button" data-copy="all">All fixtures</button>
-        ${tableText ? '<button class="copy copy-all copy-table" type="button" data-copy="table">League table</button>' : ''}
-      </div>
-    </div>`
-  app.querySelector('[data-copy="next"]').addEventListener('click', (event) => copyText(nextText, event.currentTarget))
-  app.querySelector('[data-copy="all"]').addEventListener('click', (event) => copyText(allText, event.currentTarget))
+    ${tabBar(team, tab)}
+    ${panel}
+    ${copies ? `<div class="copy-bar"><div class="copy-actions${tab === 'league' ? ' single' : ''}">${copies}</div></div>` : ''}`
+  app.querySelector('[data-copy="next"]')?.addEventListener('click', (event) => copyText(nextText, event.currentTarget))
+  app.querySelector('[data-copy="all"]')?.addEventListener('click', (event) => copyText(allText, event.currentTarget))
   app.querySelector('[data-copy="table"]')?.addEventListener('click', (event) => copyText(tableText, event.currentTarget))
 }
 
@@ -202,22 +339,31 @@ async function copyText(text, button) {
   }, 1600)
 }
 
-function show() {
-  const id = location.hash.replace(/^#\/?/, '')
+function show({ scroll = true } = {}) {
+  const { id, tab } = route()
   const team = id ? window.__fixtures.teams.find((item) => item.id === id) : null
   if (!team) renderHome(window.__fixtures)
-  else renderTeam(window.__fixtures, team)
-  document.body.classList.toggle('has-copy', Boolean(team))
+  else renderTeam(window.__fixtures, team, tab)
+  document.body.classList.toggle('has-copy', Boolean(app.querySelector('.copy-bar')))
+  if (!scroll) return
   const goTop = () => window.scrollTo(0, 0)
   goTop()
   requestAnimationFrame(goTop)
 }
 
-const [response, tablesResponse] = await Promise.all([
+setTeamAdmin(teamAdmin())
+adminSwitch.addEventListener('click', () => {
+  setTeamAdmin(!teamAdmin())
+  if (window.__fixtures) show({ scroll: false })
+})
+
+const [response, tablesResponse, resultsResponse] = await Promise.all([
   fetch('./fixtures.json', { cache: 'no-store' }),
   fetch('./tables.json', { cache: 'no-store' }),
+  fetch('./results.json', { cache: 'no-store' }),
 ])
 window.__tables = tablesResponse.ok ? await tablesResponse.json() : { tables: [] }
+window.__results = resultsResponse.ok ? await resultsResponse.json() : { results: [] }
 if (!response.ok) {
   checked.textContent = 'Fixtures have not been downloaded yet.'
   app.innerHTML = `<section class="empty"><h2>Run the checker first</h2><p>From the project folder, run <strong>npm run scrape</strong>, then refresh this page.</p></section>`

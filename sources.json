@@ -13,6 +13,18 @@
       "url": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-league-summer/"
     }
   ],
+  "results": [
+    {
+      "name": "Stockport winter",
+      "season": "winter",
+      "url": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-results-winter/"
+    },
+    {
+      "name": "Stockport summer",
+      "season": "summer",
+      "url": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-results-summer/"
+    }
+  ],
   "sources": [
     {
       "name": "Stockport winter",

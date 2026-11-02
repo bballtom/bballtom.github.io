@@ -205,6 +205,127 @@ export function readLeagues(html) {
   return leagues
 }
 
+export function readResultLeagues(html) {
+  const $ = load(html)
+  const leagues = []
+  $('select#leagueDropdown option').each((_, option) => {
+    const id = clean($(option).attr('value'))
+    const label = clean($(option).text())
+    const seasonId = clean($(option).attr('data-season'))
+    if (!id || !label || label.toLowerCase() === 'select a league') return
+    leagues.push({ id, label, seasonId })
+  })
+  return leagues
+}
+
+export function resultKey(row) {
+  return [row.season, String(row.leagueId), row.date, row.time, norm(row.team), norm(row.opponent)].join('|')
+}
+
+function resultOutcome(ours, theirs) {
+  if (ours > theirs) return 'win'
+  if (ours < theirs) return 'loss'
+  return 'draw'
+}
+
+export function readResults(html, { leagueId, leagueLabel, sourceUrl, teamPattern }) {
+  const $ = load(html)
+  const season = parseSeason(leagueLabel)
+  if (!season.label) return []
+  const league = leagueName(leagueLabel, season.label).replace(/^Stockport\s*-\s*/i, '')
+  const teamRe = new RegExp(teamPattern, 'i')
+  const table = $('table').filter((_, element) => {
+    const headers = $(element).find('th').map((__, th) => clean($(th).text())).get()
+    return headers.includes('Time') && headers.includes('Teams')
+  }).first()
+  if (!table.length) return []
+
+  const results = []
+  const seen = new Set()
+  let currentDateText = ''
+  table.find('tr').each((_, row) => {
+    const cells = $(row).find('td')
+    if (!cells.length) return
+    const first = clean($(cells[0]).text())
+    if (!/^\d{1,2}:\d{2}$/.test(first)) {
+      if (inferIsoDate(first, season)) currentDateText = first
+      return
+    }
+    if (!currentDateText || cells.length < 2) return
+    const scored = clean($(cells[1]).text()).match(/^(.+?)\s*\((\d+)\)\s*vs\s*\((\d+)\)\s*(.+)$/i)
+    if (!scored) return
+    const date = inferIsoDate(currentDateText, season)
+    if (!date) return
+    const [hours, minutes] = first.split(':')
+    const time = `${hours.padStart(2, '0')}:${minutes.padStart(2, '0')}`
+    const division = cells.length > 2 ? clean($(cells[2]).text()) : ''
+    const sides = [
+      { name: clean(scored[1]), score: Number(scored[2]), opponent: clean(scored[4]), opponentScore: Number(scored[3]) },
+      { name: clean(scored[4]), score: Number(scored[3]), opponent: clean(scored[1]), opponentScore: Number(scored[2]) },
+    ]
+    for (const side of sides) {
+      if (!teamRe.test(side.name)) continue
+      const team = displayTeam(side.name)
+      const result = {
+        season: season.label,
+        leagueId: String(leagueId),
+        league,
+        division,
+        date,
+        time,
+        team,
+        teamId: teamSlug(team),
+        opponent: displayTeam(side.opponent),
+        teamScore: side.score,
+        opponentScore: side.opponentScore,
+        outcome: resultOutcome(side.score, side.opponentScore),
+        sourceUrl,
+      }
+      const key = resultKey(result)
+      if (seen.has(key)) continue
+      seen.add(key)
+      results.push(result)
+    }
+  })
+  return results
+}
+
+function sameResult(left, right) {
+  return left.teamScore === right.teamScore
+    && left.opponentScore === right.opponentScore
+    && left.outcome === right.outcome
+    && left.time === right.time
+    && left.division === right.division
+    && left.opponent === right.opponent
+    && left.league === right.league
+}
+
+export function mergeResults(previous, scraped) {
+  const byKey = new Map()
+  for (const row of previous ?? []) byKey.set(resultKey(row), row)
+  let changed = false
+  for (const row of scraped ?? []) {
+    const key = resultKey(row)
+    const old = byKey.get(key)
+    if (!old) {
+      byKey.set(key, row)
+      changed = true
+      continue
+    }
+    if (!sameResult(old, row)) {
+      byKey.set(key, { ...old, ...row })
+      changed = true
+    }
+  }
+  const results = [...byKey.values()].sort((a, b) => (
+    b.date.localeCompare(a.date)
+    || String(b.time).localeCompare(String(a.time))
+    || a.team.localeCompare(b.team)
+    || a.opponent.localeCompare(b.opponent)
+  ))
+  return { results, changed }
+}
+
 export function readFixtures(html, { leagueId, leagueLabel, sourceUrl, defaultHall, teamPattern }) {
   const $ = load(html)
   const season = parseSeason(leagueLabel)

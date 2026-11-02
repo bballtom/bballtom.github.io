@@ -5,6 +5,7 @@
   "scripts": {
     "scrape": "node scraper/scrape.mjs",
     "tables": "node scraper/tables.mjs",
+    "results": "node scraper/results.mjs",
     "start": "node scraper/serve.mjs",
     "test": "node --test scraper/lib.test.mjs"
   },
