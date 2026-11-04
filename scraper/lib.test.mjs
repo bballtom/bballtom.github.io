@@ -167,8 +167,8 @@ test('a division table keeps position, results, and points', () => {
       </tbody>
     </table>`)
   assert.deepEqual(rows, [
-    { position: 1, team: 'Thunder Strikers', played: 2, won: 2, lost: 0, points: 6 },
-    { position: 2, team: 'Tameside Vikings Slayers', played: 2, won: 1, lost: 1, points: 3 },
+    { position: 1, team: 'Thunder Strikers', played: 2, won: 2, drawn: 0, lost: 0, byes: 0, walkovers: 0, points: 6 },
+    { position: 2, team: 'Tameside Vikings Slayers', played: 2, won: 1, drawn: 0, lost: 1, byes: 0, walkovers: 0, points: 3 },
   ])
 })
 

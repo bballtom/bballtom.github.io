@@ -121,6 +121,10 @@ function standingsFor(team) {
   return tables.find((table) => table.rows.some((row) => sameName(row.team, team.name)))
 }
 
+function countCell(value) {
+  return value == null || value === '' ? '–' : value
+}
+
 function standingsHtml(team) {
   const table = standingsFor(team)
   if (!table) return ''
@@ -131,21 +135,28 @@ function standingsHtml(team) {
     <div class="standings-wrap">
       <table>
         <thead>
-          <tr><th>Pos</th><th>Team</th><th>P</th><th>W</th><th>L</th><th>Pts</th></tr>
+          <tr>
+            <th class="pos" aria-label="Position"></th><th>Team</th><th>P</th><th>W</th>
+            <th title="Drawn">D</th><th>L</th>
+            <th title="Byes">Bye</th><th title="Walkovers">W/O</th><th>Pts</th>
+          </tr>
         </thead>
         <tbody>
           ${table.rows.map((row) => `<tr class="${sameName(row.team, team.name) ? 'us' : ''}">
             <td>${row.position}</td>
             <td>${escapeHtml(shortTeam(row.team))}</td>
-            <td>${row.played}</td>
-            <td>${row.won}</td>
-            <td>${row.lost}</td>
-            <td>${row.points}</td>
+            <td>${countCell(row.played)}</td>
+            <td>${countCell(row.won)}</td>
+            <td>${countCell(row.drawn)}</td>
+            <td>${countCell(row.lost)}</td>
+            <td>${countCell(row.byes)}</td>
+            <td>${countCell(row.walkovers)}</td>
+            <td>${countCell(row.points)}</td>
           </tr>`).join('')}
         </tbody>
       </table>
     </div>
-    <p class="source">Table checked ${escapeHtml(when)}. <a href="${escapeHtml(table.sourceUrl)}">League table</a></p>
+    <p class="source">Last checked ${escapeHtml(when)}. <a href="${escapeHtml(table.sourceUrl)}">League table</a></p>
   </section>`
 }
 
@@ -282,7 +293,7 @@ function resultsPanel(team) {
         </li>`).join('')}
       </ul>
     </section>`).join('')}
-    ${when ? `<p class="source">Results checked ${escapeHtml(when)}.</p>` : ''}`
+    ${when ? `<p class="source">Last checked ${escapeHtml(when)}.</p>` : ''}`
 }
 
 function renderTeam(data, team, tab) {
@@ -356,6 +367,13 @@ function show({ scroll = true } = {}) {
   const team = id ? window.__fixtures.teams.find((item) => item.id === id) : null
   if (!team) renderHome(window.__fixtures)
   else renderTeam(window.__fixtures, team, tab)
+  const stamp = !team || tab === 'fixtures'
+    ? window.__fixtures?.checkedAt
+    : tab === 'league'
+      ? window.__tables?.checkedAt
+      : window.__results?.checkedAt
+  const when = stampLabel(stamp)
+  checked.textContent = when ? `Last checked ${when}` : 'Not checked yet'
   document.body.classList.toggle('has-copy', Boolean(app.querySelector('.copy-bar')))
   if (!scroll) return
   const goTop = () => window.scrollTo(0, 0)
@@ -381,8 +399,6 @@ if (!response.ok) {
   app.innerHTML = `<section class="empty"><h2>Run the checker first</h2><p>From the project folder, run <strong>npm run scrape</strong>, then refresh this page.</p></section>`
 } else {
   window.__fixtures = await response.json()
-  const when = stampLabel(window.__fixtures.changedAt || window.__fixtures.checkedAt)
-  checked.textContent = when ? `Last change ${when}` : 'Fixtures loaded'
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual'
   show()
   window.addEventListener('hashchange', show)

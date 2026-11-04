@@ -97,6 +97,8 @@ async function main() {
     const snapshot = (data) => JSON.stringify(data.tables ?? [])
     if (previous.season === next.season && snapshot(previous) === snapshot(next)) {
       console.log('No table changes.')
+      previous.checkedAt = londonStamp()
+      await writeFile(tablesPath, `${JSON.stringify(previous, null, 2)}\n`)
       return
     }
 

@@ -96,6 +96,8 @@ async function main() {
   const snapshot = (data) => JSON.stringify(data.teams ?? [])
   if (previous.teams && snapshot(previous) === snapshot(next)) {
     console.log('No fixture changes.')
+    previous.checkedAt = nowStamp
+    await writeFile(fixturesPath, `${JSON.stringify(previous, null, 2)}\n`)
     return
   }
 

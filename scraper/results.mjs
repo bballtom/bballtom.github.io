@@ -93,6 +93,8 @@ async function main() {
   const before = (previous.results ?? []).map(stored)
   if (JSON.stringify(before) === JSON.stringify(merged)) {
     console.log('No result changes.')
+    previous.checkedAt = londonStamp()
+    await writeFile(resultsPath, `${JSON.stringify(previous, null, 2)}\n`)
     return
   }
 

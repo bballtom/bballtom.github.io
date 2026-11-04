@@ -186,7 +186,10 @@ export function readStandings(html) {
       team,
       played: num(cells[1]),
       won: num(cells[2]),
+      drawn: num(cells[3]),
       lost: num(cells[4]),
+      byes: num(cells[5]),
+      walkovers: num(cells[6]),
       points: num(cells[10]),
     })
   })
