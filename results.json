@@ -1,7 +1,22 @@
 {
-  "checkedAt": "2026-11-04T19:45",
+  "checkedAt": "2026-11-05T19:41",
   "timezone": "Europe/London",
   "results": [
+    {
+      "season": "Winter Season 26",
+      "leagueId": "55",
+      "league": "Thursday & Friday under 18s basketball basketball",
+      "division": "Division 2",
+      "date": "2026-11-05",
+      "time": "19:30",
+      "team": "Tameside Vikings Ravens",
+      "teamId": "ravens",
+      "opponent": "Evo Elite",
+      "teamScore": 20,
+      "opponentScore": 0,
+      "outcome": "win",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-results-winter/?id=55&season=9"
+    },
     {
       "season": "Winter Season 26",
       "leagueId": "59",
