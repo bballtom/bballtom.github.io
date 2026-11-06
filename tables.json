@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-05T19:47",
+  "checkedAt": "2026-11-06T19:46",
   "timezone": "Europe/London",
   "season": "Winter Season 26",
   "tables": [
@@ -776,79 +776,79 @@
         {
           "position": 1,
           "team": "Stingrays",
-          "played": 3,
-          "won": 3,
+          "played": 4,
+          "won": 4,
           "drawn": 0,
           "lost": 0,
           "byes": 0,
           "walkovers": 0,
-          "points": 9
+          "points": 12
         },
         {
           "position": 2,
-          "team": "Tameside Vikings - Berserkers",
-          "played": 3,
-          "won": 2,
-          "drawn": 0,
-          "lost": 0,
-          "byes": 1,
-          "walkovers": 0,
-          "points": 9
-        },
-        {
-          "position": 3,
           "team": "Globetrotters",
-          "played": 3,
-          "won": 2,
+          "played": 4,
+          "won": 3,
           "drawn": 0,
           "lost": 1,
           "byes": 0,
           "walkovers": 0,
-          "points": 7
+          "points": 10
         },
         {
-          "position": 4,
+          "position": 3,
           "team": "SK Nukes Green",
-          "played": 3,
-          "won": 1,
+          "played": 4,
+          "won": 2,
           "drawn": 0,
           "lost": 1,
           "byes": 1,
           "walkovers": 0,
-          "points": 7
+          "points": 10
+        },
+        {
+          "position": 4,
+          "team": "Tameside Vikings - Berserkers",
+          "played": 4,
+          "won": 2,
+          "drawn": 0,
+          "lost": 0,
+          "byes": 1,
+          "walkovers": 1,
+          "points": 9
         },
         {
           "position": 5,
           "team": "Mannchester Bulls 9-10",
-          "played": 3,
+          "played": 4,
           "won": 1,
           "drawn": 0,
-          "lost": 1,
+          "lost": 2,
           "byes": 1,
           "walkovers": 0,
-          "points": 7
+          "points": 8
         },
         {
           "position": 6,
           "team": "Tameside Vikings - Warriors",
-          "played": 3,
+          "played": 4,
           "won": 0,
           "drawn": 0,
           "lost": 3,
-          "byes": 0,
+          "byes": 1,
           "walkovers": 0,
-          "points": 3
+          "points": 6
         },
         {
           "position": 7,
           "team": "Trafford Titans Y10",
-          "played": 3,
+          "played": 4,
           "won": 0,
           "drawn": 0,
-          "lost": 3,
+          "lost": 4,
           "byes": 0,
           "walkovers": 0,
-          "points": 3
+          "points": 4
         }
       ]
     },
@@ -861,6 +861,17 @@
       "rows": [
         {
           "position": 1,
+          "team": "Southside Golden Lions",
+          "played": 4,
+          "won": 3,
+          "drawn": 0,
+          "lost": 1,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 10
+        },
+        {
+          "position": 2,
           "team": "Teal Dragons",
           "played": 3,
           "won": 3,
@@ -869,17 +880,6 @@
           "byes": 0,
           "walkovers": 0,
           "points": 9
-        },
-        {
-          "position": 2,
-          "team": "Southside Golden Lions",
-          "played": 3,
-          "won": 2,
-          "drawn": 0,
-          "lost": 1,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 7
         },
         {
           "position": 3,
@@ -927,18 +927,18 @@
         },
         {
           "position": 7,
-          "team": "Manchester Mavericks",
-          "played": 3,
+          "team": "Tameside Vikings Ballers",
+          "played": 4,
           "won": 0,
           "drawn": 0,
-          "lost": 3,
+          "lost": 4,
           "byes": 0,
           "walkovers": 0,
-          "points": 3
+          "points": 4
         },
         {
           "position": 8,
-          "team": "Tameside Vikings Ballers",
+          "team": "Manchester Mavericks",
           "played": 3,
           "won": 0,
           "drawn": 0,
@@ -959,50 +959,50 @@
         {
           "position": 1,
           "team": "Tornados",
-          "played": 3,
-          "won": 3,
+          "played": 4,
+          "won": 4,
           "drawn": 0,
           "lost": 0,
           "byes": 0,
           "walkovers": 0,
-          "points": 9
+          "points": 12
         },
         {
           "position": 2,
-          "team": "Reddish Reapers White",
-          "played": 3,
-          "won": 2,
+          "team": "North Manchester Falcons",
+          "played": 4,
+          "won": 3,
           "drawn": 0,
           "lost": 1,
           "byes": 0,
           "walkovers": 0,
-          "points": 7
+          "points": 10
         },
         {
           "position": 3,
-          "team": "Stockport Sharks",
-          "played": 3,
+          "team": "Reddish Reapers White",
+          "played": 4,
           "won": 2,
           "drawn": 0,
-          "lost": 1,
+          "lost": 2,
           "byes": 0,
           "walkovers": 0,
-          "points": 7
+          "points": 8
         },
         {
           "position": 4,
           "team": "Vale Vikings",
-          "played": 3,
+          "played": 4,
           "won": 2,
           "drawn": 0,
-          "lost": 1,
+          "lost": 2,
           "byes": 0,
           "walkovers": 0,
-          "points": 7
+          "points": 8
         },
         {
           "position": 5,
-          "team": "North Manchester Falcons",
+          "team": "Stockport Sharks",
           "played": 3,
           "won": 2,
           "drawn": 0,
