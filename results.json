@@ -1,7 +1,37 @@
 {
-  "checkedAt": "2026-11-05T19:41",
+  "checkedAt": "2026-11-06T19:41",
   "timezone": "Europe/London",
   "results": [
+    {
+      "season": "Winter Season 26",
+      "leagueId": "54",
+      "league": "Thursday & Friday school years 9&10 basketball",
+      "division": "Premier Division",
+      "date": "2026-11-06",
+      "time": "17:40",
+      "team": "Tameside Vikings Berserkers",
+      "teamId": "berserkers",
+      "opponent": "Stingrays",
+      "teamScore": 0,
+      "opponentScore": 20,
+      "outcome": "loss",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-results-winter/?id=54&season=9"
+    },
+    {
+      "season": "Winter Season 26",
+      "leagueId": "55",
+      "league": "Thursday & Friday under 18s basketball basketball",
+      "division": "Division 1",
+      "date": "2026-11-05",
+      "time": "19:30",
+      "team": "Tameside Vikings Ballers",
+      "teamId": "ballers",
+      "opponent": "Southside Golden Lions",
+      "teamScore": 37,
+      "opponentScore": 55,
+      "outcome": "loss",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-results-winter/?id=55&season=9"
+    },
     {
       "season": "Winter Season 26",
       "leagueId": "55",
