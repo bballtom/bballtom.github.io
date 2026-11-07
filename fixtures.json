@@ -1,57 +1,9 @@
 {
-  "checkedAt": "2026-11-07T16:36",
-  "changedAt": "2026-11-07T14:38",
+  "checkedAt": "2026-11-07T18:38",
+  "changedAt": "2026-11-07T18:38",
   "timezone": "Europe/London",
   "defaultHall": "Reddish Vale High School",
   "teams": [
-    {
-      "id": "tornadoes",
-      "name": "Tameside Vikings Tornadoes",
-      "fixtures": [
-        {
-          "season": "Winter Season 26",
-          "leagueId": "58",
-          "league": "Saturday school years 5&6 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=58",
-          "date": "2026-11-07",
-          "time": "16:50",
-          "opponent": "Trafford Titans Yr5",
-          "hall": "Reddish Vale High School",
-          "court": "3",
-          "division": "Division 2",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "58",
-          "league": "Saturday school years 5&6 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=58",
-          "date": "2026-11-14",
-          "time": "12:40",
-          "opponent": "Heaton Warriors",
-          "hall": "Reddish Vale High School",
-          "court": "2",
-          "division": "Division 2",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "58",
-          "league": "Saturday school years 5&6 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=58",
-          "date": "2026-11-21",
-          "time": "12:40",
-          "opponent": "Glossopdale Hoops Purple",
-          "hall": "Reddish Vale High School",
-          "court": "2",
-          "division": "Division 2",
-          "status": "scheduled",
-          "change": null
-        }
-      ]
-    },
     {
       "id": "warriors",
       "name": "Tameside Vikings Warriors",
@@ -549,6 +501,40 @@
           "hall": "Reddish Vale High School",
           "court": "3",
           "division": "Division 1",
+          "status": "scheduled",
+          "change": null
+        }
+      ]
+    },
+    {
+      "id": "tornadoes",
+      "name": "Tameside Vikings Tornadoes",
+      "fixtures": [
+        {
+          "season": "Winter Season 26",
+          "leagueId": "58",
+          "league": "Saturday school years 5&6 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=58",
+          "date": "2026-11-14",
+          "time": "12:40",
+          "opponent": "Heaton Warriors",
+          "hall": "Reddish Vale High School",
+          "court": "2",
+          "division": "Division 2",
+          "status": "scheduled",
+          "change": null
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "58",
+          "league": "Saturday school years 5&6 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=58",
+          "date": "2026-11-21",
+          "time": "12:40",
+          "opponent": "Glossopdale Hoops Purple",
+          "hall": "Reddish Vale High School",
+          "court": "2",
+          "division": "Division 2",
           "status": "scheduled",
           "change": null
         }
