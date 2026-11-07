@@ -1,57 +1,9 @@
 {
-  "checkedAt": "2026-11-07T08:46",
-  "changedAt": "2026-11-07T00:53",
+  "checkedAt": "2026-11-07T10:38",
+  "changedAt": "2026-11-07T10:38",
   "timezone": "Europe/London",
   "defaultHall": "Reddish Vale High School",
   "teams": [
-    {
-      "id": "hammers",
-      "name": "Tameside Vikings Hammers",
-      "fixtures": [
-        {
-          "season": "Winter Season 26",
-          "leagueId": "54",
-          "league": "Thursday & Friday school years 9&10 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
-          "date": "2026-11-07",
-          "time": "10:10",
-          "opponent": "Lion Mountain",
-          "hall": "Hollinwood",
-          "court": "",
-          "division": "Division 3",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "54",
-          "league": "Thursday & Friday school years 9&10 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
-          "date": "2026-11-14",
-          "time": "09:00",
-          "opponent": "Reddish Romans",
-          "hall": "Manchester College",
-          "court": "",
-          "division": "Division 3",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "54",
-          "league": "Thursday & Friday school years 9&10 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
-          "date": "2026-11-21",
-          "time": "10:40",
-          "opponent": "Reddish Rebels",
-          "hall": "Manchester College",
-          "court": "",
-          "division": "Division 3",
-          "status": "scheduled",
-          "change": null
-        }
-      ]
-    },
     {
       "id": "storm-maidens",
       "name": "Tameside Vikings Storm Maidens",
@@ -735,6 +687,40 @@
           "hall": "Reddish Vale High School",
           "court": "2",
           "division": "Division 1",
+          "status": "scheduled",
+          "change": null
+        }
+      ]
+    },
+    {
+      "id": "hammers",
+      "name": "Tameside Vikings Hammers",
+      "fixtures": [
+        {
+          "season": "Winter Season 26",
+          "leagueId": "54",
+          "league": "Thursday & Friday school years 9&10 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
+          "date": "2026-11-14",
+          "time": "09:00",
+          "opponent": "Reddish Romans",
+          "hall": "Manchester College",
+          "court": "",
+          "division": "Division 3",
+          "status": "scheduled",
+          "change": null
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "54",
+          "league": "Thursday & Friday school years 9&10 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
+          "date": "2026-11-21",
+          "time": "10:40",
+          "opponent": "Reddish Rebels",
+          "hall": "Manchester College",
+          "court": "",
+          "division": "Division 3",
           "status": "scheduled",
           "change": null
         }
