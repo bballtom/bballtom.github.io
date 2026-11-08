@@ -3,9 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <title>Tameside Vikings fixtures</title>
-  <link rel="icon" href="./logo.png">
-  <link rel="stylesheet" href="./styles.css">
+  <script>
+    // The iPhone home-screen app keeps the last copy of this page.
+    // A new address makes it fetch the page again instead of showing that copy.
+    (function () {
+      var standalone = navigator.standalone === true || matchMedia('(display-mode: standalone)').matches
+      if (!standalone) return
+      var params = new URLSearchParams(location.search)
+      var fresh = Number(params.get('fresh') || 0)
+      if (fresh && Date.now() - fresh < 120000) return
+      params.set('fresh', String(Date.now()))
+      location.replace(location.pathname + '?' + params.toString() + location.hash)
+    })()
+  </script>
+  <link rel="icon" href="./favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="./icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="stylesheet" href="./styles.css?v=20261108">
 </head>
 <body>
   <header class="top">
@@ -23,7 +39,7 @@
     </div>
   </header>
   <main id="app"></main>
-  <script type="module" src="./app.js"></script>
+  <script type="module" src="./app.js?v=20261108"></script>
   <script data-goatcounter="https://tomcrompton.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
 </body>

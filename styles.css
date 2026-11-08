@@ -179,6 +179,42 @@ main {
   list-style: none;
 }
 
+.team-item { position: relative; }
+
+.star {
+  position: absolute;
+  top: 6px;
+  right: 4px;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #7d9186;
+  cursor: pointer;
+}
+
+.star svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linejoin: round;
+}
+
+.star[aria-pressed="true"] { color: var(--beard); }
+.star[aria-pressed="true"] svg { fill: currentColor; }
+
+.star:focus-visible {
+  outline: 3px solid var(--beard);
+  outline-offset: 2px;
+}
+
 .team-card, .fixture-card, .empty {
   display: block;
   background: var(--card);
@@ -189,7 +225,7 @@ main {
 }
 
 .team-card {
-  padding: 14px 16px 13px;
+  padding: 14px 56px 13px 16px;
   border-left: 6px solid var(--green);
 }
 

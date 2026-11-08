@@ -4,6 +4,7 @@ const app = document.querySelector('#app')
 const checked = document.querySelector('#checked')
 const adminSwitch = document.querySelector('#admin')
 const ADMIN_KEY = 'vikings-team-admin'
+const FAV_KEY = 'vikings-favourites'
 
 function teamAdmin() {
   try {
@@ -20,6 +21,41 @@ function setTeamAdmin(on) {
     // A private browser can refuse storage. The switch still works for this visit.
   }
   adminSwitch.setAttribute('aria-checked', on ? 'true' : 'false')
+}
+
+function favourites() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(FAV_KEY) || '[]')
+    return Array.isArray(saved) ? saved.filter((id) => typeof id === 'string') : []
+  } catch {
+    return []
+  }
+}
+
+function toggleFavourite(id) {
+  const saved = favourites().filter((item) => item !== id)
+  if (!favourites().includes(id)) saved.unshift(id)
+  try {
+    localStorage.setItem(FAV_KEY, JSON.stringify(saved))
+  } catch {
+    // A private browser can refuse storage.
+  }
+}
+
+function takeFavourites(groups) {
+  const saved = favourites()
+  const pinned = []
+  for (const id of saved) {
+    for (const group of groups) {
+      const team = group.teams.find((item) => item.id === id)
+      if (!team) continue
+      pinned.push(team)
+      break
+    }
+  }
+  const ids = new Set(pinned.map((team) => team.id))
+  for (const group of groups) group.teams = group.teams.filter((team) => !ids.has(team.id))
+  return pinned
 }
 
 function stampLabel(stamp) {
@@ -77,11 +113,19 @@ function teamCard(team, checkedAt) {
   const fixture = nextFixture(team)
   const removed = fixture.status === 'removed' ? ' removed' : ''
   const record = fixture.bye ? '' : recordHtml(team.id, fixture.opponent)
-  return `<li><a class="team-card${fixture.bye ? ' bye' : ''}${removed}" href="#/${team.id}">
-    <div class="squad"><h3>${squadName(team.name)}</h3>${pill(fixture)}</div>
-    <p class="when">${whenText(fixture, checkedAt)}</p>
-    ${fixtureDetail(fixture, record)}
-  </a></li>`
+  const name = shortSquad(team.name)
+  const saved = favourites().includes(team.id)
+  const label = saved ? `Remove ${name} from favourites` : `Add ${name} to favourites`
+  return `<li class="team-item">
+    <a class="team-card${fixture.bye ? ' bye' : ''}${removed}" href="#/${team.id}">
+      <div class="squad"><h3>${squadName(team.name)}</h3>${pill(fixture)}</div>
+      <p class="when">${whenText(fixture, checkedAt)}</p>
+      ${fixtureDetail(fixture, record)}
+    </a>
+    <button type="button" class="star" data-fav="${escapeHtml(team.id)}" aria-pressed="${saved ? 'true' : 'false'}" aria-label="${escapeHtml(label)}">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.7 5.8 6.3.7-4.7 4.4 1.3 6.2L12 16.6 6.4 19.7l1.3-6.2L3 9.1l6.3-.7L12 2.6z"/></svg>
+    </button>
+  </li>`
 }
 
 function renderHome(data) {
@@ -94,9 +138,17 @@ function renderHome(data) {
     return
   }
   const groups = groupsFor(teams)
+  const pinned = takeFavourites(groups)
   app.innerHTML = `
     <p class="summary">${teams.length} teams, ${games} upcoming games${byes ? `, ${byes} ${byes === 1 ? 'bye' : 'byes'}` : ''}</p>
-    ${groups.map((group) => `
+    ${pinned.length ? `
+      <section class="age-group">
+        <h2>Favourites</h2>
+        <ul class="team-list">
+          ${pinned.map((team) => teamCard(team, data.checkedAt)).join('')}
+        </ul>
+      </section>` : ''}
+    ${groups.filter((group) => group.teams.length).map((group) => `
       <section class="age-group">
         <h2>${escapeHtml(group.label)}</h2>
         <ul class="team-list">
@@ -330,8 +382,12 @@ function renderTeam(data, team, tab) {
   app.querySelector('[data-copy="table"]')?.addEventListener('click', (event) => copyText(tableText, event.currentTarget))
 }
 
+function shortSquad(full) {
+  return String(full ?? '').replace(/^Tameside Vikings\s+/i, '')
+}
+
 function squadName(full) {
-  return escapeHtml(full.replace(/^Tameside Vikings\s+/i, ''))
+  return escapeHtml(shortSquad(full))
 }
 
 function escapeHtml(value) {
@@ -381,25 +437,70 @@ function show({ scroll = true } = {}) {
   requestAnimationFrame(goTop)
 }
 
+app.addEventListener('click', (event) => {
+  const button = event.target.closest('[data-fav]')
+  if (!button || route().id) return
+  toggleFavourite(button.dataset.fav)
+  if (window.__fixtures) show({ scroll: false })
+})
+
 setTeamAdmin(teamAdmin())
 adminSwitch.addEventListener('click', () => {
   setTeamAdmin(!teamAdmin())
   if (window.__fixtures) show({ scroll: false })
 })
 
-const [response, tablesResponse, resultsResponse] = await Promise.all([
-  fetch('./fixtures.json', { cache: 'no-store' }),
-  fetch('./tables.json', { cache: 'no-store' }),
-  fetch('./results.json', { cache: 'no-store' }),
-])
-window.__tables = tablesResponse.ok ? await tablesResponse.json() : { tables: [] }
-window.__results = resultsResponse.ok ? await resultsResponse.json() : { results: [] }
-if (!response.ok) {
-  checked.textContent = 'Fixtures have not been downloaded yet.'
-  app.innerHTML = `<section class="empty"><h2>Run the checker first</h2><p>From the project folder, run <strong>npm run scrape</strong>, then refresh this page.</p></section>`
-} else {
-  window.__fixtures = await response.json()
-  if ('scrollRestoration' in history) history.scrollRestoration = 'manual'
-  show()
-  window.addEventListener('hashchange', show)
+function freshFile(name) {
+  return `./${name}?${Date.now()}`
 }
+
+let loading = null
+let loadedAt = 0
+
+async function loadData({ scroll = false } = {}) {
+  if (loading) return loading
+  const run = (async () => {
+    const [response, tablesResponse, resultsResponse] = await Promise.all([
+      fetch(freshFile('fixtures.json'), { cache: 'no-store' }),
+      fetch(freshFile('tables.json'), { cache: 'no-store' }),
+      fetch(freshFile('results.json'), { cache: 'no-store' }),
+    ])
+    if (tablesResponse.ok) window.__tables = await tablesResponse.json()
+    else if (!window.__tables) window.__tables = { tables: [] }
+    if (resultsResponse.ok) window.__results = await resultsResponse.json()
+    else if (!window.__results) window.__results = { results: [] }
+    if (!response.ok) {
+      if (!window.__fixtures) {
+        checked.textContent = 'Fixtures have not been downloaded yet.'
+        app.innerHTML = `<section class="empty"><h2>Run the checker first</h2><p>From the project folder, run <strong>npm run scrape</strong>, then refresh this page.</p></section>`
+      }
+      return
+    }
+    window.__fixtures = await response.json()
+    loadedAt = Date.now()
+    show({ scroll })
+  })()
+  loading = run
+  try {
+    await run
+  } finally {
+    if (loading === run) loading = null
+  }
+}
+
+function refreshIfStale() {
+  if (document.visibilityState === 'hidden') return
+  if (Date.now() - loadedAt < 15000) return
+  loadData({ scroll: false })
+}
+
+document.addEventListener('visibilitychange', refreshIfStale)
+window.addEventListener('pageshow', (event) => {
+  if (event.persisted) loadData({ scroll: false })
+})
+window.addEventListener('hashchange', () => {
+  if (window.__fixtures) show()
+})
+
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual'
+loadData({ scroll: true })
