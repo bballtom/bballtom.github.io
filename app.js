@@ -256,6 +256,16 @@ function recordHtml(teamId, opponent) {
   return `<div class="records">${recent}${against}</div>`
 }
 
+function formStrip(teamId) {
+  const recent = recordRow('Last 5 games', recentResults(window.__results?.results, teamId))
+  return recent ? `<div class="form-strip">${recent}</div>` : ''
+}
+
+function opponentRecord(teamId, opponent) {
+  const against = recordRow('This opponent', meetingsAgainst(window.__results?.results, teamId, opponent))
+  return against ? `<div class="records">${against}</div>` : ''
+}
+
 function resultTally(rows) {
   const counts = { win: 0, draw: 0, loss: 0 }
   for (const row of rows) if (counts[row.outcome] != null) counts[row.outcome] += 1
@@ -304,14 +314,14 @@ function resultWhen(row) {
 }
 
 function fixturesPanel(data, team) {
-  return `<ul class="fixture-list">
-    ${team.fixtures.map((fixture, index) => {
+  return `${formStrip(team.id)}<ul class="fixture-list">
+    ${team.fixtures.map((fixture) => {
       const note = fixture.status === 'removed' ? 'CANCELLED' : changeSummary(fixture)
       const classes = ['fixture-card', fixture.status === 'removed' ? 'removed' : '', fixture.bye ? 'bye' : ''].filter(Boolean).join(' ')
       const extra = fixture.bye
         ? ''
         : `<p class="league">${escapeHtml(fixture.division)}${fixture.division ? ' · ' : ''}${escapeHtml(fixture.league)}</p>`
-      const record = index === 0 && !fixture.bye ? recordHtml(team.id, fixture.opponent) : ''
+      const record = fixture.bye ? '' : opponentRecord(team.id, fixture.opponent)
       return `<li class="${classes}">
         ${note ? `<p class="note ${fixture.change?.type ?? 'removed'}">${escapeHtml(note)}</p>` : ''}
         <p class="when">${whenText(fixture, data.checkedAt)}</p>

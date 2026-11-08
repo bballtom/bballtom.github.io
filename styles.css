@@ -225,7 +225,7 @@ main {
 }
 
 .team-card {
-  padding: 14px 56px 13px 16px;
+  padding: 14px 16px 13px;
   border-left: 6px solid var(--green);
 }
 
@@ -243,6 +243,7 @@ main {
   justify-content: space-between;
   gap: 12px;
   align-items: baseline;
+  padding-right: 36px;
 }
 
 .squad h3, .team-heading h2, .fixture-head h2 {
@@ -305,6 +306,13 @@ main {
 .opponent, .place, .league, .meta { color: var(--muted); }
 
 .bye-mark { margin: 4px 0 0; color: var(--cancel); font-weight: 800; }
+
+.form-strip {
+  margin: 0 0 14px;
+  padding: 0 2px;
+}
+
+.form-strip .record-label { color: #b7cfc0; }
 
 .records {
   display: grid;
