@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-11-07T22:34",
-  "changedAt": "2026-11-07T18:38",
+  "checkedAt": "2026-11-08T00:55",
+  "changedAt": "2026-11-08T00:55",
   "timezone": "Europe/London",
   "defaultHall": "Reddish Vale High School",
   "teams": [
@@ -584,25 +584,6 @@
       "id": "iron-maidens",
       "name": "Tameside Vikings Iron Maidens",
       "fixtures": [
-        {
-          "season": "Winter Season 26",
-          "leagueId": "58",
-          "league": "Saturday school years 5&6 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=58",
-          "date": "2026-11-07",
-          "time": "",
-          "opponent": "",
-          "hall": "",
-          "court": "",
-          "division": "",
-          "bye": true,
-          "status": "removed",
-          "change": {
-            "type": "removed",
-            "detectedAt": "2026-11-07T00:53",
-            "previous": null
-          }
-        },
         {
           "season": "Winter Season 26",
           "leagueId": "58",
