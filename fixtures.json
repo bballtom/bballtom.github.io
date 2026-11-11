@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-11-11T21:30",
-  "changedAt": "2026-11-08T00:55",
+  "checkedAt": "2026-11-11T22:47",
+  "changedAt": "2026-11-11T22:47",
   "timezone": "Europe/London",
   "defaultHall": "Reddish Vale High School",
   "teams": [
@@ -304,11 +304,18 @@
           "date": "2026-11-14",
           "time": "09:20",
           "opponent": "Trafford Titans Y9 Sky",
-          "hall": "Reddish Vale High School",
-          "court": "3",
+          "hall": "Cancelled",
+          "court": "",
           "division": "Premier Division",
           "status": "scheduled",
-          "change": null
+          "change": {
+            "type": "updated",
+            "detectedAt": "2026-11-11T22:47",
+            "previous": {
+              "hall": "Reddish Vale High School",
+              "court": "3"
+            }
+          }
         },
         {
           "season": "Winter Season 26",
