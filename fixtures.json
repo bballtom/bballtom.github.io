@@ -1,43 +1,9 @@
 {
-  "checkedAt": "2026-11-12T16:57",
-  "changedAt": "2026-11-12T14:51",
+  "checkedAt": "2026-11-12T18:51",
+  "changedAt": "2026-11-12T18:51",
   "timezone": "Europe/London",
   "defaultHall": "Reddish Vale High School",
   "teams": [
-    {
-      "id": "warriors",
-      "name": "Tameside Vikings Warriors",
-      "fixtures": [
-        {
-          "season": "Winter Season 26",
-          "leagueId": "54",
-          "league": "Thursday & Friday school years 9&10 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
-          "date": "2026-11-12",
-          "time": "18:40",
-          "opponent": "Globetrotters",
-          "hall": "Reddish Vale High School",
-          "court": "2",
-          "division": "Premier Division",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "54",
-          "league": "Thursday & Friday school years 9&10 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
-          "date": "2026-11-20",
-          "time": "17:40",
-          "opponent": "Stingrays",
-          "hall": "Reddish Vale High School",
-          "court": "3",
-          "division": "Premier Division",
-          "status": "scheduled",
-          "change": null
-        }
-      ]
-    },
     {
       "id": "berserkers",
       "name": "Tameside Vikings Berserkers",
@@ -543,6 +509,26 @@
               "time": "10:10"
             }
           }
+        }
+      ]
+    },
+    {
+      "id": "warriors",
+      "name": "Tameside Vikings Warriors",
+      "fixtures": [
+        {
+          "season": "Winter Season 26",
+          "leagueId": "54",
+          "league": "Thursday & Friday school years 9&10 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
+          "date": "2026-11-20",
+          "time": "17:40",
+          "opponent": "Stingrays",
+          "hall": "Reddish Vale High School",
+          "court": "3",
+          "division": "Premier Division",
+          "status": "scheduled",
+          "change": null
         }
       ]
     },
