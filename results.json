@@ -1,7 +1,22 @@
 {
-  "checkedAt": "2026-11-11T19:47",
+  "checkedAt": "2026-11-12T19:42",
   "timezone": "Europe/London",
   "results": [
+    {
+      "season": "Winter Season 26",
+      "leagueId": "54",
+      "league": "Thursday & Friday school years 9&10 basketball",
+      "division": "Premier Division",
+      "date": "2026-11-12",
+      "time": "18:40",
+      "team": "Tameside Vikings Warriors",
+      "teamId": "warriors",
+      "opponent": "Globetrotters",
+      "teamScore": 31,
+      "opponentScore": 50,
+      "outcome": "loss",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-results-winter/?id=54&season=9"
+    },
     {
       "season": "Winter Season 26",
       "leagueId": "58",
