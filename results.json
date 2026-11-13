@@ -1,7 +1,22 @@
 {
-  "checkedAt": "2026-11-12T19:42",
+  "checkedAt": "2026-11-13T19:41",
   "timezone": "Europe/London",
   "results": [
+    {
+      "season": "Winter Season 26",
+      "leagueId": "54",
+      "league": "Thursday & Friday school years 9&10 basketball",
+      "division": "Premier Division",
+      "date": "2026-11-13",
+      "time": "18:30",
+      "team": "Tameside Vikings Berserkers",
+      "teamId": "berserkers",
+      "opponent": "SK Nukes Green",
+      "teamScore": 48,
+      "opponentScore": 27,
+      "outcome": "win",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-results-winter/?id=54&season=9"
+    },
     {
       "season": "Winter Season 26",
       "leagueId": "54",
