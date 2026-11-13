@@ -1,77 +1,9 @@
 {
-  "checkedAt": "2026-11-13T18:47",
-  "changedAt": "2026-11-13T18:47",
+  "checkedAt": "2026-11-13T20:49",
+  "changedAt": "2026-11-13T20:49",
   "timezone": "Europe/London",
   "defaultHall": "Reddish Vale High School",
   "teams": [
-    {
-      "id": "valhalla",
-      "name": "Tameside Vikings Valhalla",
-      "fixtures": [
-        {
-          "season": "Winter Season 26",
-          "leagueId": "55",
-          "league": "Thursday & Friday under 18s basketball basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=55",
-          "date": "2026-11-13",
-          "time": "19:20",
-          "opponent": "Teal Dragons",
-          "hall": "Reddish Vale High School",
-          "court": "1",
-          "division": "Division 1",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "55",
-          "league": "Thursday & Friday under 18s basketball basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=55",
-          "date": "2026-11-19",
-          "time": "19:30",
-          "opponent": "Tameside Vikings Ballers",
-          "hall": "Reddish Vale High School",
-          "court": "2",
-          "division": "Division 1",
-          "status": "scheduled",
-          "change": null
-        }
-      ]
-    },
-    {
-      "id": "ravens",
-      "name": "Tameside Vikings Ravens",
-      "fixtures": [
-        {
-          "season": "Winter Season 26",
-          "leagueId": "55",
-          "league": "Thursday & Friday under 18s basketball basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=55",
-          "date": "2026-11-13",
-          "time": "20:10",
-          "opponent": "Stockport Sharks",
-          "hall": "Reddish Vale High School",
-          "court": "3",
-          "division": "Division 2",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "55",
-          "league": "Thursday & Friday under 18s basketball basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=55",
-          "date": "2026-11-19",
-          "time": "19:30",
-          "opponent": "Reddish Reapers White",
-          "hall": "Reddish Vale High School",
-          "court": "3",
-          "division": "Division 2",
-          "status": "scheduled",
-          "change": null
-        }
-      ]
-    },
     {
       "id": "ballers",
       "name": "Tameside Vikings Ballers",
@@ -475,6 +407,46 @@
               "time": "10:10"
             }
           }
+        }
+      ]
+    },
+    {
+      "id": "ravens",
+      "name": "Tameside Vikings Ravens",
+      "fixtures": [
+        {
+          "season": "Winter Season 26",
+          "leagueId": "55",
+          "league": "Thursday & Friday under 18s basketball basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=55",
+          "date": "2026-11-19",
+          "time": "19:30",
+          "opponent": "Reddish Reapers White",
+          "hall": "Reddish Vale High School",
+          "court": "3",
+          "division": "Division 2",
+          "status": "scheduled",
+          "change": null
+        }
+      ]
+    },
+    {
+      "id": "valhalla",
+      "name": "Tameside Vikings Valhalla",
+      "fixtures": [
+        {
+          "season": "Winter Season 26",
+          "leagueId": "55",
+          "league": "Thursday & Friday under 18s basketball basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=55",
+          "date": "2026-11-19",
+          "time": "19:30",
+          "opponent": "Tameside Vikings Ballers",
+          "hall": "Reddish Vale High School",
+          "court": "2",
+          "division": "Division 1",
+          "status": "scheduled",
+          "change": null
         }
       ]
     },
