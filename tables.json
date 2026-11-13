@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-12T19:48",
+  "checkedAt": "2026-11-13T19:49",
   "timezone": "Europe/London",
   "season": "Winter Season 26",
   "tables": [
@@ -711,6 +711,17 @@
       "rows": [
         {
           "position": 1,
+          "team": "Stingrays",
+          "played": 5,
+          "won": 4,
+          "drawn": 0,
+          "lost": 0,
+          "byes": 1,
+          "walkovers": 0,
+          "points": 15
+        },
+        {
+          "position": 2,
           "team": "Globetrotters",
           "played": 5,
           "won": 4,
@@ -721,48 +732,37 @@
           "points": 13
         },
         {
-          "position": 2,
-          "team": "Stingrays",
-          "played": 4,
-          "won": 4,
-          "drawn": 0,
-          "lost": 0,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 12
-        },
-        {
           "position": 3,
-          "team": "SK Nukes Green",
-          "played": 4,
-          "won": 2,
-          "drawn": 0,
-          "lost": 1,
-          "byes": 1,
-          "walkovers": 0,
-          "points": 10
-        },
-        {
-          "position": 4,
           "team": "Tameside Vikings - Berserkers",
-          "played": 4,
-          "won": 2,
+          "played": 5,
+          "won": 3,
           "drawn": 0,
           "lost": 0,
           "byes": 1,
           "walkovers": 1,
-          "points": 9
+          "points": 12
         },
         {
-          "position": 5,
-          "team": "Mannchester Bulls 9-10",
-          "played": 4,
-          "won": 1,
+          "position": 4,
+          "team": "SK Nukes Green",
+          "played": 5,
+          "won": 2,
           "drawn": 0,
           "lost": 2,
           "byes": 1,
           "walkovers": 0,
-          "points": 8
+          "points": 11
+        },
+        {
+          "position": 5,
+          "team": "Mannchester Bulls 9-10",
+          "played": 5,
+          "won": 2,
+          "drawn": 0,
+          "lost": 2,
+          "byes": 1,
+          "walkovers": 0,
+          "points": 11
         },
         {
           "position": 6,
@@ -778,13 +778,13 @@
         {
           "position": 7,
           "team": "Trafford Titans Y10",
-          "played": 4,
+          "played": 5,
           "won": 0,
           "drawn": 0,
-          "lost": 4,
+          "lost": 5,
           "byes": 0,
           "walkovers": 0,
-          "points": 4
+          "points": 5
         }
       ]
     },
@@ -808,17 +808,28 @@
         },
         {
           "position": 2,
-          "team": "Tameside Vikings - Valhalla",
-          "played": 4,
+          "team": "Macc town alex",
+          "played": 5,
           "won": 3,
           "drawn": 0,
-          "lost": 1,
+          "lost": 2,
           "byes": 0,
           "walkovers": 0,
-          "points": 10
+          "points": 11
         },
         {
           "position": 3,
+          "team": "Trafford Titans U18 Orange",
+          "played": 5,
+          "won": 3,
+          "drawn": 0,
+          "lost": 2,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 11
+        },
+        {
+          "position": 4,
           "team": "Southside Golden Lions",
           "played": 4,
           "won": 3,
@@ -829,8 +840,8 @@
           "points": 10
         },
         {
-          "position": 4,
-          "team": "Trafford Titans U18 Orange",
+          "position": 5,
+          "team": "Tameside Vikings - Valhalla",
           "played": 4,
           "won": 3,
           "drawn": 0,
@@ -838,17 +849,6 @@
           "byes": 0,
           "walkovers": 0,
           "points": 10
-        },
-        {
-          "position": 5,
-          "team": "Macc town alex",
-          "played": 4,
-          "won": 2,
-          "drawn": 0,
-          "lost": 2,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 8
         },
         {
           "position": 6,
@@ -894,6 +894,17 @@
       "rows": [
         {
           "position": 1,
+          "team": "North Manchester Falcons",
+          "played": 5,
+          "won": 4,
+          "drawn": 0,
+          "lost": 1,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 13
+        },
+        {
+          "position": 2,
           "team": "Tornados",
           "played": 4,
           "won": 4,
@@ -904,7 +915,18 @@
           "points": 12
         },
         {
-          "position": 2,
+          "position": 3,
+          "team": "Vale Vikings",
+          "played": 5,
+          "won": 3,
+          "drawn": 0,
+          "lost": 2,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 11
+        },
+        {
+          "position": 4,
           "team": "Stockport Sharks",
           "played": 4,
           "won": 3,
@@ -915,37 +937,15 @@
           "points": 10
         },
         {
-          "position": 3,
-          "team": "North Manchester Falcons",
-          "played": 4,
-          "won": 3,
-          "drawn": 0,
-          "lost": 1,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 10
-        },
-        {
-          "position": 4,
-          "team": "Reddish Reapers White",
-          "played": 4,
-          "won": 2,
-          "drawn": 0,
-          "lost": 2,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 8
-        },
-        {
           "position": 5,
-          "team": "Vale Vikings",
-          "played": 4,
+          "team": "Reddish Reapers White",
+          "played": 5,
           "won": 2,
           "drawn": 0,
-          "lost": 2,
+          "lost": 3,
           "byes": 0,
           "walkovers": 0,
-          "points": 8
+          "points": 9
         },
         {
           "position": 6,
@@ -972,13 +972,13 @@
         {
           "position": 8,
           "team": "Reddish Eagles",
-          "played": 4,
+          "played": 5,
           "won": 0,
           "drawn": 0,
-          "lost": 4,
+          "lost": 5,
           "byes": 0,
           "walkovers": 0,
-          "points": 4
+          "points": 5
         }
       ]
     }
