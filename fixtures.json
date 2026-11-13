@@ -1,43 +1,9 @@
 {
-  "checkedAt": "2026-11-13T20:49",
-  "changedAt": "2026-11-13T20:49",
+  "checkedAt": "2026-11-13T22:40",
+  "changedAt": "2026-11-13T22:40",
   "timezone": "Europe/London",
   "defaultHall": "Reddish Vale High School",
   "teams": [
-    {
-      "id": "ballers",
-      "name": "Tameside Vikings Ballers",
-      "fixtures": [
-        {
-          "season": "Winter Season 26",
-          "leagueId": "55",
-          "league": "Thursday & Friday under 18s basketball basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=55",
-          "date": "2026-11-13",
-          "time": "21:00",
-          "opponent": "Manchester Mavericks",
-          "hall": "Reddish Vale High School",
-          "court": "2",
-          "division": "Division 1",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "55",
-          "league": "Thursday & Friday under 18s basketball basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=55",
-          "date": "2026-11-19",
-          "time": "19:30",
-          "opponent": "Tameside Vikings Valhalla",
-          "hall": "Reddish Vale High School",
-          "court": "2",
-          "division": "Division 1",
-          "status": "scheduled",
-          "change": null
-        }
-      ]
-    },
     {
       "id": "guardians",
       "name": "Tameside Vikings Guardians",
@@ -407,6 +373,26 @@
               "time": "10:10"
             }
           }
+        }
+      ]
+    },
+    {
+      "id": "ballers",
+      "name": "Tameside Vikings Ballers",
+      "fixtures": [
+        {
+          "season": "Winter Season 26",
+          "leagueId": "55",
+          "league": "Thursday & Friday under 18s basketball basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=55",
+          "date": "2026-11-19",
+          "time": "19:30",
+          "opponent": "Tameside Vikings Valhalla",
+          "hall": "Reddish Vale High School",
+          "court": "2",
+          "division": "Division 1",
+          "status": "scheduled",
+          "change": null
         }
       ]
     },
