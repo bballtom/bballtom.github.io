@@ -1,49 +1,9 @@
 {
-  "checkedAt": "2026-11-14T16:36",
-  "changedAt": "2026-11-14T14:39",
+  "checkedAt": "2026-11-14T18:39",
+  "changedAt": "2026-11-14T18:39",
   "timezone": "Europe/London",
   "defaultHall": "Reddish Vale High School",
   "teams": [
-    {
-      "id": "thunder",
-      "name": "Tameside Vikings Thunder",
-      "fixtures": [
-        {
-          "season": "Winter Season 26",
-          "leagueId": "59",
-          "league": "Saturday school years 7&8 basketball (boys)",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
-          "date": "2026-11-14",
-          "time": "16:50",
-          "opponent": "ABC Basketball Y7/8",
-          "hall": "Reddish Vale High School",
-          "court": "2",
-          "division": "Premier Division",
-          "status": "scheduled",
-          "change": null
-        },
-        {
-          "season": "Winter Season 26",
-          "leagueId": "59",
-          "league": "Saturday school years 7&8 basketball (boys)",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
-          "date": "2026-11-21",
-          "time": "11:00",
-          "opponent": "MBC SWARM",
-          "hall": "Hollinwood",
-          "court": "",
-          "division": "Premier Division",
-          "status": "scheduled",
-          "change": {
-            "type": "updated",
-            "detectedAt": "2026-10-26T20:30",
-            "previous": {
-              "time": "10:10"
-            }
-          }
-        }
-      ]
-    },
     {
       "id": "ballers",
       "name": "Tameside Vikings Ballers",
@@ -231,6 +191,32 @@
           "division": "Division 3",
           "status": "scheduled",
           "change": null
+        }
+      ]
+    },
+    {
+      "id": "thunder",
+      "name": "Tameside Vikings Thunder",
+      "fixtures": [
+        {
+          "season": "Winter Season 26",
+          "leagueId": "59",
+          "league": "Saturday school years 7&8 basketball (boys)",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
+          "date": "2026-11-21",
+          "time": "11:00",
+          "opponent": "MBC SWARM",
+          "hall": "Hollinwood",
+          "court": "",
+          "division": "Premier Division",
+          "status": "scheduled",
+          "change": {
+            "type": "updated",
+            "detectedAt": "2026-10-26T20:30",
+            "previous": {
+              "time": "10:10"
+            }
+          }
         }
       ]
     },
