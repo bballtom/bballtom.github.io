@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-19T19:57",
+  "checkedAt": "2026-11-20T19:55",
   "timezone": "Europe/London",
   "season": "Winter Season 26",
   "tables": [
@@ -714,6 +714,81 @@
       ]
     },
     {
+      "id": "54|858",
+      "leagueId": "54",
+      "league": "Thursday & Friday school years 9&10 basketball",
+      "division": "Division 1",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-league/?id=54%7C858",
+      "rows": [
+        {
+          "position": 1,
+          "team": "Blue Whale Sports 9/10 Boys",
+          "played": 5,
+          "won": 5,
+          "drawn": 0,
+          "lost": 0,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 15
+        },
+        {
+          "position": 2,
+          "team": "Poynton Pirates",
+          "played": 6,
+          "won": 3,
+          "drawn": 0,
+          "lost": 2,
+          "byes": 1,
+          "walkovers": 0,
+          "points": 14
+        },
+        {
+          "position": 3,
+          "team": "Red tigers",
+          "played": 5,
+          "won": 2,
+          "drawn": 0,
+          "lost": 2,
+          "byes": 1,
+          "walkovers": 0,
+          "points": 11
+        },
+        {
+          "position": 4,
+          "team": "Raptors",
+          "played": 6,
+          "won": 0,
+          "drawn": 0,
+          "lost": 5,
+          "byes": 1,
+          "walkovers": 0,
+          "points": 8
+        },
+        {
+          "position": 5,
+          "team": "Trafford Titans Y10",
+          "played": 6,
+          "won": 0,
+          "drawn": 0,
+          "lost": 5,
+          "byes": 1,
+          "walkovers": 0,
+          "points": 8
+        },
+        {
+          "position": 6,
+          "team": "Tameside Vikings - Warriors",
+          "played": 6,
+          "won": 0,
+          "drawn": 0,
+          "lost": 5,
+          "byes": 1,
+          "walkovers": 0,
+          "points": 8
+        }
+      ]
+    },
+    {
       "id": "54|859",
       "leagueId": "54",
       "league": "Thursday & Friday school years 9&10 basketball",
@@ -723,79 +798,79 @@
         {
           "position": 1,
           "team": "Stingrays",
-          "played": 5,
-          "won": 4,
+          "played": 6,
+          "won": 5,
           "drawn": 0,
           "lost": 0,
           "byes": 1,
           "walkovers": 0,
-          "points": 15
+          "points": 18
         },
         {
           "position": 2,
+          "team": "Phoenix Orange",
+          "played": 6,
+          "won": 5,
+          "drawn": 0,
+          "lost": 0,
+          "byes": 1,
+          "walkovers": 0,
+          "points": 18
+        },
+        {
+          "position": 3,
+          "team": "Cheadle Reapers",
+          "played": 6,
+          "won": 5,
+          "drawn": 0,
+          "lost": 0,
+          "byes": 1,
+          "walkovers": 0,
+          "points": 18
+        },
+        {
+          "position": 4,
           "team": "Globetrotters",
-          "played": 5,
-          "won": 4,
+          "played": 6,
+          "won": 5,
           "drawn": 0,
           "lost": 1,
           "byes": 0,
           "walkovers": 0,
-          "points": 13
-        },
-        {
-          "position": 3,
-          "team": "Tameside Vikings - Berserkers",
-          "played": 5,
-          "won": 3,
-          "drawn": 0,
-          "lost": 0,
-          "byes": 1,
-          "walkovers": 1,
-          "points": 12
-        },
-        {
-          "position": 4,
-          "team": "SK Nukes Green",
-          "played": 5,
-          "won": 2,
-          "drawn": 0,
-          "lost": 2,
-          "byes": 1,
-          "walkovers": 0,
-          "points": 11
+          "points": 16
         },
         {
           "position": 5,
-          "team": "Mannchester Bulls 9-10",
-          "played": 5,
-          "won": 2,
+          "team": "SK Nukes Green",
+          "played": 6,
+          "won": 3,
           "drawn": 0,
           "lost": 2,
           "byes": 1,
           "walkovers": 0,
-          "points": 11
+          "points": 14
         },
         {
           "position": 6,
-          "team": "Tameside Vikings - Warriors",
-          "played": 5,
-          "won": 0,
+          "team": "Tameside Vikings - Berserkers",
+          "played": 6,
+          "won": 3,
           "drawn": 0,
-          "lost": 4,
+          "lost": 1,
           "byes": 1,
-          "walkovers": 0,
-          "points": 7
+          "walkovers": 1,
+          "points": 13
         },
         {
           "position": 7,
-          "team": "Trafford Titans Y10",
-          "played": 5,
-          "won": 0,
+          "team": "Mannchester Bulls 9-10",
+          "played": 6,
+          "won": 2,
           "drawn": 0,
-          "lost": 5,
-          "byes": 0,
+          "lost": 3,
+          "byes": 1,
           "walkovers": 0,
-          "points": 5
+          "points": 12
         }
       ]
     },
@@ -809,13 +884,13 @@
         {
           "position": 1,
           "team": "Tameside Vikings - Valhalla",
-          "played": 5,
-          "won": 4,
+          "played": 6,
+          "won": 5,
           "drawn": 0,
           "lost": 1,
           "byes": 0,
           "walkovers": 0,
-          "points": 13
+          "points": 16
         },
         {
           "position": 2,
@@ -864,13 +939,13 @@
         {
           "position": 6,
           "team": "Tameside Vikings Ballers",
-          "played": 5,
+          "played": 6,
           "won": 1,
           "drawn": 0,
-          "lost": 4,
+          "lost": 5,
           "byes": 0,
           "walkovers": 0,
-          "points": 7
+          "points": 8
         },
         {
           "position": 7,
@@ -916,6 +991,17 @@
         },
         {
           "position": 2,
+          "team": "North Manchester Falcons",
+          "played": 6,
+          "won": 4,
+          "drawn": 0,
+          "lost": 2,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 14
+        },
+        {
+          "position": 3,
           "team": "Stockport Sharks",
           "played": 5,
           "won": 4,
@@ -926,18 +1012,18 @@
           "points": 13
         },
         {
-          "position": 3,
-          "team": "North Manchester Falcons",
-          "played": 5,
-          "won": 4,
+          "position": 4,
+          "team": "Reddish Reapers White",
+          "played": 6,
+          "won": 3,
           "drawn": 0,
-          "lost": 1,
+          "lost": 3,
           "byes": 0,
           "walkovers": 0,
-          "points": 13
+          "points": 12
         },
         {
-          "position": 4,
+          "position": 5,
           "team": "Vale Vikings",
           "played": 5,
           "won": 3,
@@ -948,37 +1034,26 @@
           "points": 11
         },
         {
-          "position": 5,
-          "team": "Reddish Reapers White",
-          "played": 5,
+          "position": 6,
+          "team": "Evo Elite",
+          "played": 6,
           "won": 2,
           "drawn": 0,
           "lost": 3,
           "byes": 0,
-          "walkovers": 0,
+          "walkovers": 1,
           "points": 9
         },
         {
-          "position": 6,
+          "position": 7,
           "team": "Tameside Vikings - Ravens",
-          "played": 5,
+          "played": 6,
           "won": 1,
           "drawn": 0,
-          "lost": 4,
+          "lost": 5,
           "byes": 0,
           "walkovers": 0,
-          "points": 7
-        },
-        {
-          "position": 7,
-          "team": "Evo Elite",
-          "played": 5,
-          "won": 1,
-          "drawn": 0,
-          "lost": 3,
-          "byes": 0,
-          "walkovers": 1,
-          "points": 6
+          "points": 8
         },
         {
           "position": 8,
