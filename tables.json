@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-20T19:55",
+  "checkedAt": "2026-11-21T19:42",
   "timezone": "Europe/London",
   "season": "Winter Season 26",
   "tables": [
@@ -13,79 +13,90 @@
         {
           "position": 1,
           "team": "Thunder Strikers",
-          "played": 5,
+          "played": 6,
           "won": 4,
           "drawn": 0,
+          "lost": 1,
+          "byes": 1,
+          "walkovers": 0,
+          "points": 16
+        },
+        {
+          "position": 2,
+          "team": "SK Nukes Storm",
+          "played": 4,
+          "won": 2,
+          "drawn": 2,
+          "lost": 1,
+          "byes": 1,
+          "walkovers": 0,
+          "points": 14
+        },
+        {
+          "position": 3,
+          "team": "Southside Wildcats",
+          "played": 4,
+          "won": 2,
+          "drawn": 3,
           "lost": 1,
           "byes": 0,
           "walkovers": 0,
           "points": 13
         },
         {
-          "position": 2,
-          "team": "SK Nukes Storm",
-          "played": 3,
-          "won": 1,
-          "drawn": 2,
-          "lost": 1,
-          "byes": 1,
-          "walkovers": 0,
-          "points": 11
-        },
-        {
-          "position": 3,
+          "position": 4,
           "team": "Reddish Monkeys",
-          "played": 5,
+          "played": 6,
           "won": 2,
           "drawn": 0,
-          "lost": 2,
+          "lost": 3,
           "byes": 1,
           "walkovers": 0,
-          "points": 11
-        },
-        {
-          "position": 4,
-          "team": "Trafford Titans Y3",
-          "played": 3,
-          "won": 1,
-          "drawn": 3,
-          "lost": 1,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 10
+          "points": 12
         },
         {
           "position": 5,
-          "team": "Southside Wildcats",
-          "played": 3,
-          "won": 1,
-          "drawn": 3,
-          "lost": 1,
+          "team": "Tameside Vikings Storm Maidens",
+          "played": 6,
+          "won": 3,
+          "drawn": 0,
+          "lost": 3,
           "byes": 0,
           "walkovers": 0,
-          "points": 10
+          "points": 12
         },
         {
           "position": 6,
-          "team": "Tameside Vikings Storm Maidens",
-          "played": 5,
-          "won": 2,
-          "drawn": 0,
-          "lost": 3,
+          "team": "MBC Bees Elite",
+          "played": 6,
+          "won": 0,
+          "drawn": 6,
+          "lost": 0,
           "byes": 0,
           "walkovers": 0,
-          "points": 9
+          "points": 12
         },
         {
           "position": 7,
+          "team": "Trafford Titans Y3",
+          "played": 4,
+          "won": 1,
+          "drawn": 3,
+          "lost": 2,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 11
+        },
+        {
+          "position": 8,
           "team": "Tameside Vikings Slayers",
-          "played": 5,
+          "played": 6,
           "won": 1,
           "drawn": 0,
-          "lost": 3,
+          "lost": 4,
           "byes": 1,
           "walkovers": 0,
-          "points": 9
+          "points": 10
         }
       ]
     },
@@ -98,80 +109,69 @@
       "rows": [
         {
           "position": 1,
-          "team": "ABC Basketball",
-          "played": 5,
-          "won": 5,
+          "team": "Reddish Demons",
+          "played": 6,
+          "won": 6,
           "drawn": 0,
           "lost": 0,
           "byes": 0,
           "walkovers": 0,
-          "points": 15
+          "points": 18
         },
         {
           "position": 2,
           "team": "Stockport Buzz",
-          "played": 5,
-          "won": 4,
+          "played": 6,
+          "won": 5,
           "drawn": 0,
           "lost": 0,
           "byes": 1,
           "walkovers": 0,
-          "points": 15
+          "points": 18
         },
         {
           "position": 3,
-          "team": "Trafford Titans Year 6",
-          "played": 5,
-          "won": 2,
-          "drawn": 1,
-          "lost": 2,
+          "team": "ABC Basketball",
+          "played": 6,
+          "won": 6,
+          "drawn": 0,
+          "lost": 0,
           "byes": 0,
           "walkovers": 0,
-          "points": 10
+          "points": 18
         },
         {
           "position": 4,
           "team": "The wizards",
-          "played": 3,
-          "won": 1,
+          "played": 4,
+          "won": 2,
           "drawn": 2,
           "lost": 2,
           "byes": 0,
           "walkovers": 0,
-          "points": 9
+          "points": 12
         },
         {
           "position": 5,
-          "team": "MBC Bee Ballers",
-          "played": 5,
-          "won": 1,
-          "drawn": 0,
-          "lost": 2,
-          "byes": 1,
-          "walkovers": 1,
-          "points": 8
+          "team": "Trafford Titans Year 6",
+          "played": 6,
+          "won": 2,
+          "drawn": 1,
+          "lost": 3,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 11
         },
         {
           "position": 6,
           "team": "Tameside Vikings-Invaders",
-          "played": 5,
+          "played": 6,
           "won": 1,
           "drawn": 1,
           "lost": 2,
-          "byes": 0,
-          "walkovers": 1,
-          "points": 7
-        },
-        {
-          "position": 7,
-          "team": "Macc Town Team Ben",
-          "played": 5,
-          "won": 0,
-          "drawn": 0,
-          "lost": 4,
           "byes": 1,
-          "walkovers": 0,
-          "points": 7
+          "walkovers": 1,
+          "points": 10
         }
       ]
     },
@@ -184,69 +184,69 @@
       "rows": [
         {
           "position": 1,
-          "team": "Trafford Titans Yr5",
-          "played": 5,
-          "won": 4,
+          "team": "Phoenix Flames",
+          "played": 6,
+          "won": 5,
           "drawn": 0,
-          "lost": 1,
-          "byes": 0,
+          "lost": 0,
+          "byes": 1,
           "walkovers": 0,
-          "points": 13
+          "points": 18
         },
         {
           "position": 2,
+          "team": "Blue Whale sports 5/6",
+          "played": 6,
+          "won": 4,
+          "drawn": 0,
+          "lost": 2,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 14
+        },
+        {
+          "position": 3,
+          "team": "Trafford Titans Yr5",
+          "played": 6,
+          "won": 4,
+          "drawn": 0,
+          "lost": 2,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 14
+        },
+        {
+          "position": 4,
           "team": "Glossopdale Hoops Purple",
-          "played": 5,
-          "won": 2,
+          "played": 6,
+          "won": 3,
           "drawn": 2,
           "lost": 1,
           "byes": 0,
           "walkovers": 0,
-          "points": 11
-        },
-        {
-          "position": 3,
-          "team": "Blue Whale sports 5/6",
-          "played": 5,
-          "won": 3,
-          "drawn": 0,
-          "lost": 2,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 11
-        },
-        {
-          "position": 4,
-          "team": "Heaton Warriors",
-          "played": 5,
-          "won": 2,
-          "drawn": 1,
-          "lost": 2,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 10
+          "points": 14
         },
         {
           "position": 5,
-          "team": "Tameside Vikings-Tornadoes",
-          "played": 5,
+          "team": "Heaton Warriors",
+          "played": 6,
           "won": 2,
           "drawn": 1,
-          "lost": 2,
+          "lost": 3,
           "byes": 0,
           "walkovers": 0,
-          "points": 10
+          "points": 11
         },
         {
           "position": 6,
-          "team": "Reddish Hawks",
-          "played": 5,
-          "won": 0,
-          "drawn": 0,
-          "lost": 5,
+          "team": "Tameside Vikings-Tornadoes",
+          "played": 6,
+          "won": 2,
+          "drawn": 1,
+          "lost": 3,
           "byes": 0,
           "walkovers": 0,
-          "points": 5
+          "points": 11
         }
       ]
     },
@@ -260,90 +260,187 @@
         {
           "position": 1,
           "team": "MBC Hornets",
-          "played": 5,
-          "won": 4,
+          "played": 6,
+          "won": 5,
           "drawn": 0,
           "lost": 1,
           "byes": 0,
           "walkovers": 0,
-          "points": 13
+          "points": 16
         },
         {
           "position": 2,
           "team": "Manchester Bulls",
-          "played": 5,
-          "won": 4,
+          "played": 6,
+          "won": 5,
           "drawn": 0,
           "lost": 0,
           "byes": 0,
           "walkovers": 1,
-          "points": 12
+          "points": 15
         },
         {
           "position": 3,
           "team": "Tameside Vikings Thunder",
-          "played": 5,
-          "won": 4,
+          "played": 6,
+          "won": 5,
           "drawn": 0,
           "lost": 0,
           "byes": 0,
           "walkovers": 1,
-          "points": 12
+          "points": 15
         },
         {
           "position": 4,
-          "team": "MBC SWARM",
+          "team": "MBC Soldiers",
           "played": 5,
-          "won": 3,
+          "won": 5,
           "drawn": 0,
-          "lost": 2,
+          "lost": 0,
           "byes": 0,
           "walkovers": 0,
-          "points": 11
+          "points": 15
         },
         {
           "position": 5,
+          "team": "MBC SWARM",
+          "played": 6,
+          "won": 3,
+          "drawn": 0,
+          "lost": 3,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 12
+        },
+        {
+          "position": 6,
           "team": "ABC Basketball Y7/8",
-          "played": 5,
+          "played": 6,
+          "won": 3,
+          "drawn": 0,
+          "lost": 3,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 12
+        }
+      ]
+    },
+    {
+      "id": "59|834",
+      "leagueId": "59",
+      "league": "Saturday school years 7&8 basketball (boys)",
+      "division": "Division 1",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-league/?id=59%7C834",
+      "rows": [
+        {
+          "position": 1,
+          "team": "Tameside Vikings - Dreki",
+          "played": 6,
+          "won": 5,
+          "drawn": 0,
+          "lost": 0,
+          "byes": 1,
+          "walkovers": 0,
+          "points": 18
+        },
+        {
+          "position": 2,
+          "team": "Trafford Titans Y8 Orange",
+          "played": 6,
+          "won": 5,
+          "drawn": 0,
+          "lost": 1,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 16
+        },
+        {
+          "position": 3,
+          "team": "Stockport Shadows",
+          "played": 6,
+          "won": 4,
+          "drawn": 0,
+          "lost": 1,
+          "byes": 0,
+          "walkovers": 1,
+          "points": 13
+        },
+        {
+          "position": 4,
+          "team": "Southside Lions 7&8",
+          "played": 6,
+          "won": 0,
+          "drawn": 6,
+          "lost": 0,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 12
+        },
+        {
+          "position": 5,
+          "team": "Trafford Titans Y8 Sky",
+          "played": 6,
+          "won": 0,
+          "drawn": 6,
+          "lost": 0,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 12
+        },
+        {
+          "position": 6,
+          "team": "Macc Town Raiders Zac",
+          "played": 6,
+          "won": 0,
+          "drawn": 6,
+          "lost": 0,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 12
+        },
+        {
+          "position": 7,
+          "team": "MBC Buzz City Ballers",
+          "played": 6,
+          "won": 3,
+          "drawn": 0,
+          "lost": 3,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 12
+        },
+        {
+          "position": 8,
+          "team": "Glossopdale Hoops Red",
+          "played": 6,
           "won": 3,
           "drawn": 0,
           "lost": 2,
           "byes": 0,
-          "walkovers": 0,
+          "walkovers": 1,
           "points": 11
         },
         {
-          "position": 6,
-          "team": "Trafford Titans Y8 Sky",
-          "played": 5,
+          "position": 9,
+          "team": "Cheadle Destroyers",
+          "played": 6,
           "won": 1,
-          "drawn": 0,
-          "lost": 4,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 7
-        },
-        {
-          "position": 7,
-          "team": "Southside Lions 7&8",
-          "played": 5,
-          "won": 1,
-          "drawn": 0,
-          "lost": 3,
-          "byes": 0,
-          "walkovers": 1,
-          "points": 6
-        },
-        {
-          "position": 8,
-          "team": "Macc Town Raiders Zac",
-          "played": 5,
-          "won": 0,
           "drawn": 0,
           "lost": 5,
           "byes": 0,
           "walkovers": 0,
-          "points": 5
+          "points": 8
+        },
+        {
+          "position": 10,
+          "team": "Trafford Titans YR7 Orange",
+          "played": 6,
+          "won": 1,
+          "drawn": 0,
+          "lost": 5,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 8
         }
       ]
     },
@@ -356,102 +453,113 @@
       "rows": [
         {
           "position": 1,
-          "team": "Tameside Vikings - Dreki",
-          "played": 5,
-          "won": 5,
-          "drawn": 0,
-          "lost": 0,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 15
-        },
-        {
-          "position": 2,
           "team": "SK Nukes Saints",
-          "played": 5,
-          "won": 4,
+          "played": 6,
+          "won": 5,
           "drawn": 0,
           "lost": 1,
           "byes": 0,
           "walkovers": 0,
-          "points": 13
+          "points": 16
+        },
+        {
+          "position": 2,
+          "team": "Reddish Romans U13",
+          "played": 6,
+          "won": 4,
+          "drawn": 0,
+          "lost": 2,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 14
         },
         {
           "position": 3,
           "team": "Raiders",
-          "played": 5,
+          "played": 6,
           "won": 4,
           "drawn": 0,
-          "lost": 1,
+          "lost": 2,
           "byes": 0,
           "walkovers": 0,
-          "points": 13
+          "points": 14
         },
         {
           "position": 4,
-          "team": "Reddish Romans U13",
-          "played": 5,
-          "won": 3,
-          "drawn": 0,
-          "lost": 2,
+          "team": "Black panthers 7/8",
+          "played": 6,
+          "won": 0,
+          "drawn": 6,
+          "lost": 0,
           "byes": 0,
           "walkovers": 0,
-          "points": 11
+          "points": 12
         },
         {
           "position": 5,
-          "team": "Reddish Eagles Silver",
-          "played": 3,
+          "team": "High Peak Brigands",
+          "played": 6,
           "won": 0,
-          "drawn": 2,
-          "lost": 2,
-          "byes": 1,
+          "drawn": 6,
+          "lost": 0,
+          "byes": 0,
           "walkovers": 0,
-          "points": 9
+          "points": 12
         },
         {
           "position": 6,
           "team": "Stockport Storm",
-          "played": 5,
-          "won": 2,
+          "played": 6,
+          "won": 3,
           "drawn": 0,
           "lost": 2,
           "byes": 0,
           "walkovers": 1,
-          "points": 8
+          "points": 11
         },
         {
           "position": 7,
-          "team": "Tameside Vikings - Guardians",
-          "played": 5,
-          "won": 1,
-          "drawn": 0,
-          "lost": 2,
-          "byes": 1,
-          "walkovers": 1,
-          "points": 8
-        },
-        {
-          "position": 8,
           "team": "Glossopdale Hoops Yellow",
-          "played": 5,
-          "won": 1,
+          "played": 6,
+          "won": 2,
           "drawn": 0,
           "lost": 4,
           "byes": 0,
           "walkovers": 0,
-          "points": 7
+          "points": 10
+        },
+        {
+          "position": 8,
+          "team": "Reddish Eagles Silver",
+          "played": 4,
+          "won": 0,
+          "drawn": 2,
+          "lost": 3,
+          "byes": 1,
+          "walkovers": 0,
+          "points": 10
         },
         {
           "position": 9,
+          "team": "Tameside Vikings - Guardians",
+          "played": 6,
+          "won": 1,
+          "drawn": 0,
+          "lost": 3,
+          "byes": 1,
+          "walkovers": 1,
+          "points": 9
+        },
+        {
+          "position": 10,
           "team": "Team Red Viper",
-          "played": 5,
+          "played": 6,
           "won": 0,
           "drawn": 0,
-          "lost": 4,
+          "lost": 5,
           "byes": 1,
           "walkovers": 0,
-          "points": 7
+          "points": 8
         }
       ]
     },
@@ -465,57 +573,57 @@
         {
           "position": 1,
           "team": "Southside Bluejays",
-          "played": 5,
-          "won": 4,
+          "played": 6,
+          "won": 5,
           "drawn": 0,
           "lost": 0,
           "byes": 0,
           "walkovers": 1,
-          "points": 12
+          "points": 15
         },
         {
           "position": 2,
-          "team": "Tameside Vikings Shield Maidens",
-          "played": 5,
-          "won": 3,
-          "drawn": 0,
-          "lost": 2,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 11
-        },
-        {
-          "position": 3,
           "team": "Southside dream",
-          "played": 5,
-          "won": 3,
+          "played": 6,
+          "won": 4,
           "drawn": 0,
           "lost": 1,
           "byes": 0,
           "walkovers": 1,
-          "points": 10
+          "points": 13
         },
         {
-          "position": 4,
-          "team": "Trafford Titans Y7 Sky",
-          "played": 5,
-          "won": 0,
-          "drawn": 0,
-          "lost": 3,
-          "byes": 0,
-          "walkovers": 2,
-          "points": 3
-        },
-        {
-          "position": 5,
+          "position": 3,
           "team": "Trafford Titans Blue 7/8",
-          "played": 0,
+          "played": 6,
           "won": 0,
-          "drawn": 0,
+          "drawn": 6,
           "lost": 0,
           "byes": 0,
           "walkovers": 0,
-          "points": 0
+          "points": 12
+        },
+        {
+          "position": 4,
+          "team": "Tameside Vikings Shield Maidens",
+          "played": 6,
+          "won": 3,
+          "drawn": 0,
+          "lost": 3,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 12
+        },
+        {
+          "position": 5,
+          "team": "Trafford Titans Y7 Sky",
+          "played": 6,
+          "won": 0,
+          "drawn": 0,
+          "lost": 4,
+          "byes": 0,
+          "walkovers": 2,
+          "points": 4
         }
       ]
     },
@@ -529,112 +637,57 @@
         {
           "position": 1,
           "team": "MMG ELITE",
-          "played": 5,
-          "won": 4,
+          "played": 6,
+          "won": 5,
           "drawn": 0,
           "lost": 0,
           "byes": 1,
           "walkovers": 0,
-          "points": 15
+          "points": 18
         },
         {
           "position": 2,
-          "team": "Devils",
-          "played": 5,
-          "won": 2,
+          "team": "Southside Storm",
+          "played": 6,
+          "won": 4,
           "drawn": 1,
           "lost": 1,
-          "byes": 1,
+          "byes": 0,
           "walkovers": 0,
-          "points": 12
+          "points": 15
         },
         {
           "position": 3,
-          "team": "Southside Storm",
-          "played": 5,
-          "won": 3,
-          "drawn": 1,
-          "lost": 1,
+          "team": "Spirits",
+          "played": 6,
+          "won": 4,
+          "drawn": 0,
+          "lost": 2,
           "byes": 0,
           "walkovers": 0,
-          "points": 12
+          "points": 14
         },
         {
           "position": 4,
-          "team": "Spirits",
-          "played": 5,
-          "won": 3,
+          "team": "Tameside Vikings Valkyries",
+          "played": 6,
+          "won": 4,
           "drawn": 0,
           "lost": 2,
           "byes": 0,
           "walkovers": 0,
-          "points": 11
+          "points": 14
         },
         {
           "position": 5,
-          "team": "Tameside Vikings Valkyries",
-          "played": 5,
-          "won": 3,
-          "drawn": 0,
+          "team": "Devils",
+          "played": 6,
+          "won": 2,
+          "drawn": 1,
           "lost": 2,
-          "byes": 0,
+          "byes": 1,
           "walkovers": 0,
-          "points": 11
-        },
-        {
-          "position": 6,
-          "team": "Trafford Titans Y 9 Orange",
-          "played": 5,
-          "won": 2,
-          "drawn": 0,
-          "lost": 3,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 9
-        },
-        {
-          "position": 7,
-          "team": "Blue whale sports 9/10 girls",
-          "played": 5,
-          "won": 2,
-          "drawn": 0,
-          "lost": 3,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 9
-        },
-        {
-          "position": 8,
-          "team": "Southside Panthers",
-          "played": 5,
-          "won": 2,
-          "drawn": 0,
-          "lost": 3,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 9
-        },
-        {
-          "position": 9,
-          "team": "Glossopdale Hoops Teal",
-          "played": 3,
-          "won": 0,
-          "drawn": 2,
-          "lost": 3,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 7
-        },
-        {
-          "position": 10,
-          "team": "Trafford Titans Y9 Sky",
-          "played": 5,
-          "won": 1,
-          "drawn": 0,
-          "lost": 2,
-          "byes": 0,
-          "walkovers": 2,
-          "points": 5
+          "points": 13
         }
       ]
     },
@@ -647,69 +700,69 @@
       "rows": [
         {
           "position": 1,
-          "team": "Lion Mountain",
-          "played": 5,
+          "team": "Tameside Vikings Vekso",
+          "played": 6,
+          "won": 5,
+          "drawn": 0,
+          "lost": 0,
+          "byes": 0,
+          "walkovers": 1,
+          "points": 15
+        },
+        {
+          "position": 2,
+          "team": "Reddish Rebels",
+          "played": 6,
           "won": 4,
           "drawn": 0,
-          "lost": 1,
+          "lost": 2,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 14
+        },
+        {
+          "position": 3,
+          "team": "Lion Mountain",
+          "played": 6,
+          "won": 4,
+          "drawn": 0,
+          "lost": 2,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 14
+        },
+        {
+          "position": 4,
+          "team": "Reddish Romans",
+          "played": 6,
+          "won": 3,
+          "drawn": 1,
+          "lost": 2,
           "byes": 0,
           "walkovers": 0,
           "points": 13
         },
         {
-          "position": 2,
-          "team": "Tameside Vikings Vekso",
-          "played": 5,
-          "won": 4,
-          "drawn": 0,
-          "lost": 0,
-          "byes": 0,
-          "walkovers": 1,
-          "points": 12
-        },
-        {
-          "position": 3,
-          "team": "Reddish Rebels",
-          "played": 5,
-          "won": 3,
-          "drawn": 0,
-          "lost": 2,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 11
-        },
-        {
-          "position": 4,
-          "team": "Reddish Romans",
-          "played": 5,
-          "won": 2,
-          "drawn": 1,
-          "lost": 2,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 10
-        },
-        {
           "position": 5,
           "team": "Tameside Vikings Hammers",
-          "played": 5,
+          "played": 6,
           "won": 1,
           "drawn": 1,
-          "lost": 3,
+          "lost": 4,
           "byes": 0,
           "walkovers": 0,
-          "points": 8
+          "points": 9
         },
         {
           "position": 6,
           "team": "Black Panthers",
-          "played": 5,
+          "played": 6,
           "won": 0,
           "drawn": 0,
-          "lost": 5,
+          "lost": 6,
           "byes": 0,
           "walkovers": 0,
-          "points": 5
+          "points": 6
         }
       ]
     },
@@ -723,17 +776,17 @@
         {
           "position": 1,
           "team": "Blue Whale Sports 9/10 Boys",
-          "played": 5,
-          "won": 5,
+          "played": 6,
+          "won": 6,
           "drawn": 0,
           "lost": 0,
           "byes": 0,
           "walkovers": 0,
-          "points": 15
+          "points": 18
         },
         {
           "position": 2,
-          "team": "Poynton Pirates",
+          "team": "Red tigers",
           "played": 6,
           "won": 3,
           "drawn": 0,
@@ -744,28 +797,17 @@
         },
         {
           "position": 3,
-          "team": "Red tigers",
-          "played": 5,
-          "won": 2,
+          "team": "Poynton Pirates",
+          "played": 6,
+          "won": 3,
           "drawn": 0,
           "lost": 2,
           "byes": 1,
           "walkovers": 0,
-          "points": 11
+          "points": 14
         },
         {
           "position": 4,
-          "team": "Raptors",
-          "played": 6,
-          "won": 0,
-          "drawn": 0,
-          "lost": 5,
-          "byes": 1,
-          "walkovers": 0,
-          "points": 8
-        },
-        {
-          "position": 5,
           "team": "Trafford Titans Y10",
           "played": 6,
           "won": 0,
@@ -773,11 +815,22 @@
           "lost": 5,
           "byes": 1,
           "walkovers": 0,
-          "points": 8
+          "points": 12
+        },
+        {
+          "position": 5,
+          "team": "Tameside Vikings - Warriors",
+          "played": 6,
+          "won": 0,
+          "drawn": 0,
+          "lost": 5,
+          "byes": 1,
+          "walkovers": 0,
+          "points": 12
         },
         {
           "position": 6,
-          "team": "Tameside Vikings - Warriors",
+          "team": "Raptors",
           "played": 6,
           "won": 0,
           "drawn": 0,
@@ -883,61 +936,83 @@
       "rows": [
         {
           "position": 1,
-          "team": "Tameside Vikings - Valhalla",
+          "team": "Tornados",
           "played": 6,
-          "won": 5,
+          "won": 6,
           "drawn": 0,
-          "lost": 1,
+          "lost": 0,
           "byes": 0,
           "walkovers": 0,
-          "points": 16
+          "points": 18
         },
         {
           "position": 2,
-          "team": "Teal Dragons",
-          "played": 5,
-          "won": 4,
-          "drawn": 0,
-          "lost": 1,
+          "team": "Poynton Pirates",
+          "played": 6,
+          "won": 0,
+          "drawn": 6,
+          "lost": 0,
           "byes": 0,
           "walkovers": 0,
-          "points": 13
+          "points": 12
         },
         {
           "position": 3,
-          "team": "Southside Golden Lions",
-          "played": 5,
-          "won": 4,
-          "drawn": 0,
-          "lost": 1,
+          "team": "Glossop Giants",
+          "played": 6,
+          "won": 0,
+          "drawn": 6,
+          "lost": 0,
           "byes": 0,
           "walkovers": 0,
-          "points": 13
+          "points": 12
         },
         {
           "position": 4,
           "team": "Macc town alex",
-          "played": 5,
+          "played": 6,
           "won": 3,
           "drawn": 0,
-          "lost": 2,
+          "lost": 3,
           "byes": 0,
           "walkovers": 0,
-          "points": 11
+          "points": 12
         },
         {
           "position": 5,
-          "team": "Trafford Titans U18 Orange",
-          "played": 5,
-          "won": 3,
-          "drawn": 0,
-          "lost": 2,
+          "team": "West Elite",
+          "played": 6,
+          "won": 0,
+          "drawn": 6,
+          "lost": 0,
           "byes": 0,
           "walkovers": 0,
-          "points": 11
+          "points": 12
         },
         {
           "position": 6,
+          "team": "Trafford Titans U18 Orange",
+          "played": 6,
+          "won": 3,
+          "drawn": 0,
+          "lost": 3,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 12
+        },
+        {
+          "position": 7,
+          "team": "High Peak Brigands",
+          "played": 6,
+          "won": 2,
+          "drawn": 0,
+          "lost": 4,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 10
+        },
+        {
+          "position": 8,
           "team": "Tameside Vikings Ballers",
           "played": 6,
           "won": 1,
@@ -946,28 +1021,6 @@
           "byes": 0,
           "walkovers": 0,
           "points": 8
-        },
-        {
-          "position": 7,
-          "team": "High Peak Brigands",
-          "played": 5,
-          "won": 1,
-          "drawn": 0,
-          "lost": 4,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 7
-        },
-        {
-          "position": 8,
-          "team": "Manchester Mavericks",
-          "played": 5,
-          "won": 0,
-          "drawn": 0,
-          "lost": 5,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 5
         }
       ]
     },
@@ -980,14 +1033,14 @@
       "rows": [
         {
           "position": 1,
-          "team": "Tornados",
-          "played": 5,
+          "team": "Stockport Sharks",
+          "played": 6,
           "won": 5,
           "drawn": 0,
-          "lost": 0,
+          "lost": 1,
           "byes": 0,
           "walkovers": 0,
-          "points": 15
+          "points": 16
         },
         {
           "position": 2,
@@ -1002,17 +1055,6 @@
         },
         {
           "position": 3,
-          "team": "Stockport Sharks",
-          "played": 5,
-          "won": 4,
-          "drawn": 0,
-          "lost": 1,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 13
-        },
-        {
-          "position": 4,
           "team": "Reddish Reapers White",
           "played": 6,
           "won": 3,
@@ -1023,15 +1065,26 @@
           "points": 12
         },
         {
-          "position": 5,
+          "position": 4,
           "team": "Vale Vikings",
-          "played": 5,
+          "played": 6,
           "won": 3,
           "drawn": 0,
-          "lost": 2,
+          "lost": 3,
           "byes": 0,
           "walkovers": 0,
-          "points": 11
+          "points": 12
+        },
+        {
+          "position": 5,
+          "team": "Manchester Mavericks",
+          "played": 6,
+          "won": 0,
+          "drawn": 6,
+          "lost": 0,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 12
         },
         {
           "position": 6,
@@ -1058,13 +1111,110 @@
         {
           "position": 8,
           "team": "Reddish Eagles",
-          "played": 5,
+          "played": 6,
           "won": 0,
           "drawn": 0,
-          "lost": 5,
+          "lost": 6,
           "byes": 0,
           "walkovers": 0,
-          "points": 5
+          "points": 6
+        }
+      ]
+    },
+    {
+      "id": "55|855",
+      "leagueId": "55",
+      "league": "Thursday & Friday under 18s basketball basketball",
+      "division": "Premier Division",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-league/?id=55%7C855",
+      "rows": [
+        {
+          "position": 1,
+          "team": "Southside Sharks U18's",
+          "played": 6,
+          "won": 6,
+          "drawn": 0,
+          "lost": 0,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 18
+        },
+        {
+          "position": 2,
+          "team": "Tameside Vikings - Valhalla",
+          "played": 6,
+          "won": 5,
+          "drawn": 0,
+          "lost": 1,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 16
+        },
+        {
+          "position": 3,
+          "team": "Southside Golden Lions",
+          "played": 6,
+          "won": 5,
+          "drawn": 0,
+          "lost": 1,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 16
+        },
+        {
+          "position": 4,
+          "team": "Teal Dragons",
+          "played": 6,
+          "won": 5,
+          "drawn": 0,
+          "lost": 1,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 16
+        },
+        {
+          "position": 5,
+          "team": "Ravens Black",
+          "played": 6,
+          "won": 4,
+          "drawn": 0,
+          "lost": 2,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 14
+        },
+        {
+          "position": 6,
+          "team": "Reddish Royals",
+          "played": 6,
+          "won": 4,
+          "drawn": 0,
+          "lost": 2,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 14
+        },
+        {
+          "position": 7,
+          "team": "Reddish Reapers Purple",
+          "played": 6,
+          "won": 4,
+          "drawn": 0,
+          "lost": 1,
+          "byes": 0,
+          "walkovers": 1,
+          "points": 13
+        },
+        {
+          "position": 8,
+          "team": "Southside Bulls U18’s",
+          "played": 6,
+          "won": 3,
+          "drawn": 0,
+          "lost": 3,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 12
         }
       ]
     }
