@@ -1,49 +1,9 @@
 {
-  "checkedAt": "2026-11-21T08:49",
-  "changedAt": "2026-11-21T01:00",
+  "checkedAt": "2026-11-21T10:45",
+  "changedAt": "2026-11-21T10:45",
   "timezone": "Europe/London",
   "defaultHall": "Reddish Vale High School",
   "teams": [
-    {
-      "id": "vekso",
-      "name": "Tameside Vikings Vekso",
-      "fixtures": [
-        {
-          "season": "Winter Season 26",
-          "leagueId": "54",
-          "league": "Thursday & Friday school years 9&10 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
-          "date": "2026-11-21",
-          "time": "09:50",
-          "opponent": "Lion Mountain",
-          "hall": "Manchester College",
-          "court": "",
-          "division": "Division 3",
-          "status": "scheduled",
-          "change": null
-        }
-      ]
-    },
-    {
-      "id": "hammers",
-      "name": "Tameside Vikings Hammers",
-      "fixtures": [
-        {
-          "season": "Winter Season 26",
-          "leagueId": "54",
-          "league": "Thursday & Friday school years 9&10 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=54",
-          "date": "2026-11-21",
-          "time": "10:40",
-          "opponent": "Reddish Rebels",
-          "hall": "Manchester College",
-          "court": "",
-          "division": "Division 3",
-          "status": "scheduled",
-          "change": null
-        }
-      ]
-    },
     {
       "id": "thunder",
       "name": "Tameside Vikings Thunder",
