@@ -1,59 +1,9 @@
 {
-  "checkedAt": "2026-11-20T22:44",
-  "changedAt": "2026-11-20T22:44",
+  "checkedAt": "2026-11-21T01:00",
+  "changedAt": "2026-11-21T01:00",
   "timezone": "Europe/London",
   "defaultHall": "Reddish Vale High School",
   "teams": [
-    {
-      "id": "dreki",
-      "name": "Tameside Vikings Dreki",
-      "fixtures": [
-        {
-          "season": "Winter Season 26",
-          "leagueId": "59",
-          "league": "Saturday school years 7&8 basketball (boys)",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
-          "date": "2026-11-21",
-          "time": "",
-          "opponent": "",
-          "hall": "",
-          "court": "",
-          "division": "",
-          "bye": true,
-          "status": "bye",
-          "change": {
-            "type": "new",
-            "detectedAt": "2026-10-25T09:27",
-            "previous": null
-          }
-        }
-      ]
-    },
-    {
-      "id": "invaders",
-      "name": "Tameside Vikings Invaders",
-      "fixtures": [
-        {
-          "season": "Winter Season 26",
-          "leagueId": "58",
-          "league": "Saturday school years 5&6 basketball",
-          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=58",
-          "date": "2026-11-21",
-          "time": "",
-          "opponent": "",
-          "hall": "",
-          "court": "",
-          "division": "",
-          "bye": true,
-          "status": "bye",
-          "change": {
-            "type": "new",
-            "detectedAt": "2026-10-25T09:27",
-            "previous": null
-          }
-        }
-      ]
-    },
     {
       "id": "vekso",
       "name": "Tameside Vikings Vekso",
@@ -812,6 +762,56 @@
           "change": {
             "type": "new",
             "detectedAt": "2026-11-20T22:44",
+            "previous": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "dreki",
+      "name": "Tameside Vikings Dreki",
+      "fixtures": [
+        {
+          "season": "Winter Season 26",
+          "leagueId": "59",
+          "league": "Saturday school years 7&8 basketball (boys)",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
+          "date": "2026-11-21",
+          "time": "",
+          "opponent": "",
+          "hall": "",
+          "court": "",
+          "division": "",
+          "bye": true,
+          "status": "removed",
+          "change": {
+            "type": "removed",
+            "detectedAt": "2026-11-21T01:00",
+            "previous": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "invaders",
+      "name": "Tameside Vikings Invaders",
+      "fixtures": [
+        {
+          "season": "Winter Season 26",
+          "leagueId": "58",
+          "league": "Saturday school years 5&6 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=58",
+          "date": "2026-11-21",
+          "time": "",
+          "opponent": "",
+          "hall": "",
+          "court": "",
+          "division": "",
+          "bye": true,
+          "status": "removed",
+          "change": {
+            "type": "removed",
+            "detectedAt": "2026-11-21T01:00",
             "previous": null
           }
         }
