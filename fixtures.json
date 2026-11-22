@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-11-22T10:44",
-  "changedAt": "2026-11-22T00:57",
+  "checkedAt": "2026-11-22T12:48",
+  "changedAt": "2026-11-22T12:48",
   "timezone": "Europe/London",
   "defaultHall": "Reddish Vale High School",
   "teams": [
@@ -614,6 +614,24 @@
             "detectedAt": "2026-11-21T22:37",
             "previous": null
           }
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "59",
+          "league": "Saturday school years 7&8 basketball (boys)",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
+          "date": "2026-12-12",
+          "time": "12:20",
+          "opponent": "Cheadle Destroyers",
+          "hall": "Manchester College",
+          "court": "",
+          "division": "Division 1",
+          "status": "scheduled",
+          "change": {
+            "type": "new",
+            "detectedAt": "2026-11-22T12:48",
+            "previous": null
+          }
         }
       ]
     },
@@ -813,6 +831,24 @@
             "detectedAt": "2026-11-21T22:37",
             "previous": null
           }
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "58",
+          "league": "Saturday school years 5&6 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=58",
+          "date": "2026-12-12",
+          "time": "16:00",
+          "opponent": "The wizards",
+          "hall": "Reddish Vale High School",
+          "court": "2",
+          "division": "Premier Division",
+          "status": "scheduled",
+          "change": {
+            "type": "new",
+            "detectedAt": "2026-11-22T12:48",
+            "previous": null
+          }
         }
       ]
     },
@@ -931,6 +967,24 @@
           "change": {
             "type": "new",
             "detectedAt": "2026-11-21T22:37",
+            "previous": null
+          }
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "58",
+          "league": "Saturday school years 5&6 basketball",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=58",
+          "date": "2026-12-12",
+          "time": "12:40",
+          "opponent": "Trafford Titans Yr5",
+          "hall": "Hollinwood",
+          "court": "",
+          "division": "Division 2",
+          "status": "scheduled",
+          "change": {
+            "type": "new",
+            "detectedAt": "2026-11-22T12:48",
             "previous": null
           }
         }
@@ -1053,6 +1107,24 @@
             "detectedAt": "2026-11-21T22:37",
             "previous": null
           }
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "59",
+          "league": "Saturday school years 7&8 basketball (boys)",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
+          "date": "2026-12-12",
+          "time": "10:10",
+          "opponent": "MBC SWARM",
+          "hall": "Hollinwood",
+          "court": "",
+          "division": "Premier Division",
+          "status": "scheduled",
+          "change": {
+            "type": "new",
+            "detectedAt": "2026-11-22T12:48",
+            "previous": null
+          }
         }
       ]
     },
@@ -1093,6 +1165,24 @@
           "change": {
             "type": "new",
             "detectedAt": "2026-11-21T22:37",
+            "previous": null
+          }
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "59",
+          "league": "Saturday school years 7&8 basketball (boys)",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=59",
+          "date": "2026-12-12",
+          "time": "12:40",
+          "opponent": "Team Red Viper",
+          "hall": "Reddish Vale High School",
+          "court": "2",
+          "division": "Division 2",
+          "status": "scheduled",
+          "change": {
+            "type": "new",
+            "detectedAt": "2026-11-22T12:48",
             "previous": null
           }
         }
