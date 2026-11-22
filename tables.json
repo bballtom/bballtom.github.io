@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-21T19:42",
+  "checkedAt": "2026-11-22T19:44",
   "timezone": "Europe/London",
   "season": "Winter Season 26",
   "tables": [
@@ -259,6 +259,17 @@
       "rows": [
         {
           "position": 1,
+          "team": "MBC Soldiers",
+          "played": 6,
+          "won": 6,
+          "drawn": 0,
+          "lost": 0,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 18
+        },
+        {
+          "position": 2,
           "team": "MBC Hornets",
           "played": 6,
           "won": 5,
@@ -269,7 +280,7 @@
           "points": 16
         },
         {
-          "position": 2,
+          "position": 3,
           "team": "Manchester Bulls",
           "played": 6,
           "won": 5,
@@ -280,7 +291,7 @@
           "points": 15
         },
         {
-          "position": 3,
+          "position": 4,
           "team": "Tameside Vikings Thunder",
           "played": 6,
           "won": 5,
@@ -288,17 +299,6 @@
           "lost": 0,
           "byes": 0,
           "walkovers": 1,
-          "points": 15
-        },
-        {
-          "position": 4,
-          "team": "MBC Soldiers",
-          "played": 5,
-          "won": 5,
-          "drawn": 0,
-          "lost": 0,
-          "byes": 0,
-          "walkovers": 0,
           "points": 15
         },
         {
