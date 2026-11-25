@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-11-24T17:24",
-  "changedAt": "2026-11-22T16:42",
+  "checkedAt": "2026-11-25T02:09",
+  "changedAt": "2026-11-25T02:09",
   "timezone": "Europe/London",
   "defaultHall": "Reddish Vale High School",
   "teams": [
@@ -843,10 +843,28 @@
           "court": "",
           "division": "",
           "bye": true,
-          "status": "bye",
+          "status": "removed",
+          "change": {
+            "type": "removed",
+            "detectedAt": "2026-11-25T02:09",
+            "previous": null
+          }
+        },
+        {
+          "season": "Winter Season 26",
+          "leagueId": "60",
+          "league": "Saturday school years 7&8 basketball (girls)",
+          "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-fixtures/?id=60",
+          "date": "2026-12-05",
+          "time": "11:50",
+          "opponent": "Trafford Titans Blue 7/8",
+          "hall": "Reddish Vale High School",
+          "court": "1",
+          "division": "Premier Division",
+          "status": "scheduled",
           "change": {
             "type": "new",
-            "detectedAt": "2026-11-21T20:38",
+            "detectedAt": "2026-11-25T02:09",
             "previous": null
           }
         },
