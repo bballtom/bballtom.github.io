@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-26T02:05",
+  "checkedAt": "2026-11-27T02:04",
   "timezone": "Europe/London",
   "season": "Winter Season 26",
   "tables": [
@@ -850,29 +850,29 @@
       "rows": [
         {
           "position": 1,
-          "team": "Stingrays",
-          "played": 6,
-          "won": 5,
+          "team": "Cheadle Reapers",
+          "played": 7,
+          "won": 6,
           "drawn": 0,
           "lost": 0,
           "byes": 1,
           "walkovers": 0,
-          "points": 18
+          "points": 21
         },
         {
           "position": 2,
           "team": "Phoenix Orange",
-          "played": 6,
+          "played": 7,
           "won": 5,
           "drawn": 0,
-          "lost": 0,
+          "lost": 1,
           "byes": 1,
           "walkovers": 0,
-          "points": 18
+          "points": 19
         },
         {
           "position": 3,
-          "team": "Cheadle Reapers",
+          "team": "Stingrays",
           "played": 6,
           "won": 5,
           "drawn": 0,
@@ -937,28 +937,28 @@
         {
           "position": 1,
           "team": "Tornados",
-          "played": 6,
-          "won": 6,
+          "played": 7,
+          "won": 7,
           "drawn": 0,
           "lost": 0,
           "byes": 0,
           "walkovers": 0,
-          "points": 18
+          "points": 21
         },
         {
           "position": 2,
-          "team": "Poynton Pirates",
-          "played": 6,
+          "team": "Glossop Giants",
+          "played": 7,
           "won": 0,
           "drawn": 6,
-          "lost": 0,
+          "lost": 1,
           "byes": 0,
           "walkovers": 0,
-          "points": 12
+          "points": 13
         },
         {
           "position": 3,
-          "team": "Glossop Giants",
+          "team": "Poynton Pirates",
           "played": 6,
           "won": 0,
           "drawn": 6,
@@ -980,22 +980,22 @@
         },
         {
           "position": 5,
-          "team": "West Elite",
+          "team": "Trafford Titans U18 Orange",
           "played": 6,
-          "won": 0,
-          "drawn": 6,
-          "lost": 0,
+          "won": 3,
+          "drawn": 0,
+          "lost": 3,
           "byes": 0,
           "walkovers": 0,
           "points": 12
         },
         {
           "position": 6,
-          "team": "Trafford Titans U18 Orange",
+          "team": "West Elite",
           "played": 6,
-          "won": 3,
-          "drawn": 0,
-          "lost": 3,
+          "won": 0,
+          "drawn": 6,
+          "lost": 0,
           "byes": 0,
           "walkovers": 0,
           "points": 12
@@ -1044,6 +1044,17 @@
         },
         {
           "position": 2,
+          "team": "Vale Vikings",
+          "played": 7,
+          "won": 4,
+          "drawn": 0,
+          "lost": 3,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 15
+        },
+        {
+          "position": 3,
           "team": "North Manchester Falcons",
           "played": 6,
           "won": 4,
@@ -1054,7 +1065,18 @@
           "points": 14
         },
         {
-          "position": 3,
+          "position": 4,
+          "team": "Manchester Mavericks",
+          "played": 7,
+          "won": 0,
+          "drawn": 6,
+          "lost": 1,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 13
+        },
+        {
+          "position": 5,
           "team": "Reddish Reapers White",
           "played": 6,
           "won": 3,
@@ -1065,29 +1087,18 @@
           "points": 12
         },
         {
-          "position": 4,
-          "team": "Vale Vikings",
-          "played": 6,
-          "won": 3,
-          "drawn": 0,
-          "lost": 3,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 12
-        },
-        {
-          "position": 5,
-          "team": "Manchester Mavericks",
-          "played": 6,
-          "won": 0,
-          "drawn": 6,
-          "lost": 0,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 12
-        },
-        {
           "position": 6,
+          "team": "Tameside Vikings - Ravens",
+          "played": 7,
+          "won": 2,
+          "drawn": 0,
+          "lost": 5,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 11
+        },
+        {
+          "position": 7,
           "team": "Evo Elite",
           "played": 6,
           "won": 2,
@@ -1098,26 +1109,15 @@
           "points": 9
         },
         {
-          "position": 7,
-          "team": "Tameside Vikings - Ravens",
-          "played": 6,
-          "won": 1,
-          "drawn": 0,
-          "lost": 5,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 8
-        },
-        {
           "position": 8,
           "team": "Reddish Eagles",
-          "played": 6,
+          "played": 7,
           "won": 0,
           "drawn": 0,
-          "lost": 6,
+          "lost": 7,
           "byes": 0,
           "walkovers": 0,
-          "points": 6
+          "points": 7
         }
       ]
     },
@@ -1174,6 +1174,28 @@
         },
         {
           "position": 5,
+          "team": "Reddish Royals",
+          "played": 7,
+          "won": 4,
+          "drawn": 1,
+          "lost": 2,
+          "byes": 0,
+          "walkovers": 0,
+          "points": 16
+        },
+        {
+          "position": 6,
+          "team": "Reddish Reapers Purple",
+          "played": 7,
+          "won": 4,
+          "drawn": 1,
+          "lost": 1,
+          "byes": 0,
+          "walkovers": 1,
+          "points": 15
+        },
+        {
+          "position": 7,
           "team": "Ravens Black",
           "played": 6,
           "won": 4,
@@ -1182,28 +1204,6 @@
           "byes": 0,
           "walkovers": 0,
           "points": 14
-        },
-        {
-          "position": 6,
-          "team": "Reddish Royals",
-          "played": 6,
-          "won": 4,
-          "drawn": 0,
-          "lost": 2,
-          "byes": 0,
-          "walkovers": 0,
-          "points": 14
-        },
-        {
-          "position": 7,
-          "team": "Reddish Reapers Purple",
-          "played": 6,
-          "won": 4,
-          "drawn": 0,
-          "lost": 1,
-          "byes": 0,
-          "walkovers": 1,
-          "points": 13
         },
         {
           "position": 8,
