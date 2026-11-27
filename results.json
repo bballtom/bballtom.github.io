@@ -1,7 +1,22 @@
 {
-  "checkedAt": "2026-11-26T02:00",
+  "checkedAt": "2026-11-27T01:59",
   "timezone": "Europe/London",
   "results": [
+    {
+      "season": "Winter Season 26",
+      "leagueId": "55",
+      "league": "Thursday & Friday under 18s basketball basketball",
+      "division": "Division 2",
+      "date": "2026-11-26",
+      "time": "19:30",
+      "team": "Tameside Vikings Ravens",
+      "teamId": "ravens",
+      "opponent": "Reddish Eagles",
+      "teamScore": 36,
+      "opponentScore": 19,
+      "outcome": "win",
+      "sourceUrl": "https://www.sportforallcentres.co.uk/basketball/stockport-basketball-results-winter/?id=55&season=9"
+    },
     {
       "season": "Winter Season 26",
       "leagueId": "57",
